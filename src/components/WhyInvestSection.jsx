@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './WhyInvestSection.css';
 
@@ -14,6 +14,7 @@ const InvestCard = ({ title, desc, icon }) => {
 
 const WhyInvestSection = () => {
   const sliderRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const reasons = [
     { title: "Outer Ring Road", desc: "104 km ring road boosting land value dramatically on Sultanpur axes.", icon: "🛣️" },
@@ -39,6 +40,23 @@ const WhyInvestSection = () => {
     }
   };
 
+  useEffect(() => {
+    let intervalId;
+    if (!isHovered) {
+      intervalId = setInterval(() => {
+        if (sliderRef.current) {
+          const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+          if (scrollLeft + clientWidth >= scrollWidth - 10) {
+            sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            scroll('right');
+          }
+        }
+      }, 3000);
+    }
+    return () => clearInterval(intervalId);
+  }, [isHovered]);
+
   return (
     <section className="section why-invest-section" id="why-invest">
       <div className="container">
@@ -48,7 +66,11 @@ const WhyInvestSection = () => {
           <p className="section-desc">India's fastest-growing Tier-2 city. Real estate on the Sultanpur & Raebareli corridors is in its highest-appreciation window right now.</p>
         </div>
 
-        <div className="slider-wrapper">
+        <div 
+          className="slider-wrapper"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <button className="slider-btn prev" onClick={() => scroll('left')} aria-label="Previous">
             <ChevronLeft size={24} />
           </button>

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
-import PropertyCard from '../components/PropertyCard';
-import { propertiesData } from '../data/properties';
+import { ProjectCard } from '../components/ProjectsSection';
+import { projects } from '../data/projects';
+import '../components/ProjectsSection.css';
 import './PageStyles.css';
 
 const Projects = () => {
   const location = useLocation();
-  const [filteredProperties, setFilteredProperties] = useState(propertiesData);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
   const [activeFilters, setActiveFilters] = useState(null);
 
   useEffect(() => {
@@ -20,17 +21,15 @@ const Projects = () => {
   const handleSearch = (filters) => {
     setActiveFilters(filters);
     
-    const results = propertiesData.filter(property => {
-      if (filters.location !== 'All Locations' && property.location !== filters.location) return false;
-      if (filters.type !== 'All Types' && property.propertyType !== filters.type) return false;
-      if (filters.bedrooms !== 'Any' && property.bedrooms < parseInt(filters.bedrooms)) return false;
-      if (filters.bathrooms !== 'Any' && property.bathrooms < parseInt(filters.bathrooms)) return false;
-      if (filters.minPrice && property.priceValue < parseInt(filters.minPrice)) return false;
-      if (filters.maxPrice && property.priceValue > parseInt(filters.maxPrice)) return false;
+    const results = projects.filter(project => {
+      // Basic matching for projects since they have different fields than properties
+      if (filters.location !== 'All Locations' && !project.location.includes(filters.location)) return false;
+      if (filters.type !== 'All Types' && project.type !== filters.type) return false;
+      // We ignore bedrooms/bathrooms/price for now as they are not structured the same way
       return true;
     });
     
-    setFilteredProperties(results);
+    setFilteredProjects(results);
   };
 
   return (
@@ -49,24 +48,27 @@ const Projects = () => {
           <SearchBar onSearch={handleSearch} />
           {activeFilters && (
             <p style={{marginTop: '20px', color: 'var(--text-secondary)'}}>
-              Showing {filteredProperties.length} properties matching your criteria.
+              Showing {filteredProjects.length} projects matching your criteria.
             </p>
           )}
         </div>
 
-        {filteredProperties.length > 0 ? (
-          <div className="property-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '40px', marginBottom: '100px'}}>
-            {filteredProperties.map(property => (
-              <PropertyCard key={property.id} property={property} />
+        {filteredProjects.length > 0 ? (
+          <div className="projects-grid" style={{ marginBottom: '100px' }}>
+            {filteredProjects.map(project => (
+              <ProjectCard 
+                key={project.id} 
+                {...project}
+              />
             ))}
           </div>
         ) : (
           <div style={{padding: '100px 0', textAlign: 'center', marginBottom: '100px'}}>
-            <h3>No properties found matching your criteria.</h3>
+            <h3>No projects found matching your criteria.</h3>
             <p style={{color: 'var(--text-secondary)', marginTop: '10px'}}>Try adjusting your filters.</p>
             <button className="btn-primary" style={{marginTop: '20px'}} onClick={() => {
               setActiveFilters(null);
-              setFilteredProperties(propertiesData);
+              setFilteredProjects(projects);
             }}>Clear Filters</button>
           </div>
         )}

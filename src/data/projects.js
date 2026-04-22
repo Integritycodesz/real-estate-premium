@@ -91,5 +91,67 @@ export const projects = [
       "Villa Size": "3200 Sq. Ft.",
       "Total Units": "42 Units"
     }
+  },
+  {
+    id: "greenwood-estate",
+    title: "Greenwood Estate",
+    location: "Kisan Path, Lucknow",
+    image: "/src/assets/hero.png",
+    type: "Villas",
+    price: "₹95.00 L",
+    status: "Available",
+    description: "Greenwood Estate provides expansive luxury villas surrounded by lush green landscapes. Offering premium amenities, wide open spaces, and modern architecture, this development is ideal for families seeking peace and comfort away from the city's hustle.",
+    features: ["Expansive Lawns", "Gated Security", "Premium Fittings"],
+    amenities: [
+      "Clubhouse & Gym",
+      "Jogging Track",
+      "24/7 Security",
+      "Power Backup",
+      "Children's Play Area",
+      "Community Hall"
+    ],
+    gallery: [
+      "/src/assets/hero.png",
+      "/src/assets/living_room.png",
+      "/src/assets/kitchen.png"
+    ],
+    specifications: {
+      "Project Type": "3BHK & 4BHK Villas",
+      "Approval": "LDA Approved",
+      "Possession": "Ready to Move",
+      "Total Area": "15 Acres",
+      "Total Units": "60 Units"
+    }
+  },
+  {
+    id: "royal-city",
+    title: "Royal City",
+    location: "Sultanpur Road",
+    image: "/src/assets/living_room.png",
+    type: "Plots",
+    price: "₹21.50 L",
+    status: "Fast Selling",
+    description: "Royal City is a massive integrated township offering affordable and premium plots. With direct access to major highways and upcoming educational institutions, it promises excellent future appreciation and world-class living.",
+    features: ["Integrated Township", "Prime Location", "High Appreciation"],
+    amenities: [
+      "Wide Internal Roads",
+      "Shopping Complex",
+      "Parks & Recreation",
+      "Water Treatment Plant",
+      "Underground Wiring",
+      "Sports Facilities"
+    ],
+    gallery: [
+      "/src/assets/living_room.png",
+      "/src/assets/hero.png",
+      "/src/assets/kitchen.png"
+    ],
+    specifications: {
+      "Project Type": "Residential Plots",
+      "Approval": "RERA Approved",
+      "Possession": "Immediate Registry",
+      "Total Area": "50 Acres",
+      "Plot Sizes": "1000 - 3000 Sq. Ft."
+    }
   }
 ];

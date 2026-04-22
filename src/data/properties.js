@@ -53,5 +53,5 @@ export const propertiesData = [
   }
 ];
 
-export const locations = ["All Locations", "Sultanpur Road", "Kisan Path", "Outer Ring Road"];
-export const propertyTypes = ["All Types", "Detached Villa", "Luxury Estate", "Apartment"];
+export const locations = ["All Locations", "Raebareli Road", "Sultanpur Highway", "Near Nayra Petrol Pump"];
+export const propertyTypes = ["All Types", "Plots", "Commercial", "Villas"];

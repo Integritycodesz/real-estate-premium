@@ -12,11 +12,7 @@ const HeroSection = () => {
         <h1 className="hero-title">BUILDING PREMIUM REAL ESTATE IN LUCKNOW</h1>
       </div>
       
-      {/* Decorative side badge similar to reference */}
-      <div className="side-badge">
-        <span>RERA</span>
-        <span className="rotated">Approved</span>
-      </div>
+
     </section>
   );
 };

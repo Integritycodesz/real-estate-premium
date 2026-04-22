@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import './ProjectsSection.css';
 
-const ProjectCard = ({ id, title, location, image, features, type, price }) => {
+export const ProjectCard = ({ id, title, location, image, features, type, price }) => {
   return (
     <div className="project-card" data-type={type}>
       <div className="project-image-wrapper">
@@ -35,8 +35,8 @@ const ProjectsSection = () => {
   const [filter, setFilter] = useState('All');
 
   const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.type === filter);
+    ? projects.slice(0, 3) 
+    : projects.filter(p => p.type === filter).slice(0, 3);
 
   const categories = ['All', 'Plots', 'Villas', 'Commercial'];
 
@@ -44,22 +44,20 @@ const ProjectsSection = () => {
     <section className="section projects-section" id="projects">
       <div className="container">
         <div className="section-header">
-          <div className="header-top">
-            <span className="subtitle">Exclusive Portfolios</span>
-            <div className="filter-bar">
-              {categories.map(cat => (
-                <button 
-                  key={cat}
-                  className={`filter-btn ${filter === cat ? 'active' : ''}`}
-                  onClick={() => setFilter(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
+          <span className="subtitle">Exclusive Portfolios</span>
           <h2>Featured <span className="text-gold">Projects</span></h2>
           <p className="section-desc">Handpicked premium developments on Lucknow's most promising investment corridors.</p>
+          <div className="filter-bar" style={{ marginTop: '30px' }}>
+            {categories.map(cat => (
+              <button 
+                key={cat}
+                className={`filter-btn ${filter === cat ? 'active' : ''}`}
+                onClick={() => setFilter(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="projects-grid">

@@ -19,8 +19,6 @@ const Home = () => {
       <div className="reveal">
         <WhyInvestSection />
       </div>
-      
-      <div className="section-divider container"></div>
 
       <div className="reveal">
         <ProjectsSection />
@@ -33,17 +31,6 @@ const Home = () => {
       <div className="reveal">
         <TestimonialsSection />
       </div>
-      
-      <section className="cta-section container reveal">
-        <div className="cta-card glass-panel">
-          <h2>Ready to build your legacy?</h2>
-          <p>Join 500+ families who have trusted us with their future homes.</p>
-          <div className="cta-actions">
-            <button className="btn-primary">View Projects</button>
-            <button className="btn-outline">Contact Us</button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
