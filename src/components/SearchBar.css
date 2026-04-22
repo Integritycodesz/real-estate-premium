@@ -1,0 +1,119 @@
+.search-bar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.search-bar-container {
+  background: var(--surface-light);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.search-fields {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.search-field {
+  flex: 1;
+  padding: 10px 24px;
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.search-field:last-child {
+  border-right: none;
+}
+
+.search-field label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.search-field select,
+.search-field input {
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-inputs input {
+  width: 60px;
+  -moz-appearance: textfield;
+}
+
+.price-inputs input::-webkit-outer-spin-button,
+.price-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-button {
+  background: var(--text-primary);
+  color: #fff;
+  border: none;
+  padding: 0 40px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: background 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background: var(--accent-gold);
+}
+
+@media (max-width: 1024px) {
+  .search-bar-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .search-fields {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-field {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 16px 0;
+  }
+  .search-field:last-child {
+    border-bottom: none;
+  }
+  .search-button {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
