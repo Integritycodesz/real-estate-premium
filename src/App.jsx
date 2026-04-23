@@ -10,11 +10,13 @@ import ProjectDetail from './pages/ProjectDetail';
 import CustomCursor from './components/CustomCursor';
 import ScrollReveal from './components/ScrollReveal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <CustomCursor />
         <ScrollReveal />

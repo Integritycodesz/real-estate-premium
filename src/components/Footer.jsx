@@ -10,7 +10,7 @@ const Footer = () => {
           <h2>PBD <span className="text-gold">Groups</span></h2>
           <p>Where Trust Becomes Legacy. Building premium real estate across Lucknow's fastest-growing corridors.</p>
         </div>
-        
+
         <div className="footer-links">
           <div className="link-group">
             <h4>Quick Links</h4>
@@ -21,18 +21,18 @@ const Footer = () => {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-          
+
           <div className="link-group">
             <h4>Contact</h4>
             <ul>
-              <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-              <li><a href="mailto:info@amitlegacyestates.com">info@amitlegacyestates.com</a></li>
+              <li><a href="tel:+917054550296 ">+91 70545 50296 </a></li>
+              <li><a href="mailto:info@pbdgroup.in">info@pbdgroup.in</a></li>
               <li>Lucknow, Uttar Pradesh</li>
             </ul>
           </div>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <div className="container bottom-content">
           <p>&copy; {new Date().getFullYear()} PBD Groups. All rights reserved.</p>

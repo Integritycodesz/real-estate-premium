@@ -36,8 +36,48 @@ const Projects = () => {
     <div className="page-wrapper fade-in">
       <div className="page-hero-header projects-header">
         <div className="container">
-          <h1>Our Projects</h1>
-          <p>Explore our catalog of premium, legally approved real estate in Lucknow's most promising corridors.</p>
+          <div style={{ maxWidth: '800px' }}>
+            <div style={{ paddingLeft: '40px' }}>
+              <p className="reveal-text delay-1" style={{ textTransform: 'uppercase', letterSpacing: '4px', color: 'var(--accent-gold)', marginBottom: '15px', fontWeight: '700', fontSize: '0.9rem' }}>
+                OUR PORTFOLIO
+              </p>
+              <h1 className="reveal-text delay-2" style={{ textShadow: '0 4px 15px rgba(0,0,0,0.4)', marginBottom: '20px', fontSize: '5rem', lineHeight: '1', fontWeight: '800', letterSpacing: '-1px' }}>
+                Our Projects.<br />
+                <span style={{ color: 'var(--accent-gold)' }}>Your Future Home.</span>
+              </h1>
+            </div>
+            
+            <div className="reveal-text delay-3" style={{ 
+              fontSize: '1.1rem', 
+              lineHeight: '1.8', 
+              color: 'rgba(255,255,255,0.95)',
+              background: 'rgba(255,255,255,0.02)',
+              backdropFilter: 'blur(20px)',
+              padding: '40px',
+              borderRadius: '0 20px 20px 0', 
+              borderLeft: '4px solid var(--accent-gold)',
+              boxShadow: '40px 40px 80px rgba(0,0,0,0.3)',
+              marginTop: '10px'
+            }}>
+              <p style={{ marginBottom: '20px', fontSize: '1.3rem', fontWeight: '600', color: '#fff', lineHeight: '1.4' }}>
+                Explore our curated catalog of premium, legally approved real estate across Lucknow's most promising development corridors.
+              </p>
+              <p style={{ marginBottom: '30px', opacity: 0.8, fontSize: '1.05rem' }}>
+                Every PBD project is selected for its strategic location, verified documentation, and long-term appreciation potential. We don't just sell plots; we deliver secure foundations for your family's future.
+              </p>
+              <div style={{ display: 'flex', gap: '50px' }}>
+                <div className="reveal-text delay-4">
+                  <div style={{ fontSize: '2.2rem', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '2px' }}>100%</div>
+                  <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', opacity: 0.6, fontWeight: '700' }}>Legal Clarity</div>
+                </div>
+                <div style={{ width: '1px', background: 'rgba(255,255,255,0.1)' }}></div>
+                <div className="reveal-text delay-4" style={{ animationDelay: '1s' }}>
+                  <div style={{ fontSize: '2.2rem', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '2px' }}>Prime</div>
+                  <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', opacity: 0.6, fontWeight: '700' }}>Locations</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
