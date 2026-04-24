@@ -28,8 +28,15 @@ const Navbar = () => {
     <nav className={navbarClass}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <h2>PBD <span className="text-gold">Groups</span></h2>
+          <div className="logo-main">
+            <span className="pbd-text">PBD</span>
+            <div className="logo-sub">
+              <span>PAWANTANAY BUILDERS</span>
+              <span>& Developers Pvt. Ltd. Lucknow</span>
+            </div>
+          </div>
         </Link>
+
         <ul className="navbar-menu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projects">Projects</Link></li>

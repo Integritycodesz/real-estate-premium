@@ -1,157 +1,189 @@
 export const projects = [
   {
-    id: "sarvodaya-city",
-    title: "Sarvodaya City",
-    location: "Barkat Nagar, Raebareli Road",
-    image: "/src/assets/living_room.png",
-    type: "Plots",
-    price: "₹17.99 L",
-    status: "Available",
-    description: "Sarvodaya City is a premium residential development located in the fast-growing Barkat Nagar corridor. This Jila Panchayat approved project offers well-planned plots with modern infrastructure, making it an ideal choice for both home builders and investors.",
-    features: ["Jila Panchayat Approved", "Premium Plots", "24/7 Security"],
+    id: "rajgharana",
+    title: "Rajgharana",
+    location: "Raebareli Road, Lucknow",
+    image: "/src/assets/rajgharana.png",
+    type: "Residential Plot",
+    price: "₹1,450 /sq.ft",
+    status: "Delivered",
+    description: "Rajgharana is PBD Group's flagship residential development. A fully delivered and thriving community, it offers premium plots with modern infrastructure, wide roads, and a secure environment for families to build their dream homes.",
+    features: ["Fully Delivered", "Grand Entrance", "Thriving Community"],
     amenities: [
       "Wide Internal Roads",
+      "24/7 Water Supply",
       "Street Lighting",
-      "Modern Drainage System",
-      "Lush Green Parks",
-      "Gated Community",
-      "Overhead Water Tank"
+      "Landscaped Gardens",
+      "Gated Security",
+      "Drainage System"
     ],
     gallery: [
+      "/src/assets/rajgharana.png",
       "/src/assets/living_room.png",
+      "/src/assets/hero.png"
+    ],
+    specifications: {
+      "Project Type": "Residential Plots",
+      "Location": "Raebareli Road",
+      "Possession": "Immediate",
+      "Total Area": "15 Acres",
+      "Plot Sizes": "1000 - 2500 Sq. Ft."
+    }
+  },
+  {
+    id: "hanumant-dham",
+    title: "Hanumant Dham",
+    location: "Near Spiritual Landmarks, Lucknow",
+    image: "/src/assets/hanumant_dham.png",
+    type: "Residential Plot",
+    price: "₹1,250 /sq.ft",
+    status: "Active",
+    description: "Hanumant Dham is a serene residential community designed for those seeking peace and spiritual connectivity. Strategically located near major landmarks, it offers well-planned plots with lush green spaces and modern amenities.",
+    features: ["Near SGPGI", "Spiritual Vibe", "Legally Verified"],
+    amenities: [
+      "Green Parks",
+      "Wide Paved Roads",
+      "Secure Boundary Wall",
+      "Water Harvesting",
+      "Electricity Connection",
+      "Jogging Track"
+    ],
+    gallery: [
+      "/src/assets/hanumant_dham.png",
       "/src/assets/kitchen.png",
       "/src/assets/hero.png"
     ],
     specifications: {
       "Project Type": "Residential Plots",
-      "Approval": "Jila Panchayat",
-      "Possession": "Immediate",
-      "Total Area": "25 Acres",
-      "Plot Sizes": "800 - 2400 Sq. Ft."
+      "Location": "Raebareli Road Corridor",
+      "Possession": "Ready for Registry",
+      "Total Area": "10 Acres",
+      "Plot Sizes": "800 - 2000 Sq. Ft."
     }
   },
   {
-    id: "sarkar-town",
-    title: "Sarkar Town",
-    location: "Rehmat Nagar, Sultanpur Highway",
-    image: "/src/assets/kitchen.png",
-    type: "Commercial",
-    price: "₹25.50 L",
+    id: "barsana-estate",
+    title: "Barsana Estate",
+    location: "Sultanpur Road, Lucknow",
+    image: "/src/assets/barsana_estate.png",
+    type: "Luxury Plot",
+    price: "₹1,650 /sq.ft",
     status: "Hot Selling",
-    description: "Sarkar Town offers a strategic mix of commercial and residential spaces directly facing the Sultanpur Highway. With high visibility and excellent connectivity, it's the perfect destination for businesses looking for premium frontage and high footfall.",
-    features: ["Highway Facing", "Commercial & Res.", "Immediate Registry"],
+    description: "Barsana Estate represents the pinnacle of modern plotting infrastructure. Featuring underground electrical lines and advanced sewage systems, it provides a clean, clutter-free environment for a premium lifestyle.",
+    features: ["Underground Wiring", "High ROI", "Premium Infra"],
     amenities: [
-      "Highway Frontage",
-      "Ample Parking Space",
-      "CCTV Surveillance",
-      "Power Backup",
-      "Commercial Complex",
+      "Underground Electrical Lines",
+      "Modern Sewage System",
+      "24/7 Gated Security",
+      "Solar Street Lights",
+      "Clubhouse Facilities",
       "Wide Entrance"
     ],
     gallery: [
-      "/src/assets/kitchen.png",
+      "/src/assets/barsana_estate.png",
       "/src/assets/living_room.png",
       "/src/assets/hero.png"
     ],
     specifications: {
-      "Project Type": "Commercial & Residential",
-      "Approval": "RERA Applied",
+      "Project Type": "Luxury Residential Plots",
+      "Location": "Main Sultanpur Road",
       "Possession": "Dec 2026",
       "Total Area": "12 Acres",
-      "Frontage": "200 Ft. Main Highway"
+      "Infrastructure": "Underground Utilities"
     }
   },
   {
-    id: "apex-luxury-villas",
-    title: "Apex Luxury Villas",
-    location: "Near Nayra Petrol Pump",
-    image: "/src/assets/hero.png",
-    type: "Villas",
-    price: "₹85.00 L",
-    status: "Limited Units",
-    description: "Experience the pinnacle of luxury living at Apex Villas. These meticulously designed 4BHK villas offer a blend of modern architecture and nature, featuring private gardens, smart home automation, and world-class club facilities.",
-    features: ["Luxury Amenities", "Park Facing", "High ROI"],
-    amenities: [
-      "Clubhouse & Gym",
-      "Swimming Pool",
-      "Smart Home Automation",
-      "Private Lawn",
-      "Modular Kitchen",
-      "Vastu Compliant"
-    ],
-    gallery: [
-      "/src/assets/hero.png",
-      "/src/assets/living_room.png",
-      "/src/assets/kitchen.png"
-    ],
-    specifications: {
-      "Project Type": "4BHK Luxury Villas",
-      "Approval": "LDA Approved",
-      "Possession": "Ready to Move",
-      "Villa Size": "3200 Sq. Ft.",
-      "Total Units": "42 Units"
-    }
-  },
-  {
-    id: "greenwood-estate",
-    title: "Greenwood Estate",
+    id: "nature-green",
+    title: "Nature Green",
     location: "Kisan Path, Lucknow",
-    image: "/src/assets/hero.png",
-    type: "Villas",
-    price: "₹95.00 L",
+    image: "/src/assets/nature_green.png",
+    type: "Eco Plot",
+    price: "₹1,150 /sq.ft",
     status: "Available",
-    description: "Greenwood Estate provides expansive luxury villas surrounded by lush green landscapes. Offering premium amenities, wide open spaces, and modern architecture, this development is ideal for families seeking peace and comfort away from the city's hustle.",
-    features: ["Expansive Lawns", "Gated Security", "Premium Fittings"],
+    description: "Nature Green is an eco-conscious development that redefines sustainable living. With dedicated organic gardens and rainwater harvesting, it offers a refreshing lifestyle away from the urban chaos.",
+    features: ["Eco-Friendly", "Lush Landscapes", "Organic Gardens"],
     amenities: [
-      "Clubhouse & Gym",
-      "Jogging Track",
-      "24/7 Security",
-      "Power Backup",
-      "Children's Play Area",
-      "Community Hall"
+      "Rainwater Harvesting",
+      "Solar Lighting",
+      "Organic Landscaping",
+      "Meditation Zone",
+      "Kids Play Area",
+      "Eco-Walkways"
     ],
     gallery: [
-      "/src/assets/hero.png",
+      "/src/assets/nature_green.png",
       "/src/assets/living_room.png",
       "/src/assets/kitchen.png"
     ],
     specifications: {
-      "Project Type": "3BHK & 4BHK Villas",
-      "Approval": "LDA Approved",
-      "Possession": "Ready to Move",
-      "Total Area": "15 Acres",
-      "Total Units": "60 Units"
+      "Project Type": "Eco-Residential Plots",
+      "Location": "Outer Ring Road",
+      "Possession": "In Progress",
+      "Total Area": "18 Acres",
+      "Theme": "Sustainable Living"
     }
   },
   {
-    id: "royal-city",
-    title: "Royal City",
-    location: "Sultanpur Road",
-    image: "/src/assets/living_room.png",
-    type: "Plots",
-    price: "₹21.50 L",
-    status: "Fast Selling",
-    description: "Royal City is a massive integrated township offering affordable and premium plots. With direct access to major highways and upcoming educational institutions, it promises excellent future appreciation and world-class living.",
-    features: ["Integrated Township", "Prime Location", "High Appreciation"],
+    id: "shivay-residency",
+    title: "Shivay Residency",
+    location: "Raebareli Road, Lucknow",
+    image: "/src/assets/shivdhara.png",
+    type: "Residential Plot",
+    price: "₹1,550 /sq.ft",
+    status: "Hot Selling",
+    description: "Shivay Residency is PBD Group's premium Jila Panchayat approved project. Offering the highest level of regulatory clearance, it provides complete peace of mind for families and investors looking for secure land ownership in Lucknow's growth corridor.",
+    features: ["Jila Panchayat Approved", "Premium Plots", "High Appreciation"],
     amenities: [
-      "Wide Internal Roads",
-      "Shopping Complex",
-      "Parks & Recreation",
-      "Water Treatment Plant",
-      "Underground Wiring",
-      "Sports Facilities"
+      "Community Center",
+      "Modern Clubhouse",
+      "Sports Facilities",
+      "Wide Arterial Roads",
+      "24/7 CCTV",
+      "Landscaped Parks"
     ],
     gallery: [
-      "/src/assets/living_room.png",
+      "/src/assets/shivdhara.png",
       "/src/assets/hero.png",
       "/src/assets/kitchen.png"
+    ],
+    specifications: {
+      "Project Type": "Modern Residential Plots",
+      "Location": "Raebareli Road",
+      "Possession": "Immediate Registry",
+      "Total Area": "20 Acres",
+      "Units": "Available in Phases"
+    }
+  },
+  {
+    id: "muraliya-garden",
+    title: "Muraliya Garden",
+    location: "Raebareli Road corridor, Lucknow",
+    image: "/src/assets/muraliya_garden.png",
+    type: "Residential Plot",
+    price: "₹1,200 /sq.ft",
+    status: "Active",
+    description: "Muraliya Garden offers a vibrant residential location with all essential utilities ready. Known for its decorative entrance and high-quality maintenance, it's a preferred choice for families planning to build immediately.",
+    features: ["Utilities Ready", "Decorative Entrance", "High Demand"],
+    amenities: [
+      "Ready Electricity",
+      "Internal Water Tank",
+      "Paved Internal Roads",
+      "Main Road Frontage",
+      "Security Guards",
+      "Daily Maintenance"
+    ],
+    gallery: [
+      "/src/assets/muraliya_garden.png",
+      "/src/assets/living_room.png",
+      "/src/assets/hero.png"
     ],
     specifications: {
       "Project Type": "Residential Plots",
-      "Approval": "RERA Approved",
-      "Possession": "Immediate Registry",
-      "Total Area": "50 Acres",
-      "Plot Sizes": "1000 - 3000 Sq. Ft."
+      "Location": "Near Khujhauli",
+      "Possession": "Ready to Build",
+      "Total Area": "8 Acres",
+      "Plot Sizes": "800, 1000, 1200 Sq. Ft."
     }
   }
 ];
+

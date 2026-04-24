@@ -134,9 +134,9 @@
 }
 
 .action-btn:hover {
-  border-color: var(--accent-gold);
-  color: var(--accent-gold);
-  background: #fdfaf3;
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+  background: #f5f8ff;
 }
 
 .project-grid {

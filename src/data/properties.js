@@ -1,57 +1,72 @@
 export const propertiesData = [
   {
     id: 1,
-    name: "Sarvodaya City Villa",
-    price: "₹85,00,000",
-    priceValue: 8500000,
-    bedrooms: 4,
-    bathrooms: 4,
-    floorArea: "3,200 sq ft",
-    propertyType: "Detached Villa",
-    development: "Gated Development",
-    location: "Sultanpur Road",
-    image: "/src/assets/living_room.png"
+    name: "Rajgharana Premium Plot",
+    price: "₹18,12,500",
+    priceValue: 1812500,
+    size: "1,250 sq ft",
+    propertyType: "Residential Plot",
+    development: "Gated Colony",
+    location: "Raebareli Road",
+    image: "/src/assets/rajgharana.png"
   },
   {
     id: 2,
-    name: "Sarkar Town Estate",
-    price: "₹1,20,00,000",
-    priceValue: 12000000,
-    bedrooms: 5,
-    bathrooms: 5,
-    floorArea: "4,500 sq ft",
-    propertyType: "Luxury Estate",
-    development: "Gated Development",
-    location: "Kisan Path",
-    image: "/src/assets/hero.png"
+    name: "Hanumant Dham Plot",
+    price: "₹12,50,000",
+    priceValue: 1250000,
+    size: "1,000 sq ft",
+    propertyType: "Residential Plot",
+    development: "Serene Community",
+    location: "Raebareli Road",
+    image: "/src/assets/hanumant_dham.png"
   },
   {
     id: 3,
-    name: "Apex Tower Apartment",
-    price: "₹65,00,000",
-    priceValue: 6500000,
-    bedrooms: 3,
-    bathrooms: 3,
-    floorArea: "1,800 sq ft",
-    propertyType: "Apartment",
-    development: "High-Rise",
-    location: "Outer Ring Road",
-    image: "/src/assets/kitchen.png"
+    name: "Barsana Estate Luxury Plot",
+    price: "₹24,75,000",
+    priceValue: 2475000,
+    size: "1,500 sq ft",
+    propertyType: "Luxury Plot",
+    development: "Underground Utilities",
+    location: "Sultanpur Road",
+    image: "/src/assets/barsana_estate.png"
   },
   {
     id: 4,
-    name: "Greenwood Villa",
-    price: "₹95,00,000",
-    priceValue: 9500000,
-    bedrooms: 4,
-    bathrooms: 3,
-    floorArea: "3,000 sq ft",
-    propertyType: "Detached Villa",
-    development: "Gated Development",
-    location: "Sultanpur Road",
-    image: "/src/assets/hero.png"
+    name: "Nature Green Eco Plot",
+    price: "₹13,80,000",
+    priceValue: 1380000,
+    size: "1,200 sq ft",
+    propertyType: "Eco Plot",
+    development: "Sustainable Project",
+    location: "Kisan Path",
+    image: "/src/assets/nature_green.png"
+  },
+  {
+    id: 5,
+    name: "Shivay Residency Premium Plot",
+    price: "₹23,25,000",
+    priceValue: 2325000,
+    size: "1,500 sq ft",
+    propertyType: "Residential Plot",
+    development: "Jila Panchayat Approved",
+    location: "Raebareli Road",
+    image: "/src/assets/shivdhara.png"
+  },
+  {
+    id: 6,
+    name: "Muraliya Garden Plot",
+    price: "₹9,60,000",
+    priceValue: 960000,
+    size: "800 sq ft",
+    propertyType: "Residential Plot",
+    development: "Ready to Build",
+    location: "Raebareli Road",
+    image: "/src/assets/muraliya_garden.png"
   }
 ];
 
-export const locations = ["All Locations", "Raebareli Road", "Sultanpur Highway", "Near Nayra Petrol Pump"];
-export const propertyTypes = ["All Types", "Plots", "Commercial", "Villas"];
+export const locations = ["All Locations", "Raebareli Road", "Sultanpur Road", "Kisan Path"];
+export const propertyTypes = ["All Types", "Residential Plot", "Luxury Plot", "Eco Plot"];
+

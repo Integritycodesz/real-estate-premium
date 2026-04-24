@@ -75,18 +75,18 @@
 }
 
 .calc-icon-wrapper {
-  background: linear-gradient(135deg, rgba(184, 134, 11, 0.2) 0%, rgba(184, 134, 11, 0) 100%);
+  background: linear-gradient(135deg, rgba(200, 20, 20, 0.2) 0%, rgba(200, 20, 20, 0) 100%);
   width: 60px;
   height: 60px;
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(184, 134, 11, 0.2);
+  border: 1px solid rgba(200, 20, 20, 0.2);
 }
 
 .calc-icon {
-  color: var(--accent-gold);
+  color: #ffffff;
 }
 
 .calc-header h3 {
@@ -132,7 +132,7 @@
 }
 
 .input-value {
-  color: var(--accent-gold);
+  color: var(--primary-red);
   font-size: 1.25rem;
   font-family: var(--font-body);
   font-weight: 700;
@@ -146,7 +146,7 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   outline: none;
-  background-image: linear-gradient(var(--accent-gold), var(--accent-gold));
+  background-image: linear-gradient(var(--primary-red), var(--primary-red));
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -156,9 +156,9 @@
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  background: var(--accent-gold);
-  border: 3px solid #0c162d;
-  box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+  background: var(--primary-red);
+  border: 3px solid var(--primary-blue);
+  box-shadow: 0 0 20px rgba(200, 20, 20, 0.4);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -176,13 +176,13 @@
 }
 
 .custom-select option {
-  background-color: #0c162d;
+  background-color: var(--primary-blue);
   color: white;
 }
 
 .calc-result-box {
-  background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(184, 134, 11, 0.02) 100%);
-  border: 1px solid rgba(184, 134, 11, 0.2);
+  background: linear-gradient(135deg, rgba(200, 20, 20, 0.15) 0%, rgba(200, 20, 20, 0.05) 100%);
+  border: 1px solid rgba(200, 20, 20, 0.3);
   border-radius: 16px;
   padding: 35px;
   text-align: center;
@@ -195,17 +195,18 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(184, 134, 11, 0.8);
+  color: #ffffff;
   margin-bottom: 12px;
   font-weight: 700;
+  opacity: 0.8;
 }
 
 .result-value {
   font-family: var(--font-heading);
   font-size: 3.2rem;
   font-weight: 700;
-  color: var(--accent-gold);
-  text-shadow: 0 0 40px rgba(184, 134, 11, 0.4);
+  color: #ffffff;
+  text-shadow: 0 0 40px rgba(200, 20, 20, 0.4);
 }
 
 .currency-symbol {

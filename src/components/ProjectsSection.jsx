@@ -38,7 +38,7 @@ const ProjectsSection = () => {
     ? projects.slice(0, 3) 
     : projects.filter(p => p.type === filter).slice(0, 3);
 
-  const categories = ['All', 'Plots', 'Villas', 'Commercial'];
+  const categories = ['All', 'Residential Plot', 'Luxury Plot', 'Eco Plot'];
 
   return (
     <section className="section projects-section" id="projects">

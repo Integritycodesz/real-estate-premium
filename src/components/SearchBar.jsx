@@ -7,8 +7,6 @@ const SearchBar = ({ onSearch }) => {
   const [filters, setFilters] = useState({
     location: 'All Locations',
     type: 'All Types',
-    bedrooms: 'Any',
-    bathrooms: 'Any',
     minPrice: '',
     maxPrice: ''
   });
@@ -33,37 +31,13 @@ const SearchBar = ({ onSearch }) => {
           </div>
           
           <div className="search-field">
-            <label>Property type</label>
+            <label>Plot type</label>
             <select name="type" value={filters.type} onChange={handleChange}>
               {propertyTypes.map(type => <option key={type} value={type}>{type}</option>)}
             </select>
           </div>
 
-          <div className="search-field">
-            <label>Bedrooms</label>
-            <select name="bedrooms" value={filters.bedrooms} onChange={handleChange}>
-              <option value="Any">Any</option>
-              <option value="1">1+</option>
-              <option value="2">2+</option>
-              <option value="3">3+</option>
-              <option value="4">4+</option>
-              <option value="5">5+</option>
-            </select>
-          </div>
-
-          <div className="search-field">
-            <label>Bathrooms</label>
-            <select name="bathrooms" value={filters.bathrooms} onChange={handleChange}>
-              <option value="Any">Any</option>
-              <option value="1">1+</option>
-              <option value="2">2+</option>
-              <option value="3">3+</option>
-              <option value="4">4+</option>
-              <option value="5">5+</option>
-            </select>
-          </div>
-
-          <div className="search-field">
+          <div className="search-field price-field">
             <label>Price Range (₹)</label>
             <div className="price-inputs">
               <input type="number" name="minPrice" placeholder="Min" value={filters.minPrice} onChange={handleChange} />
@@ -81,5 +55,6 @@ const SearchBar = ({ onSearch }) => {
     </div>
   );
 };
+
 
 export default SearchBar;

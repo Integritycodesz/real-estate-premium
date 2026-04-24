@@ -84,7 +84,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: var(--accent-gold);
+  background: var(--primary-red);
   color: white;
   padding: 6px 15px;
   font-size: 0.75rem;
@@ -93,12 +93,13 @@
   letter-spacing: 1px;
   border-radius: 4px;
   z-index: 2;
+  box-shadow: 0 4px 10px rgba(200, 20, 20, 0.2);
 }
 
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+  background: linear-gradient(to top, rgba(10, 40, 110, 0.95) 0%, rgba(10, 40, 110, 0.4) 50%, rgba(10, 40, 110, 0.1) 100%);
   z-index: 1;
 }
 
@@ -109,9 +110,9 @@
 }
 
 .project-location {
-  color: var(--accent-gold);
+  color: #ff4d4d;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
   display: block;
 }
@@ -144,7 +145,7 @@
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--accent-gold);
+  background: var(--primary-red);
   border-radius: 50%;
 }
 

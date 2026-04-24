@@ -165,7 +165,7 @@ const ProjectDetail = () => {
                     Schedule a Visit
                   </button>
                   <a 
-                    href={`https://wa.me/919876543210?text=Hello, I'm interested in ${project.title} located at ${project.location}. Please share more details.`}
+                    href={`https://wa.me/917054550296?text=Hello, I'm interested in ${project.title} located at ${project.location}. Please share more details.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp w-full btn-large"

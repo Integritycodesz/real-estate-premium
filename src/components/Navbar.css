@@ -28,27 +28,52 @@
   max-width: 1400px;
 }
 
-.navbar-logo h2 {
+.navbar-logo .logo-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pbd-text {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 1px;
-  transition: color 0.4s ease;
-}
-
-.navbar.scrolled .navbar-logo h2 {
-  color: var(--text-primary);
-}
-
-.navbar-logo span {
-  color: var(--accent-gold);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-red);
   letter-spacing: 2px;
+  line-height: 1;
 }
+
+.logo-sub {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-sub span:first-child {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: 1px;
+}
+
+.logo-sub span:last-child {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--primary-blue);
+  opacity: 0.8;
+}
+
+.navbar.scrolled .logo-sub span {
+  color: var(--primary-blue);
+}
+
+.navbar:not(.scrolled) .logo-sub span {
+  color: #ffffff; /* Contrast on transparent hero */
+}
+
+
 
 .navbar-menu {
   display: flex;
@@ -73,7 +98,7 @@
 }
 
 .navbar-menu li a:hover {
-  color: var(--accent-gold);
+  color: var(--primary-red);
 }
 
 .navbar-menu li a::after {
@@ -83,7 +108,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--accent-gold);
+  background-color: var(--primary-red);
   transition: width 0.3s ease;
 }
 
@@ -92,29 +117,27 @@
 }
 
 .navbar-btn {
-  background: transparent;
+  background: var(--primary-red);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: none;
   padding: 12px 28px;
   border-radius: 30px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(200, 20, 20, 0.2);
 }
 
 .navbar.scrolled .navbar-btn {
-  color: var(--text-primary);
-  border-color: var(--border-subtle);
+  background: var(--primary-red);
+  color: #ffffff;
 }
 
 .navbar-btn:hover {
-  background: #ffffff;
-  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 20, 20, 0.3);
+  filter: brightness(1.1);
 }
 
-.navbar.scrolled .navbar-btn:hover {
-  background: var(--text-primary);
-  color: #fff;
-}
