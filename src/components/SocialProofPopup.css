@@ -1,0 +1,95 @@
+.social-proof-popup {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 9997; /* Below custom cursor but high enough */
+  transform: translateX(-120%);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  max-width: 350px;
+  border: 1px solid rgba(10, 40, 110, 0.05);
+}
+
+.social-proof-popup.visible {
+  transform: translateX(0);
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(10, 40, 110, 0.2);
+}
+
+.social-content {
+  flex: 1;
+}
+
+.social-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.loc {
+  font-weight: 600;
+}
+
+.social-action {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.project {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+.social-time {
+  margin: 4px 0 0;
+  font-size: 0.7rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.social-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.social-close:hover {
+  color: var(--primary-red);
+}
+
+@media (max-width: 768px) {
+  .social-proof-popup {
+    bottom: 90px; /* Above mobile menu if exists */
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+}

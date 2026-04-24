@@ -1,5 +1,5 @@
-import React from 'react';
 import HeroSection from '../components/HeroSection';
+import FlashDealsBanner from '../components/FlashDealsBanner';
 import AboutSection from '../components/AboutSection';
 import WhyInvestSection from '../components/WhyInvestSection';
 import ProjectsSection from '../components/ProjectsSection';
@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <div className="home-page fade-in">
       <HeroSection />
+      <FlashDealsBanner />
       
       <div className="reveal">
         <AboutSection />

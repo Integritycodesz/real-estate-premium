@@ -15,6 +15,7 @@ import {
   X
 } from 'lucide-react';
 import InquiryForm from '../components/InquiryForm';
+import FlashDealsBanner from '../components/FlashDealsBanner';
 import './ProjectDetail.css';
 
 const ProjectDetail = () => {
@@ -44,6 +45,13 @@ const ProjectDetail = () => {
     );
   }
 
+  const handleShare = () => {
+    const shareUrl = window.location.href;
+    const shareText = `Check out this premium project "${project.title}" at ${project.location} on PBD Groups:`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + "\n" + shareUrl)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="project-detail-page fade-in">
       {/* Gallery Modal */}
@@ -64,6 +72,8 @@ const ProjectDetail = () => {
         </div>
       )}
 
+      <FlashDealsBanner />
+
       {/* Dynamic Header / Breadcrumb */}
       <div className="project-nav-bar">
         <div className="container">
@@ -72,7 +82,7 @@ const ProjectDetail = () => {
             <span>Back to Projects</span>
           </Link>
           <div className="project-actions-quick">
-            <button className="action-btn"><Share2 size={18} /></button>
+            <button className="action-btn" onClick={handleShare} title="Share on WhatsApp"><Share2 size={18} /></button>
             <button className="action-btn"><Heart size={18} /></button>
           </div>
         </div>
@@ -142,6 +152,59 @@ const ProjectDetail = () => {
                     <span className="spec-value">{value}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Location Advantage Section */}
+            <div className="project-section location-advantage-section">
+              <span className="subtitle-small">LOCATION ADVANTAGE</span>
+              <h2 className="section-title-large">Connectivity & <span className="text-gold">Proximity</span></h2>
+              <div className="location-divider"></div>
+              
+              <div className="connectivity-grid">
+                <div className="connectivity-list">
+                  <div className="connectivity-item">
+                    <span className="landmark">Sultanpur Highway</span>
+                    <span className="time text-gold">Immediate</span>
+                  </div>
+                  <div className="connectivity-item">
+                    <span className="landmark">Outer Ring Road</span>
+                    <span className="time text-gold">5 minutes</span>
+                  </div>
+                  <div className="connectivity-item">
+                    <span className="landmark">Shaheed Path</span>
+                    <span className="time text-gold">10 minutes</span>
+                  </div>
+                  <div className="connectivity-item">
+                    <span className="landmark">Lulu Mall / Plassio</span>
+                    <span className="time text-gold">15 minutes</span>
+                  </div>
+                  <div className="connectivity-item">
+                    <span className="landmark">Lucknow Airport</span>
+                    <span className="time text-gold">20 minutes</span>
+                  </div>
+                  <div className="connectivity-item">
+                    <span className="landmark">Lucknow Railway Station</span>
+                    <span className="time text-gold">25 minutes</span>
+                  </div>
+                </div>
+                
+                <div className="location-map-wrapper">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56963.53507198755!2d80.95759795000001!3d26.7536965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3893693e507%3A0x7d67280f5313d39c!2sRaebareli%20Rd%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1714044000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0, borderRadius: '20px' }} 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Project Location Map"
+                  ></iframe>
+                  <div className="map-overlay-btn">
+                    <span>Open in Maps</span>
+                    <Maximize2 size={14} />
+                  </div>
+                </div>
               </div>
             </div>
 

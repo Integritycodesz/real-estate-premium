@@ -29,6 +29,7 @@
 
   /* Dark Section Tokens */
   --bg-dark: #0A286E; /* Using Logo Blue for dark sections */
+  --bg-footer: #06112c; /* Slightly darker than primary blue for separation */
   --text-on-dark: #ffffff;
   --text-on-dark-muted: rgba(255, 255, 255, 0.7);
 }

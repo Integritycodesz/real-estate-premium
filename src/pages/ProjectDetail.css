@@ -91,7 +91,7 @@
   margin-bottom: 40px;
   background: #fff;
   position: sticky;
-  top: 80px; /* Below Navbar */
+  top: 128px; /* Below Navbar (80px) + FlashDealsBanner (48px) */
   z-index: 90;
 }
 
@@ -466,6 +466,130 @@
     font-size: 2.5rem;
   }
   .project-gallery-hero {
+    height: 350px;
+  }
+}
+/* Location Advantage Section */
+.location-advantage-section {
+  padding-top: 40px;
+}
+
+.subtitle-small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-title-large {
+  font-size: 2.8rem;
+  font-family: var(--font-heading);
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.location-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin-bottom: 40px;
+}
+
+.connectivity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.connectivity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.connectivity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.connectivity-item:hover {
+  border-left-color: var(--accent-gold);
+  transform: translateX(10px);
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.connectivity-item .landmark {
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1rem;
+}
+
+.connectivity-item .time {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.location-map-wrapper {
+  position: relative;
+  height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.map-overlay-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.map-overlay-btn:hover {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .connectivity-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title-large {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .connectivity-item {
+    padding: 15px 20px;
+  }
+  
+  .connectivity-item .landmark {
+    font-size: 0.9rem;
+  }
+  
+  .location-map-wrapper {
     height: 350px;
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
+import FlashDealsBanner from '../components/FlashDealsBanner';
 import { ProjectCard } from '../components/ProjectsSection';
 import { projects } from '../data/projects';
 import '../components/ProjectsSection.css';
@@ -80,6 +81,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
+
+      <FlashDealsBanner />
       
       <div className="container">
 

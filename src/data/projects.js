@@ -6,7 +6,7 @@ export const projects = [
     image: "/src/assets/rajgharana.png",
     type: "Residential Plot",
     price: "₹1,450 /sq.ft",
-    status: "Delivered",
+    status: "60% OFF",
     description: "Rajgharana is PBD Group's flagship residential development. A fully delivered and thriving community, it offers premium plots with modern infrastructure, wide roads, and a secure environment for families to build their dream homes.",
     features: ["Fully Delivered", "Grand Entrance", "Thriving Community"],
     amenities: [
@@ -37,7 +37,7 @@ export const projects = [
     image: "/src/assets/hanumant_dham.png",
     type: "Residential Plot",
     price: "₹1,250 /sq.ft",
-    status: "Active",
+    status: "SELLING FAST",
     description: "Hanumant Dham is a serene residential community designed for those seeking peace and spiritual connectivity. Strategically located near major landmarks, it offers well-planned plots with lush green spaces and modern amenities.",
     features: ["Near SGPGI", "Spiritual Vibe", "Legally Verified"],
     amenities: [
@@ -68,7 +68,7 @@ export const projects = [
     image: "/src/assets/barsana_estate.png",
     type: "Luxury Plot",
     price: "₹1,650 /sq.ft",
-    status: "Hot Selling",
+    status: "LIMITED OFFER",
     description: "Barsana Estate represents the pinnacle of modern plotting infrastructure. Featuring underground electrical lines and advanced sewage systems, it provides a clean, clutter-free environment for a premium lifestyle.",
     features: ["Underground Wiring", "High ROI", "Premium Infra"],
     amenities: [
@@ -99,7 +99,7 @@ export const projects = [
     image: "/src/assets/nature_green.png",
     type: "Eco Plot",
     price: "₹1,150 /sq.ft",
-    status: "Available",
+    status: "60% OFF",
     description: "Nature Green is an eco-conscious development that redefines sustainable living. With dedicated organic gardens and rainwater harvesting, it offers a refreshing lifestyle away from the urban chaos.",
     features: ["Eco-Friendly", "Lush Landscapes", "Organic Gardens"],
     amenities: [
@@ -130,7 +130,7 @@ export const projects = [
     image: "/src/assets/shivdhara.png",
     type: "Residential Plot",
     price: "₹1,550 /sq.ft",
-    status: "Hot Selling",
+    status: "SELLING FAST",
     description: "Shivay Residency is PBD Group's premium Jila Panchayat approved project. Offering the highest level of regulatory clearance, it provides complete peace of mind for families and investors looking for secure land ownership in Lucknow's growth corridor.",
     features: ["Jila Panchayat Approved", "Premium Plots", "High Appreciation"],
     amenities: [
@@ -161,7 +161,7 @@ export const projects = [
     image: "/src/assets/muraliya_garden.png",
     type: "Residential Plot",
     price: "₹1,200 /sq.ft",
-    status: "Active",
+    status: "READY TO BUILD",
     description: "Muraliya Garden offers a vibrant residential location with all essential utilities ready. Known for its decorative entrance and high-quality maintenance, it's a preferred choice for families planning to build immediately.",
     features: ["Utilities Ready", "Decorative Entrance", "High Demand"],
     amenities: [

@@ -1,11 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import FlashDealsBanner from './components/FlashDealsBanner';
+import LeadPopup from './components/LeadPopup';
+import SocialProofPopup from './components/SocialProofPopup';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import ProjectDetail from './pages/ProjectDetail';
 import CustomCursor from './components/CustomCursor';
 import ScrollReveal from './components/ScrollReveal';
@@ -18,6 +22,8 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="app-container">
+        <LeadPopup />
+        <SocialProofPopup />
         <CustomCursor />
         <ScrollReveal />
         <FloatingWhatsApp />
@@ -28,6 +34,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
             <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -29,7 +30,7 @@ const AboutSection = () => {
               <cite>— Managing Director, PBD Groups</cite>
             </div>
             
-            <button className="btn-story">Our Full Story →</button>
+            <Link to="/about" className="btn-story">Our Full Story →</Link>
           </div>
 
           <div className="features-grid">

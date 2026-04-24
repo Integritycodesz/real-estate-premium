@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, CheckCircle2 } from 'lucide-react';
+import FlashDealsBanner from '../components/FlashDealsBanner';
 import './PageStyles.css';
 
 const Contact = () => {
@@ -54,6 +55,8 @@ const Contact = () => {
           </div>
         </div>
       </header>
+
+      <FlashDealsBanner />
 
       <div className="container">
 

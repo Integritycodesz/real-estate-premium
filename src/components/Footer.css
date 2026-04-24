@@ -1,7 +1,9 @@
 .footer {
-  background-color: var(--primary-blue);
+  background-color: var(--bg-footer);
   color: #ffffff;
   padding: 100px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .footer-container {

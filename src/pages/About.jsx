@@ -1,4 +1,5 @@
 import React from 'react';
+import FlashDealsBanner from '../components/FlashDealsBanner';
 import './PageStyles.css';
 
 const About = () => {
@@ -52,6 +53,8 @@ const About = () => {
           </div>
         </div>
       </header>
+
+      <FlashDealsBanner />
 
       <div className="container">
 
@@ -148,7 +151,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px' }}>
+        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px', marginBottom: '80px' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>What We Stand For — Our Values</h2>
           <h3 style={{ color: 'var(--accent-gold)', marginBottom: '20px', fontSize: '1.4rem' }}>Trust Is Not a Tagline. It's Our Track Record.</h3>
           <p style={{ marginBottom: '40px', fontSize: '1.1rem' }}>At PBD, we don't frame trust as a value we aspire to. We point to it. Two delivered projects. Hundreds of families. Zero broken promises.</p>
@@ -179,70 +182,6 @@ const About = () => {
                   </div>
                 </React.Fragment>
               ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px', marginBottom: '100px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Meet the Team — The People Behind Your Trust</h2>
-          <p style={{ marginBottom: '50px', fontSize: '1.1rem' }}>We're not a faceless organization. We're a close-knit team that has collectively guided hundreds of families through one of life's most significant financial decisions — with patience, transparency, and genuine care.</p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-
-            {/* Team Member 1 */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '30px', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
-              {/* Placeholder for Photo */}
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'var(--bg-color)', border: '1px dashed var(--border-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>[Photo]</span>
-              </div>
-              <h3 style={{ color: 'var(--accent-gold)', marginBottom: '5px' }}>Narendra Yadav</h3>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontWeight: '500' }}>Founder & CEO</p>
-              <p style={{ flexGrow: '1' }}>The man who started PBD is the same man who personally oversees every project's legal compliance, approval process, and customer experience. Narendra believes that a developer's reputation is built project by project, family by family — and he leads PBD with that weight felt every day.</p>
-              <blockquote style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '15px', fontStyle: 'italic', marginTop: '20px', color: 'var(--accent-gold)' }}>
-                "I don't build projects. I build the kind of confidence that lets a family sleep peacefully after signing their documents."
-              </blockquote>
-            </div>
-
-            {/* Team Member 2 */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '30px', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
-              {/* Placeholder for Photo */}
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'var(--bg-color)', border: '1px dashed var(--border-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>[Photo]</span>
-              </div>
-              <h3 style={{ color: 'var(--accent-gold)', marginBottom: '5px' }}>Dhiraj Yadav</h3>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontWeight: '500' }}>Director</p>
-              <p style={{ flexGrow: '1' }}>Dhiraj leads the operational and development side of PBD — from site planning and layout design to infrastructure execution and handover. His sharp attention to detail ensures every road is properly laid, every boundary is accurately demarcated, and every colony is delivered to the standard the buyer was promised.</p>
-              <blockquote style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '15px', fontStyle: 'italic', marginTop: '20px', color: 'var(--accent-gold)' }}>
-                "Delivery is the only marketing that truly works. When we hand over a plot and the buyer sees exactly what they signed up for, that's when the real trust is built."
-              </blockquote>
-            </div>
-
-            {/* Team Member 3 */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '30px', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
-              {/* Placeholder for Photo */}
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'var(--bg-color)', border: '1px dashed var(--border-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>[Photo]</span>
-              </div>
-              <h3 style={{ color: 'var(--accent-gold)', marginBottom: '5px' }}>Priyanka</h3>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontWeight: '500' }}>Senior Sales Manager</p>
-              <p style={{ flexGrow: '1' }}>Priyanka is often the first voice a potential buyer hears at PBD. With deep experience in understanding buyer needs and matching them to the right project, Priyanka is known for her zero-pressure approach — she doesn't sell plots, she helps families make informed decisions. Her clients often say they felt guided, not sold.</p>
-              <blockquote style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '15px', fontStyle: 'italic', marginTop: '20px', color: 'var(--accent-gold)' }}>
-                "The best sale I can make is one where the buyer thanks me six months later for helping them make the right choice."
-              </blockquote>
-            </div>
-
-            {/* Team Member 4 */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '30px', borderRadius: '16px', display: 'flex', flexDirection: 'column' }}>
-              {/* Placeholder for Photo */}
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'var(--bg-color)', border: '1px dashed var(--border-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '25px' }}>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>[Photo]</span>
-              </div>
-              <h3 style={{ color: 'var(--accent-gold)', marginBottom: '5px' }}>Dipankar</h3>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontWeight: '500' }}>Sales & Client Relations</p>
-              <p style={{ flexGrow: '1' }}>Dipankar is the steady presence that keeps buyers informed, confident, and supported from the moment they show interest through final registration. He manages follow-ups, documentation coordination, and post-sale communication — ensuring every buyer feels like a priority, not a number.</p>
-              <blockquote style={{ borderLeft: '3px solid var(--accent-gold)', paddingLeft: '15px', fontStyle: 'italic', marginTop: '20px', color: 'var(--accent-gold)' }}>
-                "A buyer who knows exactly what's happening at every step is a buyer who trusts us. That's the only way I like to work."
-              </blockquote>
             </div>
           </div>
         </div>

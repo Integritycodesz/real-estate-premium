@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import './ProjectsSection.css';
 
-export const ProjectCard = ({ id, title, location, image, features, type, price }) => {
+export const ProjectCard = ({ id, title, location, image, features, type, price, status }) => {
   return (
     <div className="project-card" data-type={type}>
       <div className="project-image-wrapper">
@@ -11,7 +11,7 @@ export const ProjectCard = ({ id, title, location, image, features, type, price 
           className="project-image" 
           style={{ backgroundImage: `url(${image})` }}
         ></div>
-        <div className="project-status">Available</div>
+        <div className="project-status">{status || 'Available'}</div>
         <div className="project-overlay"></div>
       </div>
       <div className="project-content">
