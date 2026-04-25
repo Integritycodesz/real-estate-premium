@@ -2,6 +2,7 @@
 .project-detail-page {
   background-color: #fcfcfc;
   padding-bottom: 80px;
+  overflow-x: hidden;
 }
 
 /* Gallery Modal */
@@ -67,12 +68,11 @@
 
 /* Breadcrumb Bar */
 .project-nav-bar {
-  background: #fff;
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 15px 0;
+  background: transparent;
+  padding: 10px 0;
   position: sticky;
-  top: 80px;
-  z-index: 100;
+  top: 132px;
+  z-index: 1500;
 }
 
 .nav-bar-flex {
@@ -98,14 +98,17 @@
 /* Main Grid Layout */
 .project-detail-grid {
   display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 60px;
-  margin-top: 40px;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
+  margin-top: 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Left Column */
 .project-main-header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .header-meta {
@@ -133,12 +136,12 @@
 .badge-status.new-launch { background: #e3f2fd; color: #2196f3; }
 
 .project-title-large {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   line-height: 1.1;
-  color: var(--text-primary);
+  color: var(--primary-blue);
   letter-spacing: -0.02em;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .project-location-full {
@@ -151,7 +154,7 @@
 
 /* Hero Gallery */
 .project-gallery-section {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .gallery-main-frame {
@@ -194,7 +197,7 @@
 
 /* Detail Blocks */
 .detail-block {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .detail-block h3 {
@@ -369,10 +372,10 @@
 /* Sticky Sidebar */
 .sidebar-sticky-box {
   position: sticky;
-  top: 130px;
+  top: 190px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .price-card-glass {
@@ -395,11 +398,21 @@
 
 .main-price {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: var(--primary-blue);
   margin-bottom: 8px;
   letter-spacing: -1px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.currency-symbol {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  font-weight: 600;
 }
 
 .price-terms {

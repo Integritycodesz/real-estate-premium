@@ -35,6 +35,10 @@
 }
 
 
+html {
+  font-size: 90%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -293,7 +297,7 @@ section {
   border: 1px solid var(--primary-red);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 29999;
+  z-index: 99999;
   transform: translate(-50%, -50%);
   transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
 }

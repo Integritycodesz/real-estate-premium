@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send, Phone, User, Zap, Star, ShieldCheck, MapPin, Calendar } from 'lucide-react';
 import './LeadPopup.css';
+import PlotImg from '../assets/about/about_hero.png';
 
 const LeadPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +70,7 @@ const LeadPopup = () => {
         </button>
         
         <div className="popup-body">
-          <div className="popup-image-side">
+          <div className="popup-image-side" style={{ backgroundImage: `url(${PlotImg})` }}>
             <div className="popup-image-overlay">
               <div className="popup-badge-group">
                 <div className="popup-badge gold">
@@ -96,10 +97,6 @@ const LeadPopup = () => {
           
           <div className="popup-form-side">
             <div className="popup-header">
-              <div className="exclusive-tag">
-                <Zap size={16} />
-                <span>URGENT: RAIBARIRLY ROAD GROWTH HUB</span>
-              </div>
               <h2>Limited <span className="text-gold">Verified Plots Available</span></h2>
               <p>Government infrastructure is moving to Raebareli Road. Secure your plot before prices hike further. Register for a free site visit & ROI report.</p>
             </div>
@@ -131,16 +128,23 @@ const LeadPopup = () => {
                 </select>
               </div>
 
-              <div className="popup-input-group">
+              <div className="popup-input-group date-input-group">
                 <div className="input-icon-wrapper">
                   <Calendar size={18} />
                 </div>
-                <input 
-                  type="date" 
-                  required 
-                  onClick={(e) => e.target.showPicker?.()}
-                  placeholder="Preferred Visit Date"
-                />
+                <div className="date-input-wrapper">
+                  <span className="input-pretext">Schedule a meeting:</span>
+                  <input 
+                    type="text"
+                    onFocus={(e) => (e.target.type = "date")}
+                    onBlur={(e) => {
+                      if (!e.target.value) e.target.type = "text";
+                    }}
+                    placeholder=""
+                    required 
+                    onClick={(e) => e.target.showPicker?.()}
+                  />
+                </div>
               </div>
 
               <button 

@@ -84,7 +84,6 @@ const ProjectDetail = () => {
             </Link>
             <div className="project-actions-quick">
               <button className="action-btn" onClick={handleShare} title="Share on WhatsApp"><Share2 size={18} /></button>
-              <button className="action-btn"><Heart size={18} /></button>
             </div>
           </div>
         </div>
@@ -222,7 +221,10 @@ const ProjectDetail = () => {
             <div className="sidebar-sticky-box">
               <div className="price-card-glass">
                 <span className="price-meta">Investment Starts From</span>
-                <div className="main-price">{project.price}</div>
+                <div className="main-price">
+                    <span className="currency-symbol">₹</span>
+                    {project.price.replace('₹', '')}
+                  </div>
                 <p className="price-terms">*All-inclusive transparent pricing.</p>
                 
                 <div className="sidebar-action-group">

@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Calendar, CheckCircle, MapPin } from 'lucide-react';
+import { ShoppingBag, Calendar, CheckCircle, MapPin, Users } from 'lucide-react';
 import './SocialProofPopup.css';
 
 const activities = [
   { name: "Rahul Sharma", location: "Gomti Nagar", action: "booked a site visit", project: "Shivay Residency", icon: <Calendar size={18} /> },
   { name: "Amit Yadav", location: "Aliganj", action: "booked a plot", project: "Rajgharana", icon: <ShoppingBag size={18} /> },
-  { name: "Priya Singh", location: "Indira Nagar", action: "requested a callback", project: "Hanumant Dham", icon: <CheckCircle size={18} /> },
+  { name: "Priya Singh", location: "Indira Nagar", action: "scheduled a meeting", project: "Hanumant Dham", icon: <Users size={18} /> },
   { name: "Suresh Gupta", location: "Vikas Nagar", action: "booked a site visit", project: "Barsana Estate", icon: <Calendar size={18} /> },
-  { name: "Neha Verma", location: "Jankipuram", action: "booked a plot", project: "Muraliya Garden", icon: <ShoppingBag size={18} /> },
+  { name: "Neha Verma", location: "Jankipuram", action: "scheduled a meeting", project: "Muraliya Garden", icon: <Users size={18} /> },
   { name: "Vikram Mehra", location: "Hazratganj", action: "booked a site visit", project: "Nature Green", icon: <Calendar size={18} /> },
   { name: "Anjali Dwivedi", location: "Ashiyana", action: "booked a plot", project: "Shivay Residency", icon: <ShoppingBag size={18} /> },
-  { name: "Rajesh Khanna", location: "LDA Colony", action: "requested floor plans", project: "Rajgharana", icon: <CheckCircle size={18} /> },
+  { name: "Rajesh Khanna", location: "LDA Colony", action: "scheduled a meeting", project: "Rajgharana", icon: <Users size={18} /> },
   { name: "Sandeep Pandey", location: "Telibagh", action: "booked a site visit", project: "Hanumant Dham", icon: <Calendar size={18} /> },
-  { name: "Meera Kapoor", location: "Mahanagar", action: "booked a plot", project: "Barsana Estate", icon: <ShoppingBag size={18} /> },
+  { name: "Meera Kapoor", location: "Mahanagar", action: "scheduled a meeting", project: "Barsana Estate", icon: <Users size={18} /> },
   { name: "Kunal Jaiswal", location: "Chowk", action: "booked a site visit", project: "Shivay Residency", icon: <Calendar size={18} /> },
   { name: "Swati Mishra", location: "Chinhat", action: "booked a plot", project: "Nature Green", icon: <ShoppingBag size={18} /> },
-  { name: "Deepak Soni", location: "Aminabad", action: "requested callback", project: "Rajgharana", icon: <CheckCircle size={18} /> },
+  { name: "Deepak Soni", location: "Aminabad", action: "scheduled a meeting", project: "Rajgharana", icon: <Users size={18} /> },
   { name: "Pooja Trivedi", location: "Charbagh", action: "booked a site visit", project: "Muraliya Garden", icon: <Calendar size={18} /> },
   { name: "Arun Pratap", location: "Dubagga", action: "booked a plot", project: "Barsana Estate", icon: <ShoppingBag size={18} /> },
-  { name: "Sneha Rastogi", location: "Aishbagh", action: "booked a site visit", project: "Shivay Residency", icon: <Calendar size={18} /> },
+  { name: "Sneha Rastogi", location: "Aishbagh", action: "scheduled a meeting", project: "Shivay Residency", icon: <Users size={18} /> },
   { name: "Manoj Bajpai", location: "Alambagh", action: "requested pricing", project: "Hanumant Dham", icon: <CheckCircle size={18} /> },
   { name: "Ritu Saxena", location: "Rajajipuram", action: "booked a plot", project: "Rajgharana", icon: <ShoppingBag size={18} /> },
-  { name: "Gaurav Shukla", location: "Butler Colony", action: "booked a site visit", project: "Nature Green", icon: <Calendar size={18} /> },
+  { name: "Gaurav Shukla", location: "Butler Colony", action: "scheduled a meeting", project: "Nature Green", icon: <Users size={18} /> },
   { name: "Tarun Gill", location: "Sushant Golf City", action: "booked a plot", project: "Shivay Residency", icon: <ShoppingBag size={18} /> }
 ];
 
@@ -62,19 +62,25 @@ const SocialProofPopup = () => {
 
   return (
     <div className={`social-proof-popup ${isVisible ? 'visible' : ''}`}>
-      <div className="social-icon">
-        {activity.icon}
+      <div className="social-icon-wrapper">
+        <div className="social-icon">
+          {activity.icon}
+        </div>
+        <div className="verified-badge">
+          <CheckCircle size={10} fill="var(--accent-gold)" color="#fff" />
+        </div>
       </div>
       <div className="social-content">
         <p className="social-text">
-          <span className="name">{activity.name}</span> from <span className="loc">{activity.location}</span>
+          <span className="name">{activity.name}</span> <span className="action-text">from</span> <span className="loc">{activity.location}</span>
         </p>
         <p className="social-action">
-          {activity.action} for <span className="project">{activity.project}</span>
+          {activity.action} <span className="project-highlight">{activity.project}</span>
         </p>
-        <p className="social-time">Just now</p>
+        <p className="social-time">Recently active</p>
       </div>
-      <div className="social-close" onClick={() => setIsVisible(false)}>×</div>
+      <button className="social-close" onClick={() => setIsVisible(false)} aria-label="Close notification">×</button>
+      <div className="social-progress"></div>
     </div>
   );
 };
