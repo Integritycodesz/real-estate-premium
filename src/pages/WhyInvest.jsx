@@ -16,13 +16,14 @@ const WhyInvest = () => {
       {/* Hero Section */}
       <section className="invest-hero-with-bg" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-overlay"></div>
-        <div className="container hero-content-invest">
-          <span className="badge">Expert Investment Guide</span>
-          <h1>Why Your Next Big Move <br/> Should Be <span className="text-gold">Raebareli Road</span></h1>
-          <p>Lucknow is growing faster than ever, and at the heart of this expansion is Raebareli Road. It's not just a stretch of asphalt; it's a corridor of opportunity where thousands are securing their future. If you've been waiting for the "right time," this is it.</p>
-          <div className="hero-scroll-indicator">
-            <span>Discover why people are choosing us</span>
-            <div className="mouse-icon"></div>
+        <div className="container hero-container-invest">
+          <div className="invest-hero-glass-box">
+            <span className="badge">Expert Investment Guide</span>
+            <h1 className="hero-title-main">Why Your Next Big Move Should Be <span className="text-gold">Raebareli Road</span></h1>
+            <p className="hero-desc-main">Lucknow is growing faster than ever, and at the heart of this expansion is Raebareli Road. It's not just a stretch of asphalt; it's a corridor of opportunity where thousands are securing their future. If you've been waiting for the "right time," this is it.</p>
+            <div className="invest-hero-actions">
+               <button className="btn-primary btn-large" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>Download Investment Guide</button>
+            </div>
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ const SmartLSection = () => {
     {
       icon: <Zap className="text-gold" size={32} />,
       title: "High Liquidity Investment",
-      desc: "Our 'SmartL' strategy ensures your plot is easy to sell in the future because it sits in Lucknow's highest demand growth corridor."
+      desc: "Our strategy ensures your plot is easy to sell in the future because it sits in Lucknow's highest demand growth corridor."
     }
   ];
 
@@ -35,10 +35,10 @@ const SmartLSection = () => {
             <span>PBD EXCLUSIVE</span>
           </div>
           <h2 className="section-title">
-            The <span className="text-gold">SmartL</span> Strategy
+            What Makes <span className="text-gold">PBD Plots Different</span>
           </h2>
           <p className="section-subtitle">
-            Why our plots appreciate faster than the rest of Lucknow.
+            Why PBD plots appreciate faster than others in Lucknow.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const SmartLSection = () => {
               <Landmark size={48} className="text-gold mb-4" />
               <h3>Wealth Creation Through Precision</h3>
               <p>
-                SmartL is PBD Group's proprietary framework for land selection. It stands for <strong>Smart Location & Legal Leverage</strong>. Most developers look for cheap land; we look for "Strategic Land" that guarantees a lifestyle today and a fortune tomorrow.
+                PBD Group's proprietary framework. It stands for <strong>Smart Location & Legal Leverage</strong>. Most developers look for cheap land; we look for "Strategic Land" that guarantees a lifestyle today and a fortune tomorrow.
               </p>
               <div className="smartl-stats">
                 <div className="smartl-stat">

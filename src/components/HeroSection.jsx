@@ -19,12 +19,12 @@ const HeroSection = () => {
 
           <h1 className="hero-title reveal-delay-2">
             Verified Land. Real Delivery. <br />
-            <span className="text-gold">Zero Risk Guesswork.</span>
+            <span className="text-gold">Zero Risk.</span>
           </h1>
 
           <p className="hero-description reveal-delay-3">
-            Invest in Jila Panchayat verified plots across Lucknow’s primary growth hub: Raebareli Road. 
-            Join 500+ families already living in our fully delivered communities.
+            Invest in Jila Panchayat/Government verified plots across Lucknow’s primary growth corridors: Raebareli Road.
+            Join 500+ families already living in our fully delivered estates.
           </p>
 
           <div className="banner-offers reveal-delay-3" style={{ marginBottom: '40px' }}>
@@ -36,17 +36,17 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-actions reveal-delay-4">
-            <Link 
-              to="/projects" 
+            <Link
+              to="/projects"
               className="hero-btn-primary"
             >
               Check Plot Availability
               <ArrowRight size={18} />
             </Link>
-            <a 
-              href="https://wa.me/917054550296?text=Hi, I am interested in your plots on Raebareli Road. Please share details." 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://wa.me/917054550296?text=Hi, I am interested in your plots on Raebareli Road. Please share details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="hero-btn-outline"
             >
               <MessageCircle size={18} />

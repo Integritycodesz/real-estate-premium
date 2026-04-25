@@ -8,12 +8,7 @@ const LeadPopup = () => {
   const [status, setStatus] = useState('idle');
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  // Check if popup should be shown based on session storage
-  const checkSession = () => {
-    const isDismissed = sessionStorage.getItem('pbd_popup_dismissed');
-    return !isDismissed;
-  };
-
+  // Manual trigger via event
   useEffect(() => {
     const handleOpenPopup = () => {
       setIsVisible(true);
@@ -24,45 +19,30 @@ const LeadPopup = () => {
     return () => window.removeEventListener('open-pbd-lead-popup', handleOpenPopup);
   }, []);
 
+  // Initial show after 5 seconds of refresh
   useEffect(() => {
-    if (hasSubmitted || !checkSession()) return;
-    
     const initialTimer = setTimeout(() => {
-      if (!hasSubmitted && checkSession()) setIsVisible(true);
-    }, 8000); // Increased to 8s for better UX
-    
+      if (!hasSubmitted) {
+        setIsVisible(true);
+      }
+    }, 5000);
+
     return () => clearTimeout(initialTimer);
   }, [hasSubmitted]);
 
+  // Reappearance logic: every 1.5 minutes (90 seconds) if not visible
   useEffect(() => {
-    if (hasSubmitted || isVisible || !checkSession()) return;
-    
-    // Exit-intent detection
-    const handleMouseOut = (e) => {
-      if (e.clientY <= 0 && !hasSubmitted && checkSession()) {
+    const reappearanceTimer = setInterval(() => {
+      if (!isVisible && !hasSubmitted) {
         setIsVisible(true);
       }
-    };
-    
-    document.addEventListener('mouseout', handleMouseOut);
-    
-    const recurringTimer = setTimeout(() => {
-      if (!isVisible && !hasSubmitted && checkSession()) {
-        setIsVisible(true);
-      }
-    }, 25000); // 25s for better UX
-    
-    return () => {
-      clearTimeout(recurringTimer);
-      document.removeEventListener('mouseout', handleMouseOut);
-    };
+    }, 90000); // 1.5 minutes
+
+    return () => clearInterval(reappearanceTimer);
   }, [isVisible, hasSubmitted]);
 
   const handleClose = () => {
     setIsClosing(true);
-    // Remember dismissal for this session
-    sessionStorage.setItem('pbd_popup_dismissed', 'true');
-    
     setTimeout(() => {
       setIsVisible(false);
       setIsClosing(false);
@@ -75,7 +55,6 @@ const LeadPopup = () => {
     setTimeout(() => {
       setStatus('success');
       setHasSubmitted(true);
-      sessionStorage.setItem('pbd_popup_dismissed', 'true');
       setTimeout(() => handleClose(), 3000);
     }, 1500);
   };

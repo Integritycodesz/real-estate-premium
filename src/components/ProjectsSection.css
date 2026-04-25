@@ -176,8 +176,8 @@
 }
 
 .price-value {
-  color: white;
-  font-size: 1rem;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -185,17 +185,22 @@
   background: white;
   color: #06112c;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .project-btn:hover {
   background: var(--accent-gold);
-  color: #06112c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 160, 40, 0.3);
 }
 
 @media (max-width: 992px) {

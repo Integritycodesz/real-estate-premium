@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import './ProjectsSection.css';
@@ -24,7 +24,10 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
         </ul>
         <div className="project-actions">
           <Link to={`/project/${id}`} className="btn-outline project-btn">View Details</Link>
-          <span className="project-price-start">Starting from {price}</span>
+          <div className="project-price-start">
+            <span className="price-label">Starting Price</span>
+            <span className="price-value">{price}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -32,12 +35,8 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
 };
 
 const ProjectsSection = () => {
-  const [filter, setFilter] = useState('All');
-
   const featuredProjectIds = ['shivay-residency', 'hanumant-dham', 'shivdhara-residency'];
   const filteredProjects = projects.filter(p => featuredProjectIds.includes(p.id));
-
-  const categories = ['All', 'Residential Plot', 'Luxury Plot', 'Eco Plot'];
 
   return (
     <section className="section projects-section" id="projects">
@@ -46,17 +45,6 @@ const ProjectsSection = () => {
           <span className="subtitle">Exclusive Portfolios</span>
           <h2>Choose From <span className="text-gold">Verified & High-Growth Projects</span></h2>
           <p className="section-desc">Strategic investments in Lucknow's most promising locations, chosen for their growth potential and legal clarity.</p>
-          <div className="filter-bar" style={{ marginTop: '30px' }}>
-            {categories.map(cat => (
-              <button 
-                key={cat}
-                className={`filter-btn ${filter === cat ? 'active' : ''}`}
-                onClick={() => setFilter(cat)}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
 
         <div className="projects-grid">
@@ -64,11 +52,15 @@ const ProjectsSection = () => {
             <ProjectCard key={project.id} {...project} />
           ))}
         </div>
+
+        <div className="view-more-container" style={{ textAlign: 'center', marginTop: '60px' }}>
+          <Link to="/projects" className="btn-primary btn-large">
+            Explore All Projects
+          </Link>
+        </div>
       </div>
     </section>
   );
 };
 
 export default ProjectsSection;
-
-
