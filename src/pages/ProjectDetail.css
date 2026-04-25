@@ -1,8 +1,12 @@
 /* Project Detail Modern Premium Styles */
 .project-detail-page {
   background-color: #fcfcfc;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   overflow-x: hidden;
+}
+
+.project-detail-page section {
+  padding: 0;
 }
 
 /* Gallery Modal */
@@ -71,7 +75,7 @@
   background: transparent;
   padding: 10px 0;
   position: sticky;
-  top: 132px;
+  top: 70px;
   z-index: 1500;
 }
 
@@ -99,8 +103,8 @@
 .project-detail-grid {
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 50px;
-  margin-top: 20px;
+  gap: 40px;
+  margin-top: 10px;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -154,7 +158,8 @@
 
 /* Hero Gallery */
 .project-gallery-section {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .gallery-main-frame {
@@ -197,7 +202,7 @@
 
 /* Detail Blocks */
 .detail-block {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .detail-block h3 {
@@ -372,7 +377,7 @@
 /* Sticky Sidebar */
 .sidebar-sticky-box {
   position: sticky;
-  top: 190px;
+  top: 120px;
   display: flex;
   flex-direction: column;
   gap: 20px;

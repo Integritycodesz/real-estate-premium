@@ -1,14 +1,14 @@
 /* Shared Page Utilities */
 .section-padding {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 /* Page Hero Header - Global Fix for Overlaps */
 .page-hero-header {
   position: relative;
-  min-height: 75vh;
-  padding-top: 180px; /* Accounts for fixed navbar */
-  padding-bottom: 120px;
+  min-height: 65vh;
+  padding-top: 140px;
+  padding-bottom: 80px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

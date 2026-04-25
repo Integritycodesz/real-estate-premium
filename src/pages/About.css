@@ -10,7 +10,7 @@
   min-height: 90vh;
   display: flex;
   align-items: center;
-  padding: 180px 0 100px;
+  padding: 140px 0 80px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,7 +75,7 @@
 
 /* Founder Legacy Section */
 .legacy-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: var(--bg-primary);
 }
 
@@ -222,7 +222,7 @@
 
 /* Trust Seal Section */
 .trust-seal-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: linear-gradient(rgba(6, 17, 44, 0.85), rgba(6, 17, 44, 0.85)), 
               url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=2070&q=80');
   background-attachment: fixed;
@@ -336,7 +336,7 @@
 .final-legacy-box {
   background-size: cover;
   background-position: center;
-  padding: 120px 60px;
+  padding: 80px 60px;
   border-radius: 50px;
   text-align: center;
   color: #fff;

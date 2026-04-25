@@ -40,17 +40,17 @@
 }
 
 .home-search {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .home-featured {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .section-header {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 80px;
+  margin: 0 auto 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +90,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .callout-card {
@@ -117,7 +117,7 @@
 .home-stats-section {
   background: var(--text-primary);
   color: #fff;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .stats-grid {
@@ -144,11 +144,11 @@
 .section-divider {
   height: 1px;
   background: var(--border-subtle);
-  margin: 100px auto;
+  margin: 40px auto;
 }
 
 .cta-section {
-  padding: 180px 0;
+  padding: 100px 0;
   background-image: url('https://images.unsplash.com/photo-1600607687940-4e524cb35a3a?auto=format&fit=crop&q=80&w=2000');
   background-size: cover;
   background-position: center;
@@ -173,7 +173,7 @@
 }
 
 .cta-card {
-  padding: 100px 60px;
+  padding: 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
