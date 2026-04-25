@@ -1,17 +1,18 @@
 .flash-deals-banner {
-  background: linear-gradient(90deg, #C81414, #ff4b2b, #C81414);
+  background: linear-gradient(90deg, #1a1a1a, #C81414, #1a1a1a);
   background-size: 200% auto;
   color: white;
-  height: 48px;
+  height: 52px;
   position: sticky; 
-  top: 80px; /* Sticks below the scrolled Navbar */
+  top: 80px; 
   left: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 2000; /* Above Navbar */
-  animation: gradientMove 3s linear infinite;
-  box-shadow: 0 2px 15px rgba(200, 20, 20, 0.4);
+  z-index: 2000; 
+  animation: gradientMove 6s ease infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .banner-marquee {
@@ -53,9 +54,22 @@
 
 .banner-text {
   margin: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: #ffffff;
+  display: flex;
+  gap: 8px;
+}
+
+.offer-title {
+  color: #ffd700; /* Gold Title */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.offer-detail {
+  font-weight: 600;
 }
 
 .timer-info {
@@ -82,17 +96,19 @@
 .banner-cta {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: white;
-  color: #C81414;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 800;
+  gap: 8px;
+  background: #ffd700; /* Gold Button */
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 900;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  text-transform: uppercase;
 }
 
 .banner-cta:hover {

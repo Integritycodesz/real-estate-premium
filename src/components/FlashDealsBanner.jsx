@@ -4,10 +4,10 @@ import './FlashDealsBanner.css';
 
 const FlashDealsBanner = () => {
   const deals = [
-    { text: "Save up to ₹2,00,000 on Shivay Residency Plots!", highlight: "₹2,00,000" },
-    { text: "Limited Time: 0% Registry Charges on Rajgharana!", highlight: "0% Registry" },
-    { text: "New Launch: Hanumant Dham - Early Bird Discount 10%!", highlight: "10% OFF" },
-    { text: "Spot Booking Offer: Free Modular Kitchen Voucher!", highlight: "Free Kitchen" }
+    { text: "Akshaya Tritiya Special: Free Registry + ₹51k Gold Coin on Hanumant Dham!", highlight: "Free Registry" },
+    { text: "Limited Inventory: Corner Plots available at Shivay Residency!", highlight: "Corner Plots" },
+    { text: "New Launch: Shivdhara Residency - Exclusive Phase 1 Pricing!", highlight: "New Launch" },
+    { text: "Special Offer for SGPGI Employees: Extra ₹500/sqft Discount at Muraliya Garden!", highlight: "SGPGI Discount" }
   ];
 
   return (
@@ -21,7 +21,9 @@ const FlashDealsBanner = () => {
                 <span>DEAL</span>
               </div>
               <p className="banner-text">
-                {deal.text}
+                {deal.text.split(':').map((part, i) => (
+                  i === 0 ? <span key={part} className="offer-title">{part}:</span> : <span key={part} className="offer-detail">{part}</span>
+                ))}
               </p>
               <span className="timer-info">
                 <Timer size={14} /> Limited time
