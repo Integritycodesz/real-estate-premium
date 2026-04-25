@@ -13,12 +13,28 @@
   margin-bottom: 80px;
 }
 
-.footer-logo .pbd-text {
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  height: 60px; /* Smaller in footer when combined with text */
+  width: auto;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo-container .logo-sub span {
   color: #ffffff;
 }
 
-.footer-logo .logo-sub span {
-  color: #ffffff;
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
 .footer-brand p {

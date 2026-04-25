@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <div className="logo-main">
-            <span className="pbd-text">PBD</span>
+            <img src="/src/assets/logo.png" alt="PBD Groups" className="site-logo" />
             <div className="logo-sub">
               <span>PAWANTANAY BUILDERS</span>
               <span>& Developers Pvt. Ltd. Lucknow</span>
@@ -40,6 +40,7 @@ const Navbar = () => {
         <ul className="navbar-menu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/why-invest">Why Invest</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/about">About Us</Link></li>
           <li><Link to="/contact">Contact</Link></li>

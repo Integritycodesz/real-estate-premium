@@ -7,7 +7,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 30000; /* Higher than LeadPopup (20000) and FlashDealsBanner (2000) */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 1010;
+  z-index: 30010;
   transition: transform 0.3s ease;
 }
 

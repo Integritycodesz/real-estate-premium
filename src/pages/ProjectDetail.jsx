@@ -72,7 +72,7 @@ const ProjectDetail = () => {
         </div>
       )}
 
-      <FlashDealsBanner />
+      {!showGallery && <FlashDealsBanner />}
 
       {/* Dynamic Header / Breadcrumb */}
       <div className="project-nav-bar">

@@ -8,7 +8,8 @@ export const propertiesData = [
     propertyType: "Residential Plot",
     development: "Gated Colony",
     location: "Raebareli Road",
-    image: "/src/assets/rajgharana.png"
+    image: "/src/assets/rajgharana.png",
+    status: "Sold Out"
   },
   {
     id: 2,
@@ -30,7 +31,8 @@ export const propertiesData = [
     propertyType: "Luxury Plot",
     development: "Underground Utilities",
     location: "Sultanpur Road",
-    image: "/src/assets/barsana_estate.png"
+    image: "/src/assets/barsana_estate.png",
+    status: "Sold Out"
   },
   {
     id: 4,

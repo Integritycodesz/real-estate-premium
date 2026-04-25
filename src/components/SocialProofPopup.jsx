@@ -29,10 +29,14 @@ const SocialProofPopup = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
+  const filteredActivities = activities.filter(a => 
+    a.project !== "Rajgharana" && a.project !== "Barsana Estate"
+  );
+
   useEffect(() => {
     const showNotification = () => {
-      // Pick a random activity
-      const nextIdx = Math.floor(Math.random() * activities.length);
+      // Pick a random activity from filtered list
+      const nextIdx = Math.floor(Math.random() * filteredActivities.length);
       setCurrentIdx(nextIdx);
       setIsVisible(true);
 
@@ -54,7 +58,7 @@ const SocialProofPopup = () => {
     };
   }, []);
 
-  const activity = activities[currentIdx];
+  const activity = filteredActivities[currentIdx];
 
   return (
     <div className={`social-proof-popup ${isVisible ? 'visible' : ''}`}>

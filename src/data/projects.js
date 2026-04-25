@@ -6,7 +6,7 @@ export const projects = [
     image: "/src/assets/rajgharana.png",
     type: "Residential Plot",
     price: "₹1,450 /sq.ft",
-    status: "60% OFF",
+    status: "Sold Out",
     description: "Rajgharana is PBD Group's flagship residential development. A fully delivered and thriving community, it offers premium plots with modern infrastructure, wide roads, and a secure environment for families to build their dream homes.",
     features: ["Fully Delivered", "Grand Entrance", "Thriving Community"],
     amenities: [
@@ -20,7 +20,7 @@ export const projects = [
     gallery: [
       "/src/assets/rajgharana.png",
       "/src/assets/living_room.png",
-      "/src/assets/hero.png"
+      "/src/assets/hero_exterior_new_1776831190922.png"
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -51,7 +51,7 @@ export const projects = [
     gallery: [
       "/src/assets/hanumant_dham.png",
       "/src/assets/kitchen.png",
-      "/src/assets/hero.png"
+      "/src/assets/hero_exterior_new_1776831190922.png"
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -68,7 +68,7 @@ export const projects = [
     image: "/src/assets/barsana_estate.png",
     type: "Luxury Plot",
     price: "₹1,650 /sq.ft",
-    status: "LIMITED OFFER",
+    status: "Sold Out",
     description: "Barsana Estate represents the pinnacle of modern plotting infrastructure. Featuring underground electrical lines and advanced sewage systems, it provides a clean, clutter-free environment for a premium lifestyle.",
     features: ["Underground Wiring", "High ROI", "Premium Infra"],
     amenities: [
@@ -82,7 +82,7 @@ export const projects = [
     gallery: [
       "/src/assets/barsana_estate.png",
       "/src/assets/living_room.png",
-      "/src/assets/hero.png"
+      "/src/assets/hero_exterior_new_1776831190922.png"
     ],
     specifications: {
       "Project Type": "Luxury Residential Plots",
@@ -143,7 +143,7 @@ export const projects = [
     ],
     gallery: [
       "/src/assets/shivdhara.png",
-      "/src/assets/hero.png",
+      "/src/assets/hero_exterior_new_1776831190922.png",
       "/src/assets/kitchen.png"
     ],
     specifications: {
@@ -175,7 +175,7 @@ export const projects = [
     gallery: [
       "/src/assets/muraliya_garden.png",
       "/src/assets/living_room.png",
-      "/src/assets/hero.png"
+      "/src/assets/hero_exterior_new_1776831190922.png"
     ],
     specifications: {
       "Project Type": "Residential Plots",

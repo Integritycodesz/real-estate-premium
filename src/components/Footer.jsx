@@ -7,13 +7,15 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <div className="logo-main footer-logo">
-            <span className="pbd-text">PBD</span>
-            <div className="logo-sub">
-              <span>PAWANTANAY BUILDERS</span>
-              <span>& Developers Pvt. Ltd. Lucknow</span>
+          <Link to="/" className="footer-logo-link">
+            <div className="logo-main footer-logo-container">
+              <img src="/src/assets/logo.png" alt="PBD Groups" className="site-logo footer-logo" />
+              <div className="logo-sub">
+                <span>PAWANTANAY BUILDERS</span>
+                <span>& Developers Pvt. Ltd. Lucknow</span>
+              </div>
             </div>
-          </div>
+          </Link>
           <p>Where Trust Becomes Legacy. Building premium real estate across Lucknow's fastest-growing corridors.</p>
         </div>
 

@@ -58,7 +58,7 @@ const Gallery = () => {
         </div>
       </header>
 
-      <FlashDealsBanner />
+
 
       <div className="container" style={{ marginTop: '60px', marginBottom: '100px' }}>
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '15px', marginBottom: '50px' }}>

@@ -15,8 +15,8 @@
   --text-muted: #718096;
   
   --accent-color: #C81414; /* Red for actions/accents */
-  --accent-gold: #C81414; /* Mapping old variable for compatibility */
-  --accent-gold-light: rgba(200, 20, 20, 0.1);
+  --accent-gold: #C5A028; /* Premium Gold */
+  --accent-gold-light: rgba(197, 160, 40, 0.1);
   
   --border-subtle: rgba(10, 40, 110, 0.1);
   --border-light: rgba(255, 255, 255, 0.2);

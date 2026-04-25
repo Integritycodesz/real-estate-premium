@@ -28,19 +28,16 @@
   max-width: 1400px;
 }
 
-.navbar-logo .logo-main {
+.logo-main {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
-.pbd-text {
-  font-family: var(--font-heading);
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--primary-red);
-  letter-spacing: 2px;
-  line-height: 1;
+.site-logo {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
 .logo-sub {
@@ -51,7 +48,7 @@
 
 .logo-sub span:first-child {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--primary-blue);
   letter-spacing: 1px;
@@ -59,7 +56,7 @@
 
 .logo-sub span:last-child {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--primary-blue);
   opacity: 0.8;
@@ -71,6 +68,10 @@
 
 .navbar:not(.scrolled) .logo-sub span {
   color: #ffffff; /* Contrast on transparent hero */
+}
+
+.navbar.scrolled .site-logo {
+  height: 50px;
 }
 
 

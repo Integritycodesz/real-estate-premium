@@ -1,4 +1,5 @@
 import HeroSection from '../components/HeroSection';
+import TrustBar from '../components/TrustBar';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import AboutSection from '../components/AboutSection';
 import WhyInvestSection from '../components/WhyInvestSection';
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <div className="home-page fade-in">
       <HeroSection />
+      <TrustBar />
       <FlashDealsBanner />
       
       <div className="reveal">
