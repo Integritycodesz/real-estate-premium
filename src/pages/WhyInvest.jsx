@@ -5,7 +5,7 @@ import Counter from '../components/Counter';
 import './WhyInvest.css';
 
 // Importing assets
-import sultanpurImg from '../assets/sultanpur_infra.png';
+
 import raebareliImg from '../assets/raebareli_hub.png';
 import growthChartImg from '../assets/growth_chart.png';
 import heroBg from '../assets/hero.jpg'; 
@@ -17,11 +17,11 @@ const WhyInvest = () => {
       <section className="invest-hero-with-bg" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="hero-overlay"></div>
         <div className="container hero-content-invest">
-          <span className="badge">Data-Driven Investment Guide</span>
-          <h1>Why Invest in <span className="text-gold">Lucknow</span> <br/> Real Estate?</h1>
-          <p>Sultanpur Road and Raebareli Road are not just locations — they are Lucknow's two most active infrastructure and investment zones. The window to buy at current prices is closing fast.</p>
+          <span className="badge">Expert Investment Guide</span>
+          <h1>Why Your Next Big Move <br/> Should Be <span className="text-gold">Raebareli Road</span></h1>
+          <p>Lucknow is growing faster than ever, and at the heart of this expansion is Raebareli Road. It's not just a stretch of asphalt; it's a corridor of opportunity where thousands are securing their future. If you've been waiting for the "right time," this is it.</p>
           <div className="hero-scroll-indicator">
-            <span>Scroll to explore data</span>
+            <span>Discover why people are choosing us</span>
             <div className="mouse-icon"></div>
           </div>
         </div>
@@ -33,114 +33,66 @@ const WhyInvest = () => {
           <div className="stats-grid-invest">
             <div className="stat-item-invest">
               <div className="stat-value"><Counter end="91" suffix="%" /></div>
-              <div className="stat-label">ROI seen by early buyers in last 3 years</div>
+              <div className="stat-label">Average ROI for our early investors</div>
             </div>
             <div className="stat-item-invest highlighted">
               <div className="stat-value"><Counter end="104" /></div>
               <div className="stat-label-large">KM</div>
-              <div className="stat-sublabel">Outer Ring Road connecting all major highways</div>
+              <div className="stat-sublabel">The massive Ring Road making every commute effortless</div>
             </div>
             <div className="stat-item-invest">
               <div className="stat-value"><Counter end="15" suffix="%+" /></div>
-              <div className="stat-label">Annual land appreciation in growth corridors</div>
+              <div className="stat-label">Steady yearly growth in land value</div>
             </div>
             <div className="stat-item-invest">
               <div className="stat-value"><Counter end="50" suffix="K+" /></div>
               <div className="stat-label-large">Jobs</div>
-              <div className="stat-label">Created by the UP Defence Corridor node</div>
+              <div className="stat-label">New opportunities arriving at the Defence Corridor</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sultanpur Road Section */}
+      {/* Raebareli Road Section - Main Focus */}
       <section className="corridor-deep-dive section">
         <div className="container">
           <div className="corridor-main-row">
             <div className="corridor-visual-side">
-              <img src={sultanpurImg} alt="Sultanpur Road" />
-              <div className="visual-badge">The Strategic Spine</div>
+              <img src={raebareliImg} alt="Raebareli Road Development" />
+              <div className="visual-badge">The Smart Choice</div>
             </div>
             <div className="corridor-text-side">
-              <span className="corridor-tag">Growth Corridor 01</span>
-              <h2>Sultanpur Road — <span className="text-gold">Lucknow's Gateway</span></h2>
-              <p>Sultanpur Road is the spine along which the city's eastward expansion is actively occurring. It connects the city to the Purvanchal Expressway and serves as the primary growth axis.</p>
+              <span className="corridor-tag">Lucknow's Rising Star</span>
+              <h2>Raebareli Road — <span className="text-gold">The Future of Modern Lucknow</span></h2>
+              <p>While other areas have already peaked, Raebareli Road is in its "sweet spot." It’s becoming the city’s premier hub for health, education, and high-quality living. Investing here isn't just about buying a plot; it's about getting in before the rest of the world catches on.</p>
               
               <div className="data-points-grid">
                 <div className="data-point">
-                  <Map className="text-gold" />
+                  <Building2 className="text-gold" />
                   <div>
-                    <h4>Outer Ring Road</h4>
-                    <p>Direct intersection with the 104-km ORR, dramatically reducing commute times.</p>
+                    <h4>Healthcare Landmark</h4>
+                    <p>With SGPGI nearby, this area is a permanent magnet for high-quality residential demand.</p>
                   </div>
                 </div>
                 <div className="data-point">
-                  <Zap className="text-gold" />
+                  <Map className="text-gold" />
                   <div>
-                    <h4>Purvanchal Expressway</h4>
-                    <p>Immediate access for pan-UP connectivity, a key driver for business growth.</p>
+                    <h4>Seamless Connectivity</h4>
+                    <p>The Outer Ring Road and NH-30 mean you're always connected to the rest of UP without the traffic.</p>
                   </div>
                 </div>
                 <div className="data-point">
                   <GraduationCap className="text-gold" />
                   <div>
                     <h4>Education Hub</h4>
-                    <p>Proximity to Engineering colleges and a growing cluster of top CBSE schools.</p>
-                  </div>
-                </div>
-                <div className="data-point">
-                  <HeartPulse className="text-gold" />
-                  <div>
-                    <h4>Healthcare Infra</h4>
-                    <p>Home to new multi-speciality hospitals driving residential demand.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Raebareli Road Section */}
-      <section className="corridor-deep-dive section bg-light">
-        <div className="container">
-          <div className="corridor-main-row reverse">
-            <div className="corridor-visual-side">
-              <img src={raebareliImg} alt="Raebareli Road" />
-              <div className="visual-badge">The Emerging Powerhouse</div>
-            </div>
-            <div className="corridor-text-side">
-              <span className="corridor-tag">Growth Corridor 02</span>
-              <h2>Raebareli Road — <span className="text-gold">Early-Stage Alpha</span></h2>
-              <p>Raebareli Road represents an opportunity similar to what Sultanpur experienced five years ago. It is evolving into Lucknow's premier health and knowledge city.</p>
-              
-              <div className="data-points-grid">
-                <div className="data-point">
-                  <Train className="text-gold" />
-                  <div>
-                    <h4>Rail & NH-30 Access</h4>
-                    <p>Dual connectivity via national highway and key rail junctions.</p>
-                  </div>
-                </div>
-                <div className="data-point">
-                  <Briefcase className="text-gold" />
-                  <div>
-                    <h4>Industrial Clusters</h4>
-                    <p>Established MSME and industrial units creating a stable employment base.</p>
-                  </div>
-                </div>
-                <div className="data-point">
-                  <Building2 className="text-gold" />
-                  <div>
-                    <h4>Medical Powerhouse</h4>
-                    <p>Presence of SGPGI and RMLAU ensures sustained high rental demand.</p>
+                    <p>Home to upcoming universities and top-tier schools, perfect for growing families.</p>
                   </div>
                 </div>
                 <div className="data-point">
                   <TrendingUp className="text-gold" />
                   <div>
-                    <h4>Below-Market Entry</h4>
-                    <p>Currently offers the most attractive price-to-appreciation ratio in Lucknow.</p>
+                    <h4>Real Value</h4>
+                    <p>Currently offering the best entry price in Lucknow with the highest potential for growth.</p>
                   </div>
                 </div>
               </div>
@@ -177,16 +129,85 @@ const WhyInvest = () => {
         </div>
       </section>
 
-      {/* Legal Section */}
-      <section className="legal-section section">
+      {/* Elite Neighbourhood Section */}
+      <section className="elite-neighbourhood section bg-light">
         <div className="container">
-          <div className="legal-box glass-panel">
-            <ShieldCheck size={60} className="text-gold" />
-            <h2>Legal Security = <span className="text-gold">Compounding Value</span></h2>
-            <p>
-              Jila and Nagar Panchayat approved plots are eligible for regularisation, formal construction, and bank-backed resale. 
-              **Legal clarity is the greatest multiplier of land value.** We ensure every plot in our portfolio is 100% verified.
-            </p>
+          <div className="section-header-centered">
+            <span className="badge-gold">THE ELITE CIRCLE</span>
+            <h2 className="section-title-large">You Are in <span className="text-gold">Good Company</span></h2>
+            <p className="section-intro">Raebareli Road isn't just a development zone; it's where Lucknow's most prestigious developers have established their flagship townships. By investing here, you aren't just buying land—you're joining a high-end ecosystem.</p>
+          </div>
+
+          <div className="neighbour-grid">
+            <div className="neighbour-card">
+              <div className="neighbour-brand">Omaxe Metro City</div>
+              <p>A massive hi-tech township defining the new luxury standard of Lucknow. Its presence ensures that the entire corridor maintains high-value appreciation and premium infrastructure.</p>
+            </div>
+            <div className="neighbour-card">
+              <div className="neighbour-brand">DLF Garden City</div>
+              <p>One of the most organized townships in North India. Located in the Purseni area, it has brought world-class wide-road planning and elite community living to Raebareli Road.</p>
+            </div>
+            <div className="neighbour-card">
+              <div className="neighbour-brand">Eldeco Udyan & Samriddhi</div>
+              <p>Eldeco's established presence with projects like Samriddhi (Villas) proves the long-term liveability and residential demand of this specific corridor.</p>
+            </div>
+            <div className="neighbour-card">
+              <div className="neighbour-brand">SGPGI Institutions</div>
+              <p>The proximity to SGPGI and upcoming medical hubs ensures a permanent class of elite residents—doctors, professors, and professionals—securing your rental and resale value.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Comparison / Competitive Edge */}
+      <section className="strategic-comparison section">
+        <div className="container">
+          <div className="comparison-flex">
+            <div className="comparison-text">
+              <h2>The Strategic <span className="text-gold">PBD Advantage</span></h2>
+              <p>While big townships offer amenities, they often come with a "Brand Premium" that eats into your immediate ROI. PBD Group offers the same high-growth location with 100% legal clarity at a price point that leaves room for your wealth to grow.</p>
+              
+              <div className="comparison-table-wrapper">
+                <table className="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Elite Townships</th>
+                      <th className="highlight-col">PBD Projects</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Location Advantage</td>
+                      <td>Raebareli Road Corridor</td>
+                      <td className="highlight-col">Prime Raebareli Road</td>
+                    </tr>
+                    <tr>
+                      <td>Entry Price</td>
+                      <td>Premium (₹4000+ /sqft)</td>
+                      <td className="highlight-col">Optimal (High Growth)</td>
+                    </tr>
+                    <tr>
+                      <td>Legal Approval</td>
+                      <td>RERA/LDA</td>
+                      <td className="highlight-col">Jila Panchayat / Verified</td>
+                    </tr>
+                    <tr>
+                      <td>Immediate Possession</td>
+                      <td>Often 2-3 Years</td>
+                      <td className="highlight-col">Ready for Registry</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="comparison-visual">
+               <div className="roi-insight-box">
+                  <TrendingUp size={40} className="text-gold" />
+                  <h4>Insight for Smart Investors</h4>
+                  <p>In the last 24 months, land prices in unorganized sectors grew by 12%, while **legally cleared plots near Omaxe/DLF corridors grew by 28-35%**. We focus exclusively on the latter.</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>

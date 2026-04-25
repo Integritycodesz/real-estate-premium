@@ -17,16 +17,16 @@ const WhyInvestSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const reasons = [
-    { title: "Outer Ring Road", desc: "104 km ring road boosting land value dramatically on Sultanpur axes.", icon: "🛣️" },
-    { title: "Purvanchal Expressway", desc: "Plots on eastern corridors have seen 2X appreciation since completion.", icon: "📈" },
-    { title: "UP Defence Corridor", desc: "₹1500+ Cr investment. 50,000+ jobs creating surging residential demand.", icon: "🏗️" },
-    { title: "12%+ Annual Growth", desc: "Land appreciation consistently outperforming bank fixed deposits.", icon: "💰" },
-    { title: "Medical & Education Hubs", desc: "5+ multi-speciality hospitals under development driving demand.", icon: "🏥" },
-    { title: "Window Closing Fast", desc: "Early buyers positioned themselves well. The advantage is still open.", icon: "⏳" },
-    { title: "Airport Expansion", desc: "New Terminal 3 and runway upgrades making Lucknow a global gateway.", icon: "✈️" },
-    { title: "IT City & HCL Tech", desc: "Planned IT clusters and corporate hubs attracting top talent.", icon: "💻" },
-    { title: "Upcoming Metro", desc: "Massive connectivity boost with Metro expansion reaching key corridors.", icon: "🚇" },
-    { title: "Smart City Mission", desc: "Government focus ensuring world-class amenities and standards.", icon: "🏙️" },
+    { title: "Outer Ring Road", desc: "The 104 km lifeline making every corner of the city feel like it's just minutes away.", icon: "🛣️" },
+    { title: "Raebareli Corridor", desc: "Plots along this stretch have seen incredible value jumps as the city expands south.", icon: "📈" },
+    { title: "UP Defence Corridor", desc: "A massive initiative bringing 50,000+ jobs and a new wave of families to the area.", icon: "🏗️" },
+    { title: "Yearly Growth", desc: "Land values here are growing far faster than traditional savings, building real wealth.", icon: "💰" },
+    { title: "Healthcare Hub", desc: "Proximity to world-class hospitals like SGPGI keeps demand for homes high year-round.", icon: "🏥" },
+    { title: "The Best Time", desc: "The biggest gains go to those who see the vision early. That window is still open for you.", icon: "⏳" },
+    { title: "Airport Access", desc: "With terminal upgrades, Lucknow is now a global gateway, boosting all nearby property.", icon: "✈️" },
+    { title: "IT & Tech Parks", desc: "Planned tech clusters nearby are attracting the bright minds of tomorrow.", icon: "💻" },
+    { title: "Metro Connectivity", desc: "The expanding metro network is bringing the heartbeat of the city right to your doorstep.", icon: "🚇" },
+    { title: "Smart City Life", desc: "Government focus ensures you get the modern infrastructure your family deserves.", icon: "🏙️" },
   ];
 
   const scroll = (direction) => {
@@ -63,7 +63,7 @@ const WhyInvestSection = () => {
         <div className="section-header">
           <span className="subtitle">The Opportunity</span>
           <h2>Why <span className="text-gold">Lucknow?</span> Why Now?</h2>
-          <p className="section-desc">India's fastest-growing Tier-2 city. Real estate on the Sultanpur & Raebareli corridors is in its highest-appreciation window right now.</p>
+          <p className="section-desc">India's fastest-growing Tier-2 city. Real estate on the Raebareli Road corridor is in its most exciting growth phase right now.</p>
         </div>
 
         <div 

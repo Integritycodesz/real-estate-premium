@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 import heroBg from '../assets/hero.jpg';
@@ -17,25 +18,33 @@ const HeroSection = () => {
           </div>
 
           <h1 className="hero-title reveal-delay-2">
-            Crafting Legacies. <br />
-            <span className="text-gold">Not Just Plots.</span>
+            Verified Land. Real Delivery. <br />
+            <span className="text-gold">Zero Risk Guesswork.</span>
           </h1>
 
           <p className="hero-description reveal-delay-3">
-            Secure your family's future with Jila Panchayat approved premium plots in Lucknow's 
-            fastest-growing corridors. Transparent documentation, expert guidance, and proven delivery.
+            Invest in Jila Panchayat verified plots across Lucknow’s primary growth hub: Raebareli Road. 
+            Join 500+ families already living in our fully delivered communities.
           </p>
 
+          <div className="banner-offers reveal-delay-3" style={{ marginBottom: '40px' }}>
+            <div className="offer-item">
+              <span className="offer-icon">🎁</span>
+              <span className="offer-label">Limited Time Benefits:</span>
+              <span className="offer-value">Free Registry | Free Boundary Wall | ₹50,000 Instant Discount</span>
+            </div>
+          </div>
+
           <div className="hero-actions reveal-delay-4">
-            <button 
+            <Link 
+              to="/projects" 
               className="hero-btn-primary"
-              onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}
             >
-              Schedule Free Site Visit
+              Check Plot Availability
               <ArrowRight size={18} />
-            </button>
+            </Link>
             <a 
-              href="https://wa.me/917054550296" 
+              href="https://wa.me/917054550296?text=Hi, I am interested in your plots on Raebareli Road. Please share details." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hero-btn-outline"
@@ -47,17 +56,22 @@ const HeroSection = () => {
         </div>
 
         <div className="hero-stats-grid reveal-delay-5">
-          <div className="stat-card">
-            <h3>8+</h3>
-            <p>Years of Trust</p>
+          <div className="stat-card dark highlight">
+            <div className="pulse-dot"></div>
+            <h3>14</h3>
+            <p>Plots Booked This Month</p>
           </div>
-          <div className="stat-card">
+          <div className="stat-card dark">
             <h3>500+</h3>
-            <p>Happy Families</p>
+            <p>Families Already Living</p>
           </div>
-          <div className="stat-card">
+          <div className="stat-card dark">
             <h3>100%</h3>
-            <p>Verified Documents</p>
+            <p>Jila Panchayat Approved</p>
+          </div>
+          <div className="stat-card dark">
+            <h3>10+</h3>
+            <p>Years of Legacy</p>
           </div>
         </div>
       </div>

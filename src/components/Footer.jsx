@@ -9,14 +9,14 @@ const Footer = () => {
         <div className="footer-brand">
           <Link to="/" className="footer-logo-link">
             <div className="logo-main footer-logo-container">
-              <img src="/src/assets/logo.png" alt="PBD Groups" className="site-logo footer-logo" />
+              <img src="/src/assets/logo.png" alt="PBD Group" className="site-logo footer-logo" />
               <div className="logo-sub">
                 <span>PAWANTANAY BUILDERS</span>
                 <span>& Developers Pvt. Ltd. Lucknow</span>
               </div>
             </div>
           </Link>
-          <p>Where Trust Becomes Legacy. Building premium real estate across Lucknow's fastest-growing corridors.</p>
+          <p>Where Trust Becomes Legacy. Building premium residential communities across the Raebareli Road corridor, Lucknow.</p>
         </div>
 
 
@@ -44,7 +44,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container bottom-content">
-          <p>&copy; {new Date().getFullYear()} PBD Groups. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} PBD Group. All rights reserved.</p>
           <div className="legal-links">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>

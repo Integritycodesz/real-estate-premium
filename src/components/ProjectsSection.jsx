@@ -34,9 +34,8 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
 const ProjectsSection = () => {
   const [filter, setFilter] = useState('All');
 
-  const filteredProjects = filter === 'All' 
-    ? projects.slice(0, 3) 
-    : projects.filter(p => p.type === filter).slice(0, 3);
+  const featuredProjectIds = ['shivay-residency', 'hanumant-dham', 'shivdhara-residency'];
+  const filteredProjects = projects.filter(p => featuredProjectIds.includes(p.id));
 
   const categories = ['All', 'Residential Plot', 'Luxury Plot', 'Eco Plot'];
 
@@ -45,8 +44,8 @@ const ProjectsSection = () => {
       <div className="container">
         <div className="section-header">
           <span className="subtitle">Exclusive Portfolios</span>
-          <h2>Featured <span className="text-gold">Projects</span></h2>
-          <p className="section-desc">Handpicked premium developments on Lucknow's most promising investment corridors.</p>
+          <h2>Choose From <span className="text-gold">Verified & High-Growth Projects</span></h2>
+          <p className="section-desc">Strategic investments in Lucknow's most promising locations, chosen for their growth potential and legal clarity.</p>
           <div className="filter-bar" style={{ marginTop: '30px' }}>
             {categories.map(cat => (
               <button 

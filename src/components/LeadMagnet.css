@@ -1,0 +1,155 @@
+.lead-magnet-card {
+  background: white;
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.lead-magnet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border-color: var(--accent-gold);
+}
+
+.magnet-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--accent-gold-light);
+  color: var(--accent-gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.magnet-content {
+  flex: 1;
+}
+
+.magnet-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--primary-blue);
+  margin-bottom: 4px;
+}
+
+.magnet-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.magnet-btn {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.magnet-btn:hover {
+  background: var(--primary-red);
+}
+
+/* Modal Styling */
+.magnet-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 17, 44, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 30000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.magnet-modal-content {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin: 15px 0 10px;
+}
+
+.modal-header p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.magnet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.magnet-form input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.magnet-form button {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.magnet-form button.success {
+  background: #10b981;
+}
+
+.modal-footer-text {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+@media (max-width: 576px) {
+  .lead-magnet-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .magnet-btn {
+    width: 100%;
+  }
+}

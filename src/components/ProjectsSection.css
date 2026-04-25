@@ -1,9 +1,7 @@
 .projects-section {
   background-color: #f8f9fa;
-  padding: 100px 0;
+  padding: 80px 0;
 }
-
-
 
 .filter-bar {
   display: flex;
@@ -12,6 +10,7 @@
   padding: 6px;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
 }
 
 .filter-btn {
@@ -25,6 +24,7 @@
   color: #666;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .filter-btn.active {
@@ -38,15 +38,15 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
   margin-top: 50px;
 }
 
 .project-card {
   position: relative;
-  height: 520px;
-  border-radius: 12px;
+  height: 500px;
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,6 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
 }
 
 .project-image {
@@ -86,8 +85,8 @@
   right: 20px;
   background: var(--primary-red);
   color: white;
-  padding: 6px 15px;
-  font-size: 0.75rem;
+  padding: 6px 14px;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -99,53 +98,59 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 40, 110, 0.95) 0%, rgba(10, 40, 110, 0.4) 50%, rgba(10, 40, 110, 0.1) 100%);
+  background: linear-gradient(to top, rgba(6, 17, 44, 0.95) 0%, rgba(6, 17, 44, 0.5) 50%, rgba(6, 17, 44, 0.1) 100%);
   z-index: 1;
 }
 
 .project-content {
   position: relative;
   z-index: 2;
-  padding: 40px;
+  padding: 30px;
+  width: 100%;
 }
 
 .project-location {
-  color: #ff4d4d;
-  font-size: 0.9rem;
+  color: #ff5e5e;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 12px;
-  display: block;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .project-title {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: white;
-  margin-bottom: 20px;
-  font-weight: 400;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .project-features {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .project-features li {
-  color: #ccc;
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 500;
 }
 
-.project-features li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--primary-red);
+.feature-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent-gold);
   border-radius: 50%;
 }
 
@@ -153,23 +158,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 20px;
 }
 
 .project-price-start {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.price-value {
   color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .project-btn {
   background: white;
-  color: #0c162d;
+  color: #06112c;
   border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -177,16 +195,46 @@
 
 .project-btn:hover {
   background: var(--accent-gold);
-  color: white;
+  color: #06112c;
 }
 
 @media (max-width: 992px) {
-
   .filter-bar {
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
+    justify-content: flex-start;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .project-card {
+    height: 480px;
+  }
+  
+  .project-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    height: 450px;
+  }
+  
+  .project-content {
+    padding: 25px;
+  }
+}
+
 

@@ -9,44 +9,31 @@ const About = () => {
         backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
       }}>
         <div className="container">
-          <div style={{ maxWidth: '800px', marginLeft: '0' }}>
-            <div style={{ paddingLeft: '40px' }}> {/* Aligning with text inside the box below */}
-              <p className="reveal-text delay-1" style={{ textTransform: 'uppercase', letterSpacing: '4px', color: 'var(--accent-gold)', marginBottom: '15px', fontWeight: '700', fontSize: '0.9rem' }}>
-                OUR STORY & LEGACY
-              </p>
-              <h1 className="reveal-text delay-2" style={{ textShadow: '0 4px 15px rgba(0,0,0,0.4)', marginBottom: '20px', fontSize: '5rem', lineHeight: '1', fontWeight: '800', letterSpacing: '-1px' }}>
+          <div className="hero-grid-about">
+            <div className="hero-text-side">
+              <span className="badge-gold">OUR STORY & LEGACY</span>
+              <h1 className="hero-title-large">
                 Built on Promises.<br />
-                <span style={{ color: 'var(--accent-gold)' }}>Lived by Families.</span>
+                <span className="text-gold">Lived by Families.</span>
               </h1>
-            </div>
-            
-            <div className="reveal-text delay-3" style={{ 
-              fontSize: '1.1rem', 
-              lineHeight: '1.8', 
-              color: 'rgba(255,255,255,0.95)',
-              background: 'rgba(255,255,255,0.02)',
-              backdropFilter: 'blur(20px)',
-              padding: '40px',
-              borderRadius: '0 20px 20px 0', 
-              borderLeft: '4px solid var(--accent-gold)',
-              boxShadow: '40px 40px 80px rgba(0,0,0,0.3)',
-              marginTop: '10px'
-            }}>
-              <p style={{ marginBottom: '20px', fontSize: '1.3rem', fontWeight: '600', color: '#fff', lineHeight: '1.4' }}>
-                In Lucknow's crowded real estate market, promises are cheap. Documents, approvals, and honest handshakes — those are rare.
-              </p>
-              <p style={{ marginBottom: '30px', opacity: 0.8, fontSize: '1.05rem' }}>
-                Since 2019, Pawantanay Builders & Developers has chosen the harder path: transparency over tactics, verified paperwork over verbal assurances, and long-term trust over short-term sales.
-              </p>
-              <div style={{ display: 'flex', gap: '50px' }}>
-                <div className="reveal-text delay-4">
-                  <div style={{ fontSize: '2.2rem', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '2px' }}>02</div>
-                  <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', opacity: 0.6, fontWeight: '700' }}>Delivered Projects</div>
-                </div>
-                <div style={{ width: '1px', background: 'rgba(255,255,255,0.1)' }}></div>
-                <div className="reveal-text delay-4" style={{ animationDelay: '1s' }}>
-                  <div style={{ fontSize: '2.2rem', fontWeight: '800', color: 'var(--accent-gold)', marginBottom: '2px' }}>04</div>
-                  <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', opacity: 0.6, fontWeight: '700' }}>Active Colonies</div>
+              
+              <div className="hero-glass-box">
+                <p className="glass-lead">
+                  In Lucknow's crowded real estate market, promises are cheap. Documents, approvals, and honest handshakes — those are rare.
+                </p>
+                <p className="glass-body">
+                  With over 10 years of expertise, PBD Group has chosen the harder path: transparency over tactics, verified paperwork over verbal assurances, and long-term trust over short-term sales.
+                </p>
+                <div className="glass-stats">
+                  <div className="glass-stat">
+                    <div className="stat-val">500+</div>
+                    <div className="stat-lab">Happy Families</div>
+                  </div>
+                  <div className="stat-divider"></div>
+                  <div className="glass-stat">
+                    <div className="stat-val">2+</div>
+                    <div className="stat-lab">Delivered Projects</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,136 +43,127 @@ const About = () => {
 
       <FlashDealsBanner />
 
-      <div className="container">
+      <div className="container section-padding">
+        {/* Founder Story */}
+        <div className="story-section">
+          <div className="story-content-grid">
+            <div className="story-text">
+              <h2 className="section-title-medium">Founder's Story</h2>
+              <h3 className="section-subtitle-gold">From a Simple Belief to a Living Legacy: The Narendra Yadav Story</h3>
+              
+              <p>Narendra Yadav didn't set out to build a real estate company. He set out to fix something broken.</p>
+              <p>Growing up in Lucknow, Narendra watched families pour their life savings into land that came with more confusion than clarity. He saw the stress on their faces, the sleepless nights, and the quiet heartbreak of a dream gone sideways.</p>
+              <p>He knew the land market didn't have to work this way.</p>
+              <p>With deep conviction, he founded PBD Group. Not to become the biggest name in real estate, but to become the most trusted one in Lucknow.</p>
 
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Founder's Story</h2>
-          <h3 style={{ color: 'var(--accent-gold)', marginBottom: '30px', fontSize: '1.4rem' }}>From a Simple Belief to a Living Legacy: The Narendra Yadav Story</h3>
-
-          <div style={{ display: 'flex', gap: '50px', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 500px' }}>
-              <p style={{ marginBottom: '15px' }}>Narendra Yadav didn't set out to build a real estate company. He set out to fix something broken.</p>
-              <p style={{ marginBottom: '15px' }}>Growing up in Lucknow, Narendra watched families — hardworking, middle-class families — pour their life savings into land that came with more confusion than clarity. Approvals that were "in process." Documents that were "almost ready." Plots that looked different from what was promised. He saw the stress on their faces, the sleepless nights, the quiet heartbreak of a dream gone sideways.</p>
-              <p style={{ marginBottom: '15px' }}>He knew the land market didn't have to work this way.</p>
-              <p style={{ marginBottom: '15px' }}>In 2019, with a deep conviction and a first project that had every document in order before a single plot was offered, Narendra founded Pawantanay Builders & Developers. Not to become the biggest name in real estate. But to become the most trusted one in Lucknow.</p>
-
-              <blockquote style={{ borderLeft: '4px solid var(--accent-gold)', paddingLeft: '20px', fontStyle: 'italic', fontSize: '1.25rem', color: 'var(--accent-gold)', margin: '30px 0' }}>
+              <blockquote className="premium-quote">
                 "If a family is going to trust me with the most important investment of their life, the least I can do is make sure every single document, every boundary, every approval — is exactly as I said it would be."
               </blockquote>
 
-              <p style={{ marginBottom: '15px' }}>What keeps Narendra going today isn't business metrics. It's the families already living in Rajgharana and 2 more projects — the delivered projects where real people have built real lives on land PBD promised them. It's the phone calls from happy buyers who refer their friends. It's the IAS and IPS officers who looked at the documentation and said yes — because the numbers, approvals, and paperwork spoke for themselves.</p>
-              <p style={{ marginBottom: '15px' }}>Under Narendra's leadership, PBD has grown from a single project to 2 fully delivered colonies and 4 active, ongoing projects — each developed with the same founding conviction: a buyer's trust is sacred.</p>
+              <p>What keeps Narendra going today isn't business metrics. It's the families already living in Rajgharana and 2 more projects — the delivered projects where real people have built real lives on land PBD Group promised them.</p>
 
-              <div style={{ background: 'var(--bg-secondary)', padding: '25px', borderRadius: '12px', marginTop: '40px' }}>
-                <p style={{ marginBottom: '10px' }}><strong style={{ color: 'var(--accent-gold)' }}>Role:</strong> Founder & CEO</p>
-                <p style={{ marginBottom: '10px' }}><strong style={{ color: 'var(--accent-gold)' }}>Founded:</strong> 2019</p>
-                <p style={{ marginBottom: '10px' }}><strong style={{ color: 'var(--accent-gold)' }}>Vision:</strong> Making land ownership in Lucknow simple, secure, and genuinely trustworthy for every middle-class family</p>
-                <p><strong style={{ color: 'var(--accent-gold)' }}>Core Belief:</strong> "Our reputation lives in the homes our buyers are living in today — and that's not something we take lightly."</p>
+              <div className="founder-card">
+                <div className="card-item"><span className="label">Role:</span> Founder & CEO</div>
+                <div className="card-item"><span className="label">Founded:</span> 2014</div>
+                <div className="card-item"><span className="label">Vision:</span> Secure land ownership for every middle-class family.</div>
               </div>
             </div>
-            <div style={{ flex: '1 1 350px' }}>
-              {/* Placeholder for Founder Image */}
-              <div style={{ width: '100%', height: '500px', background: 'var(--bg-secondary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-subtle)', position: 'sticky', top: '100px' }}>
-                <span style={{ color: 'var(--text-muted)' }}>[Placeholder: Image of Narendra Yadav]</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Company Details — Who We Are</h2>
-          <p style={{ marginBottom: '15px' }}>Pawantanay Builders & Developers Pvt. Ltd. is a Lucknow-based real estate development company with a focused mission: create legally sound, well-located, and genuinely affordable plotted colonies for middle-class families and first-time land buyers.</p>
-          <p style={{ marginBottom: '15px' }}>We don't try to do everything. We do one thing — and we do it right.</p>
-          <p style={{ marginBottom: '25px' }}>Every project we develop is strategically located along Raebareli Road — one of Lucknow's fastest-growing corridors — with direct access to the city's expanding metro network, Outer Ring Road, Shahid Path, Sultanpur Road, and major upcoming developments like IT City, Awas Vikas, and Link Expressway.</p>
-
-          <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 500px' }}>
-              <h3 style={{ marginBottom: '20px', color: 'var(--text-primary)' }}>What you get with every PBD project:</h3>
-              <ul style={{ listStyleType: 'none', paddingLeft: '0', marginBottom: '30px' }}>
-                <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><span style={{ color: 'var(--accent-gold)' }}>✓</span> <span><strong>Complete legal documentation</strong> — verified, clear, and ready before you are asked to commit</span></li>
-                <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><span style={{ color: 'var(--accent-gold)' }}>✓</span> <span><strong>Transparent pricing</strong> — what we quote is exactly what you pay, no hidden charges, no last-minute additions</span></li>
-                <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><span style={{ color: 'var(--accent-gold)' }}>✓</span> <span><strong>Flexible payment plans</strong> — structured EMI options designed around a working family's real financial situation</span></li>
-                <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><span style={{ color: 'var(--accent-gold)' }}>✓</span> <span><strong>Personal guidance</strong> — from your first call to your final registry, our team walks every step with you</span></li>
-                <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><span style={{ color: 'var(--accent-gold)' }}>✓</span> <span><strong>Post-sale support</strong> — because our relationship doesn't end at the signature</span></li>
-              </ul>
-            </div>
-
-            <div style={{ flex: '1 1 400px', background: 'var(--bg-secondary)', padding: '40px', borderRadius: '16px', border: '2px solid rgba(212, 175, 55, 0.3)', boxShadow: '0 15px 35px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(212, 175, 55, 0.1)', position: 'relative', transform: 'translateY(-5px)' }}>
-              <h3 style={{ marginBottom: '20px', color: 'var(--accent-gold)', fontSize: '1.8rem' }}>What makes us genuinely different?</h3>
-              <p style={{ marginBottom: '20px', fontSize: '1.1rem', lineHeight: '1.8' }}>We've already delivered. Rajgharana and 2 more Projects are completely delivered — families are living there right now. That's not a marketing claim. That's verifiable proof of what we've promised and what we've done.</p>
-              <div style={{ background: 'rgba(212, 175, 55, 0.08)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-                <p style={{ color: 'var(--accent-gold)', fontWeight: '600', fontSize: '1.2rem', margin: 0, lineHeight: '1.6' }}>When you invest with PBD, you're not betting on a future promise. You're trusting a team that has already delivered, to deliver again.</p>
+            <div className="story-image">
+              <div className="image-placeholder-frame">
+                <span className="placeholder-text">[Image of Narendra Yadav]</span>
+                <div className="frame-decoration"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '30px' }}>Our Journey — Built One Family at a Time</h2>
-          <div style={{ marginTop: '30px', borderLeft: '2px solid var(--accent-gold)', paddingLeft: '30px', marginLeft: '10px' }}>
-            <div style={{ marginBottom: '35px', position: 'relative' }}>
-              <div style={{ position: 'absolute', width: '12px', height: '12px', background: 'var(--accent-gold)', borderRadius: '50%', left: '-37px', top: '6px' }}></div>
-              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.2rem' }}>2019</h4>
-              <p>Narendra Yadav founded Pawantanay Builders & Developers with one belief: Lucknow's middle-class families deserve land they can trust, paperwork that's real, and a developer that actually delivers.</p>
+        {/* Company Details */}
+        <div className="company-details-section section-padding">
+          <h2 className="section-title-medium">Who We Are</h2>
+          <div className="company-grid">
+            <div className="company-text">
+              <p className="large-lead">Pawantanay Builders & Developers Pvt. Ltd. is a Lucknow-based company with a focused mission: create legally sound, well-located, and genuinely affordable plotted colonies.</p>
+              
+              <div className="benefits-list">
+                <div className="benefit-item">
+                  <div className="check-icon">✓</div>
+                  <p><strong>Complete legal documentation</strong> — verified and ready upfront.</p>
+                </div>
+                <div className="benefit-item">
+                  <div className="check-icon">✓</div>
+                  <p><strong>Transparent pricing</strong> — zero hidden charges, ever.</p>
+                </div>
+                <div className="benefit-item">
+                  <div className="check-icon">✓</div>
+                  <p><strong>Flexible EMI plans</strong> — designed for real working families.</p>
+                </div>
+                <div className="benefit-item">
+                  <div className="check-icon">✓</div>
+                  <p><strong>Personal guidance</strong> — from first call to final registry.</p>
+                </div>
+              </div>
             </div>
-            <div style={{ marginBottom: '35px', position: 'relative' }}>
-              <div style={{ position: 'absolute', width: '12px', height: '12px', background: 'var(--accent-gold)', borderRadius: '50%', left: '-37px', top: '6px' }}></div>
-              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.2rem' }}>2020</h4>
-              <p>Launched our first project, Rajgharana, on Raebareli Road. Every plot offered only after documentation was complete and clear. The colony sold out — and every buyer who invested there lives there today.</p>
-            </div>
-            <div style={{ marginBottom: '35px', position: 'relative' }}>
-              <div style={{ position: 'absolute', width: '12px', height: '12px', background: 'var(--accent-gold)', borderRadius: '50%', left: '-37px', top: '6px' }}></div>
-              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.2rem' }}>2022</h4>
-              <p>Delivered Gokul Vihar, our second completed colony. Another full delivery. Another community of families who trusted us and were never let down. Gokul Vihar is now a thriving residential neighbourhood, a testament to what PBD stands for.</p>
-            </div>
-            <div style={{ marginBottom: '35px', position: 'relative' }}>
-              <div style={{ position: 'absolute', width: '12px', height: '12px', background: 'var(--accent-gold)', borderRadius: '50%', left: '-37px', top: '6px' }}></div>
-              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.2rem' }}>2023–2024</h4>
-              <p>Launched Shivay Residency, Muralia Garden, Hanumant Dham, and Green Garden — four active colonies on Raebareli Road corridor, each designed for early investors, first-time buyers, and families planning their future. Already 50–60% sold in each project, with early buyers including senior government officers who chose PBD for the security of its documentation.</p>
-            </div>
-            <div style={{ marginBottom: '35px', position: 'relative' }}>
-              <div style={{ position: 'absolute', width: '12px', height: '12px', background: 'var(--accent-gold)', borderRadius: '50%', left: '-37px', top: '6px' }}></div>
-              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.2rem' }}>Today</h4>
-              <p>PBD operates six projects across Lucknow's most promising growth corridor, with two fully delivered and four actively in progress. The mission hasn't changed since 2019: every buyer gets exactly what they were promised.</p>
+
+            <div className="difference-box">
+              <h3>What makes us different?</h3>
+              <p>We've already delivered. Rajgharana and 2 more projects are completely finished — families are living there right now. Verifiable proof of our promises.</p>
+              <div className="highlight-tag">
+                Trust a team that has already delivered.
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="content-block" style={{ marginTop: '60px', borderTop: '1px solid var(--border-subtle)', paddingTop: '60px', marginBottom: '80px' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>What We Stand For — Our Values</h2>
-          <h3 style={{ color: 'var(--accent-gold)', marginBottom: '20px', fontSize: '1.4rem' }}>Trust Is Not a Tagline. It's Our Track Record.</h3>
-          <p style={{ marginBottom: '40px', fontSize: '1.1rem' }}>At PBD, we don't frame trust as a value we aspire to. We point to it. Two delivered projects. Hundreds of families. Zero broken promises.</p>
+        {/* Timeline Section */}
+        <div className="timeline-section section-padding">
+          <h2 className="section-title-medium centered">Our Journey</h2>
+          <div className="timeline-container">
+            {[
+              { year: "2014", event: "PBD Group founded with a focus on trust and documentation." },
+              { year: "2020", event: "Launched Rajgharana on Raebareli Road. Fully sold and delivered." },
+              { year: "2022", event: "Delivered Gokul Vihar, our second thriving residential community." },
+              { year: "2023-24", event: "Launched Shivay Residency and 3 more projects on the growth corridor." },
+              { year: "Today", event: "6 active projects, 2 fully delivered. Built on a reputation of honesty." }
+            ].map((item, idx) => (
+              <div key={idx} className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <span className="timeline-year">{item.year}</span>
+                  <p className="timeline-event">{item.event}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          <div className="values-marquee-wrapper">
-            <div className="values-marquee">
-              {[1, 2].map((set) => (
-                <React.Fragment key={set}>
-                  <div className="value-item">
-                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '15px' }}>Honesty Before Everything</h3>
-                    <p>We tell you what the project is, what the documentation looks like, and what the timeline is — in plain language, without fine print. If something isn't ready, we don't sell it. That's the standard we've held since Day 1.</p>
+        {/* Values Marquee */}
+        <div className="values-section section-padding">
+          <h2 className="section-title-medium centered">Our Values</h2>
+          <div className="values-marquee-container">
+            <div className="values-marquee-track">
+              {[1, 2].map(set => (
+                <div key={set} className="marquee-group">
+                  <div className="value-marquee-item">
+                    <h4>Honesty First</h4>
+                    <p>No fine print. Just plain language and verified facts.</p>
                   </div>
-                  <div className="value-item">
-                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '15px' }}>Legal Clarity, Always</h3>
-                    <p>Every project comes with complete, verified documentation. We believe a buyer should be able to hand our paperwork to any lawyer in Lucknow and have them nod in confidence. That level of clarity is non-negotiable for us.</p>
+                  <div className="value-marquee-item">
+                    <h4>Legal Clarity</h4>
+                    <p>Documentation so clear any lawyer would approve.</p>
                   </div>
-                  <div className="value-item">
-                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '15px' }}>Buyer First, Not Sales First</h3>
-                    <p>Our team doesn't push. They listen. They understand your budget, your timeline, your concerns — and they guide you to the right decision, even if that means telling you to wait for a better fit. We'd rather lose a sale than create a wrong one.</p>
+                  <div className="value-marquee-item">
+                    <h4>No Pressure</h4>
+                    <p>Your timeline, your decision. We provide the facts.</p>
                   </div>
-                  <div className="value-item">
-                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '15px' }}>No Pressure. No Fake Urgency.</h3>
-                    <p>Real estate is full of manufactured urgency. We don't do that. If a project is 50% sold, we tell you. If limited plots remain, we tell you honestly — not to pressure you, but because you deserve accurate information to make your decision.</p>
+                  <div className="value-marquee-item">
+                    <h4>Long-term Trust</h4>
+                    <p>Our relationship starts at delivery, it doesn't end there.</p>
                   </div>
-                  <div className="value-item">
-                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '15px' }}>Long-Term Relationship Over One-Time Transaction</h3>
-                    <p>The families in Rajgharana and Gokul Vihar are not our past customers. They are our reputation, walking and living every day. We take that seriously — and that's why they refer us to everyone they know.</p>
-                  </div>
-                </React.Fragment>
+                </div>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

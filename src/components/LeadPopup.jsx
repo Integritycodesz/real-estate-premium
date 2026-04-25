@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, Phone, User, Zap, Star, ShieldCheck, MapPin, Gift } from 'lucide-react';
+import { X, Send, Phone, User, Zap, Star, ShieldCheck, MapPin, Calendar } from 'lucide-react';
 import './LeadPopup.css';
 
 const LeadPopup = () => {
@@ -7,6 +7,12 @@ const LeadPopup = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [status, setStatus] = useState('idle');
   const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  // Check if popup should be shown based on session storage
+  const checkSession = () => {
+    const isDismissed = sessionStorage.getItem('pbd_popup_dismissed');
+    return !isDismissed;
+  };
 
   useEffect(() => {
     const handleOpenPopup = () => {
@@ -19,25 +25,44 @@ const LeadPopup = () => {
   }, []);
 
   useEffect(() => {
-    if (hasSubmitted) return;
+    if (hasSubmitted || !checkSession()) return;
+    
     const initialTimer = setTimeout(() => {
-      if (!hasSubmitted) setIsVisible(true);
-    }, 5000);
+      if (!hasSubmitted && checkSession()) setIsVisible(true);
+    }, 8000); // Increased to 8s for better UX
+    
     return () => clearTimeout(initialTimer);
   }, [hasSubmitted]);
 
   useEffect(() => {
-    if (hasSubmitted || isVisible) return;
-    const recurringTimer = setTimeout(() => {
-      if (!isVisible && !hasSubmitted) {
+    if (hasSubmitted || isVisible || !checkSession()) return;
+    
+    // Exit-intent detection
+    const handleMouseOut = (e) => {
+      if (e.clientY <= 0 && !hasSubmitted && checkSession()) {
         setIsVisible(true);
       }
-    }, 25000);
-    return () => clearTimeout(recurringTimer);
+    };
+    
+    document.addEventListener('mouseout', handleMouseOut);
+    
+    const recurringTimer = setTimeout(() => {
+      if (!isVisible && !hasSubmitted && checkSession()) {
+        setIsVisible(true);
+      }
+    }, 25000); // 25s for better UX
+    
+    return () => {
+      clearTimeout(recurringTimer);
+      document.removeEventListener('mouseout', handleMouseOut);
+    };
   }, [isVisible, hasSubmitted]);
 
   const handleClose = () => {
     setIsClosing(true);
+    // Remember dismissal for this session
+    sessionStorage.setItem('pbd_popup_dismissed', 'true');
+    
     setTimeout(() => {
       setIsVisible(false);
       setIsClosing(false);
@@ -50,6 +75,7 @@ const LeadPopup = () => {
     setTimeout(() => {
       setStatus('success');
       setHasSubmitted(true);
+      sessionStorage.setItem('pbd_popup_dismissed', 'true');
       setTimeout(() => handleClose(), 3000);
     }, 1500);
   };
@@ -71,11 +97,17 @@ const LeadPopup = () => {
                   <Star size={14} fill="currentColor" />
                   <span>PREMIUM PROJECTS</span>
                 </div>
+                <div className="popup-badge red">
+                  <ShieldCheck size={14} />
+                  <span>GOVT. APPROVED LAYOUT</span>
+                </div>
               </div>
               
               <div className="popup-image-text">
                 <div className="trust-indicator">
-                  <ShieldCheck size={20} className="text-gold" />
+                  <div className="trust-icon-wrapper">
+                    <ShieldCheck size={20} />
+                  </div>
                   <span>Lucknow's Most Trusted Developer</span>
                 </div>
                 <h3>Start Your Journey With Us</h3>
@@ -86,43 +118,49 @@ const LeadPopup = () => {
           <div className="popup-form-side">
             <div className="popup-header">
               <div className="exclusive-tag">
-                <Gift size={16} />
-                <span>EXCLUSIVE BENEFIT</span>
+                <Zap size={16} />
+                <span>URGENT: RAIBARIRLY ROAD GROWTH HUB</span>
               </div>
-              <h2>Claim Your <span className="text-gold">Free Registry</span></h2>
-              <p>Secure your investment in the <strong>Growth Corridor of Lucknow</strong>. Register now for exclusive pricing and a complimentary site visit.</p>
+              <h2>Limited <span className="text-gold">Verified Plots Available</span></h2>
+              <p>Government infrastructure is moving to Raebareli Road. Secure your plot before prices hike further. Register for a free site visit & ROI report.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="popup-form">
               <div className="popup-input-group">
-                <User size={18} className="input-icon" />
+                <div className="input-icon-wrapper">
+                  <User size={18} />
+                </div>
                 <input type="text" placeholder="Your Full Name" required />
               </div>
               
               <div className="popup-input-group">
-                <Phone size={18} className="input-icon" />
+                <div className="input-icon-wrapper">
+                  <Phone size={18} />
+                </div>
                 <input type="tel" placeholder="Mobile Number" required />
               </div>
 
               <div className="popup-input-group">
-                <MapPin size={18} className="input-icon" />
-                <select required style={{ paddingLeft: '45px', appearance: 'none', background: '#f9f9f9', borderRadius: '12px', border: '1px solid #eee', width: '100%', height: '50px' }}>
-                  <option value="" disabled selected>Preferred Projects</option>
-                  <option value="rajgharana">Rajgharana</option>
-                  <option value="shivay">Shivay Residency</option>
-                  <option value="hanumant">Hanumant Dham</option>
-                  <option value="green">Green Garden</option>
+                <div className="input-icon-wrapper">
+                  <MapPin size={18} />
+                </div>
+                <select required defaultValue="">
+                  <option value="" disabled>Looking for?:</option>
+                  <option value="investment">Investment</option>
+                  <option value="personal">Personal Use</option>
+                  <option value="both">Both</option>
                 </select>
               </div>
 
               <div className="popup-input-group">
-                <Gift size={18} className="input-icon" style={{ color: 'var(--accent-gold)' }} />
+                <div className="input-icon-wrapper">
+                  <Calendar size={18} />
+                </div>
                 <input 
-                  type="datetime-local" 
+                  type="date" 
                   required 
                   onClick={(e) => e.target.showPicker?.()}
-                  style={{ paddingLeft: '45px', background: '#f9f9f9', borderRadius: '12px', border: '1px solid #eee', width: '100%', height: '50px' }} 
-                  placeholder="Preferred Site Visit Date"
+                  placeholder="Preferred Visit Date"
                 />
               </div>
 
@@ -132,30 +170,40 @@ const LeadPopup = () => {
                 disabled={status !== 'idle'}
               >
                 {status === 'sending' ? (
-                  'Reserving Offer...'
+                  'Checking Availability...'
                 ) : status === 'success' ? (
-                  'Reservation Confirmed! 🎉'
+                  'Success! We will contact you. 🎉'
                 ) : (
                   <>
-                    <span>Get Instant Booking</span>
+                    <span>Check Availability & Get Details</span>
                     <Send size={18} />
                   </>
                 )}
               </button>
             </form>
+
+            <p className="popup-micro-copy">
+              🔒 Your details are safe. No spam calls.
+            </p>
             
-            <div className="popup-trust-footer" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 20px', justifyContent: 'center' }}>
+            <div className="popup-trust-footer">
               <div className="trust-item">
-                <ShieldCheck size={14} />
-                <span>10+ Years of Trust</span>
+                <div className="trust-item-icon">
+                  <ShieldCheck size={14} />
+                </div>
+                <span>10+ Years of Expertise</span>
               </div>
               <div className="trust-item">
-                <Star size={14} />
+                <div className="trust-item-icon">
+                  <Star size={14} />
+                </div>
                 <span>500+ Happy Families</span>
               </div>
               <div className="trust-item">
-                <Zap size={14} />
-                <span>7+ Projects Delivered</span>
+                <div className="trust-item-icon">
+                  <Zap size={14} />
+                </div>
+                <span>2+ Delivered Projects</span>
               </div>
             </div>
           </div>

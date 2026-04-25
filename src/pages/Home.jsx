@@ -2,6 +2,7 @@ import HeroSection from '../components/HeroSection';
 import TrustBar from '../components/TrustBar';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import AboutSection from '../components/AboutSection';
+import SmartLSection from '../components/SmartLSection';
 import WhyInvestSection from '../components/WhyInvestSection';
 import ProjectsSection from '../components/ProjectsSection';
 import Calculators from '../components/Calculators';
@@ -17,6 +18,10 @@ const Home = () => {
       
       <div className="reveal">
         <AboutSection />
+      </div>
+
+      <div className="reveal">
+        <SmartLSection />
       </div>
 
       <div className="reveal">

@@ -15,13 +15,13 @@ const trustItems = [
   },
   {
     icon: <MapPin size={24} />,
-    title: "Sultanpur & Raebareli",
-    subtitle: "Lucknow's growth corridors"
+    title: "Raebareli Road Experts",
+    subtitle: "Focus on growth corridor"
   },
   {
     icon: <UserCheck size={24} />,
     title: "Personal Buyer Guidance",
-    subtitle: "8 years of expertise"
+    subtitle: "10 years of expertise"
   },
   {
     icon: <FileText size={24} />,

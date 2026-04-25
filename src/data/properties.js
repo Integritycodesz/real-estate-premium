@@ -30,7 +30,7 @@ export const propertiesData = [
     size: "1,500 sq ft",
     propertyType: "Luxury Plot",
     development: "Underground Utilities",
-    location: "Sultanpur Road",
+    location: "Raebareli Road",
     image: "/src/assets/barsana_estate.png",
     status: "Sold Out"
   },
@@ -69,6 +69,6 @@ export const propertiesData = [
   }
 ];
 
-export const locations = ["All Locations", "Raebareli Road", "Sultanpur Road", "Kisan Path"];
+export const locations = ["All Locations", "Raebareli Road", "Kisan Path"];
 export const propertyTypes = ["All Types", "Residential Plot", "Luxury Plot", "Eco Plot"];
 

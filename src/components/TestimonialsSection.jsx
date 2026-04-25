@@ -6,19 +6,25 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      text: "I was sceptical about buying a plot — too many agents had disappointed me before. Amit Tiwari showed me the Jila Panchayat documents on the very first visit. That changed everything. No pressure, complete transparency.",
-      name: "Rajesh S.",
-      role: "Investor"
+      text: "I was skeptical about buying a plot in Lucknow — too many agents had disappointed me before. PBD Group showed me the Jila Panchayat documents for Shivay Residency on the very first visit. That changed everything. No pressure, complete transparency.",
+      name: "Rajesh Shrivastava",
+      role: "Investor",
+      project: "Shivay Residency",
+      location: "Alambagh, Lucknow"
     },
     {
-      text: "As an NRI investing from Riyadh, trust was my biggest concern. They coordinated everything with my family here, sent site videos, shared all documents digitally. Professional process from start to finish.",
-      name: "Vikram M.",
-      role: "NRI Buyer"
+      text: "As an NRI investing from Riyadh, trust was my biggest concern. The team coordinated everything for our plot in Rajgharana with my family in Lucknow. They sent site videos and shared all registry documents digitally. Extremely professional.",
+      name: "Vikram Malhotra",
+      role: "NRI Buyer",
+      project: "Rajgharana",
+      location: "Riyadh / Lucknow"
     },
     {
-      text: "My entire family was involved in this decision. PBD Groups was patient with every question, never rushed us, and the price we paid was exactly what was quoted. Zero surprises at registration.",
+      text: "Buying a plot in Hanumant Dham was a family decision. PBD Group was patient with our 50+ questions, never rushed us, and the final price was exactly what was quoted. Zero surprises at the sub-registrar office.",
       name: "The Sharma Family",
-      role: "Homeowners"
+      role: "Homeowners",
+      project: "Hanumant Dham",
+      location: "Telibagh, Lucknow"
     }
   ];
 
@@ -50,11 +56,19 @@ const TestimonialsSection = () => {
               
               return (
                 <div key={index} className={`testimonial-card glass-panel ${position}`}>
+                  <div className="verified-badge">
+                    <span className="dot"></span> Verified Buyer
+                  </div>
                   <div className="quote-mark">"</div>
                   <p className="testimonial-text">{test.text}</p>
-                  <div className="testimonial-author">
-                    <h4>{test.name}</h4>
-                    <span>{test.role}</span>
+                  <div className="testimonial-footer">
+                    <div className="author-info">
+                      <h4>{test.name}</h4>
+                      <span className="author-location">{test.location}</span>
+                    </div>
+                    <div className="project-tag">
+                      Ref: {test.project}
+                    </div>
                   </div>
                 </div>
               );

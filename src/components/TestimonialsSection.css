@@ -103,6 +103,64 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+ 
+ .verified-badge {
+   position: absolute;
+   top: 30px;
+   right: 40px;
+   background: rgba(16, 185, 129, 0.1);
+   color: #10b981;
+   padding: 6px 12px;
+   border-radius: 20px;
+   font-size: 0.7rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   border: 1px solid rgba(16, 185, 129, 0.2);
+ }
+ 
+ .verified-badge .dot {
+   width: 6px;
+   height: 6px;
+   background: #10b981;
+   border-radius: 50%;
+   box-shadow: 0 0 10px #10b981;
+ }
+ 
+ .testimonial-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   margin-top: 30px;
+   padding-top: 25px;
+   border-top: 1px solid rgba(255, 255, 255, 0.05);
+ }
+ 
+ .author-info h4 {
+   font-size: 1.3rem;
+   color: var(--accent-gold);
+   margin-bottom: 4px;
+   font-family: var(--font-heading);
+ }
+ 
+ .author-location {
+   font-size: 0.85rem;
+   color: var(--text-on-dark-muted);
+   font-weight: 500;
+ }
+ 
+ .project-tag {
+   background: rgba(255, 255, 255, 0.05);
+   padding: 8px 16px;
+   border-radius: 8px;
+   font-size: 0.75rem;
+   font-weight: 600;
+   color: var(--accent-gold);
+   border: 1px solid rgba(197, 160, 40, 0.2);
+ }
 
 .carousel-btn {
   background: transparent;

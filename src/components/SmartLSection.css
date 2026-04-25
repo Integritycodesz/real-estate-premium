@@ -1,0 +1,148 @@
+.smartl-section {
+  padding: 120px 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.smartl-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.smartl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-gold-light);
+  color: var(--accent-gold);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.smartl-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.smartl-main-card {
+  background: var(--primary-blue);
+  color: white;
+  padding: 60px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.smartl-main-card::before {
+  content: 'L';
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+  font-size: 30rem;
+  font-family: var(--font-heading);
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+}
+
+.smartl-main-card h3 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.smartl-main-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.smartl-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.smartl-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.smartl-stat strong {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.smartl-stat span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.smartl-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.smartl-point-card {
+  background: #f8f9fb;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.smartl-point-card:hover {
+  background: #fff;
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.point-icon-box {
+  margin-bottom: 20px;
+}
+
+.smartl-point-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  margin-bottom: 12px;
+}
+
+.smartl-point-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mb-4 { margin-bottom: 1rem; }
+
+@media (max-width: 1200px) {
+  .smartl-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .smartl-main-card {
+    padding: 40px 30px;
+  }
+  .smartl-points {
+    grid-template-columns: 1fr;
+  }
+}
