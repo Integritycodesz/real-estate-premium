@@ -17,6 +17,7 @@ import CustomCursor from './components/CustomCursor';
 import ScrollReveal from './components/ScrollReveal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
+import MobileBottomNav from './components/MobileBottomNav';
 import './App.css';
 
 // Component to handle conditional global elements
@@ -32,6 +33,7 @@ const GlobalContent = () => {
       <ScrollReveal />
       <FloatingWhatsApp />
       <Navbar />
+      <MobileBottomNav />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

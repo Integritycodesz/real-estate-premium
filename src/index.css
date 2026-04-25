@@ -318,9 +318,22 @@ section {
 @media (max-width: 1024px) {
   body {
     cursor: auto;
+    padding-bottom: 70px; /* Space for MobileBottomNav */
   }
   .custom-cursor, .cursor-follower {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Increase touch targets for mobile accessibility */
+  button, a, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    font-size: 16px !important; /* Prevent iOS auto-zoom on focus */
   }
 }
 

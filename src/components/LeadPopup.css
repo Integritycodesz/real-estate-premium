@@ -306,6 +306,48 @@
   .popup-form-side { padding: 40px 30px; }
 }
 
+@media (max-width: 768px) {
+  .lead-popup-container {
+    flex-direction: column;
+    max-width: 90vw;
+    height: 90vh;
+    overflow-y: auto;
+  }
+
+  .popup-image-side {
+    height: 180px;
+    padding: 20px;
+  }
+
+  .popup-form-side {
+    padding: 25px 20px;
+  }
+
+  .popup-close-btn {
+    top: 15px;
+    right: 15px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .popup-form-side h2 {
+    font-size: 1.5rem;
+  }
+
+  .popup-form-side p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .popup-form {
+    gap: 12px;
+  }
+
+  .date-input-wrapper {
+    padding-left: 40px;
+  }
+}
+
 @media (max-width: 480px) {
   .lead-popup-content { border-radius: 16px; }
   .popup-form-side { padding: 35px 20px 25px; }

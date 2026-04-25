@@ -267,22 +267,6 @@ const ProjectDetail = () => {
         </div>
       </div>
       
-      {/* Sticky Mobile Action Bar */}
-      <div className="sticky-mobile-actions">
-        <button className="mobile-action-btn visit" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>
-          <PhoneCall size={20} />
-          <span>Book Site Visit</span>
-        </button>
-        <a 
-          href={`https://wa.me/917054550296?text=Interested in ${project.title}. Please share details.`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mobile-action-btn wa"
-        >
-          <MessageCircle size={20} />
-          <span>WhatsApp</span>
-        </a>
-      </div>
     </div>
   );
 };
