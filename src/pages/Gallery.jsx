@@ -82,10 +82,6 @@ const Gallery = () => {
               </div>
 
               <div className="card-hover-overlay">
-                <div className="overlay-content">
-                  <span className="project-tag">{item.project}</span>
-                  <h3 className="image-title">{item.title}</h3>
-                </div>
                 <div className="maximize-icon">
                   <Maximize2 size={24} />
                 </div>
@@ -104,10 +100,6 @@ const Gallery = () => {
 
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
             <img src={selectedImage.url} alt={selectedImage.title} />
-            <div className="lightbox-info">
-              <h3>{selectedImage.title}</h3>
-              <p className="text-gold">{selectedImage.project}</p>
-            </div>
           </div>
         </div>
       )}
