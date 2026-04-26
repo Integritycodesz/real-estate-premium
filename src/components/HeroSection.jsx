@@ -58,8 +58,8 @@ const HeroSection = () => {
         <div className="hero-stats-grid reveal-delay-5">
           <div className="stat-card dark highlight">
             <div className="pulse-dot"></div>
-            <h3>14</h3>
-            <p>Plots Booked This Month</p>
+            <h3>5</h3>
+            <p>Ongoing Projects</p>
           </div>
           <div className="stat-card dark">
             <h3>500+</h3>

@@ -104,31 +104,27 @@
   letter-spacing: 2px;
 }
  
- .verified-badge {
-   position: absolute;
-   top: 30px;
-   right: 40px;
-   background: rgba(16, 185, 129, 0.1);
-   color: #10b981;
-   padding: 6px 12px;
-   border-radius: 20px;
-   font-size: 0.7rem;
-   font-weight: 700;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   display: flex;
-   align-items: center;
-   gap: 6px;
-   border: 1px solid rgba(16, 185, 129, 0.2);
- }
- 
- .verified-badge .dot {
-   width: 6px;
-   height: 6px;
-   background: #10b981;
-   border-radius: 50%;
-   box-shadow: 0 0 10px #10b981;
- }
+  .author-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .verified-status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #10b981;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .verified-icon {
+    filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.3));
+  }
  
  .testimonial-footer {
    display: flex;
@@ -142,7 +138,7 @@
  .author-info h4 {
    font-size: 1.3rem;
    color: var(--accent-gold);
-   margin-bottom: 4px;
+   margin: 0;
    font-family: var(--font-heading);
  }
  
@@ -211,11 +207,6 @@
     left: 15px;
   }
   
-  .verified-badge {
-    top: 20px;
-    right: 20px;
-    padding: 4px 10px;
-  }
   
   .testimonial-footer {
     flex-direction: column;

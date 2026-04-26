@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BadgeCheck } from 'lucide-react';
 import './TestimonialsSection.css';
 
 const TestimonialsSection = () => {
@@ -56,14 +57,17 @@ const TestimonialsSection = () => {
               
               return (
                 <div key={index} className={`testimonial-card glass-panel ${position}`}>
-                  <div className="verified-badge">
-                    <span className="dot"></span> Verified Buyer
-                  </div>
                   <div className="quote-mark">"</div>
                   <p className="testimonial-text">{test.text}</p>
                   <div className="testimonial-footer">
                     <div className="author-info">
-                      <h4>{test.name}</h4>
+                      <div className="author-header">
+                        <h4>{test.name}</h4>
+                        <div className="verified-status">
+                          <BadgeCheck size={16} className="verified-icon" />
+                          <span>Verified User</span>
+                        </div>
+                      </div>
                       <span className="author-location">{test.location}</span>
                     </div>
                     <div className="project-tag">
