@@ -32,14 +32,6 @@ const FlashDealsBanner = () => {
           ))}
         </div>
       </div>
-      <div className="banner-cta-fixed">
-        <button 
-          onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))} 
-          className="banner-cta"
-        >
-          Claim Now <ArrowRight size={16} />
-        </button>
-      </div>
     </div>
   );
 };

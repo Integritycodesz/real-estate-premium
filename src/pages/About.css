@@ -447,6 +447,16 @@
   .about-hero {
     min-height: auto;
     padding: 160px 0 80px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle::before {
+    display: none;
   }
 
   .about-hero .hero-glass-box {
@@ -454,20 +464,73 @@
     border-radius: 24px;
     border-left: none;
     border-top: 5px solid var(--accent-gold);
+    margin-top: 30px;
   }
   
+  .signature-name {
+    font-size: 2rem;
+  }
+
+  .journey-timeline::before {
+    left: 20px;
+  }
+
+  .journey-item, .journey-item:nth-child(even) {
+    padding-left: 45px;
+    margin-bottom: 50px;
+  }
+
+  .journey-marker {
+    left: 20px;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .journey-card {
+    padding: 25px 20px;
+  }
+
+  .journey-year {
+    font-size: 1.8rem;
+  }
+
+  .journey-card h4 {
+    font-size: 1.25rem;
+  }
+
+  .premium-quote {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
   .trust-seal-section {
     margin: 0;
     border-radius: 0;
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .values-display {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .final-legacy-box {
-    padding: 80px 30px;
+    padding: 60px 20px;
     border-radius: 30px;
+  }
+
+  .final-legacy-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 140px 0 60px;
+  }
+
+  .journey-year {
+    font-size: 1.5rem;
   }
 }

@@ -2,16 +2,27 @@ import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2, X, Send, ShieldCheck } from 'lucide-react';
 import './LeadMagnet.css';
 
-const LeadMagnet = ({ title, description, magnetType = 'Price Chart' }) => {
+const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState('idle'); // idle, sending, success
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
+    
+    // Proper Logic: Trigger actual download after a short delay
     setTimeout(() => {
       setStatus('success');
-      // Simulate download
+      
+      if (fileUrl && fileUrl !== '#') {
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = `${title.replace(/\s+/g, '_')}_${magnetType.replace(/\s+/g, '_')}`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      
       setTimeout(() => {
         setIsOpen(false);
         setStatus('idle');

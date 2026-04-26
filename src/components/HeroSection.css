@@ -214,7 +214,7 @@
 
 .stat-card p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -252,42 +252,81 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 160px 0 80px;
-    height: auto;
-    min-height: 100vh;
-    display: block;
+    padding: 50px 0 30px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-container {
+    align-items: center;
   }
   
   .hero-content {
+    max-width: 100%;
     margin-bottom: 40px;
+  }
+
+  .hero-badge {
+    justify-content: center;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    margin: 0 auto 35px;
   }
   
   .hero-actions {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 15px;
   }
   
   .hero-btn-primary, .hero-btn-outline {
     width: 100%;
+    max-width: 320px;
+    padding: 16px 25px;
   }
   
   .hero-stats-grid {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .stat-card h3 {
+    font-size: 1.5rem;
   }
   
-  .offer-item {
-    flex-wrap: wrap;
-    gap: 5px;
+  .banner-offers {
+    margin-top: 25px;
+    border-radius: 8px;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .hero-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 cols but smaller */
+    gap: 8px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .stat-card p {
+    font-size: 0.65rem;
   }
   
   .hero-title {
+    font-size: 2.5rem;
     line-height: 1.2;
   }
 }

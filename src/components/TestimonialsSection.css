@@ -186,15 +186,51 @@
 
 @media (max-width: 768px) {
   .carousel-container {
-    height: 550px;
+    height: 480px;
+    margin-top: 20px;
   }
+  
   .testimonial-card {
-    padding: 40px 30px;
+    padding: 35px 25px;
+    max-width: calc(100% - 10px);
   }
+  
   .testimonial-card.prev, .testimonial-card.next {
     display: none;
   }
+  
   .testimonial-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  .quote-mark {
+    font-size: 5rem;
+    top: 5px;
+    left: 15px;
+  }
+  
+  .verified-badge {
+    top: 20px;
+    right: 20px;
+    padding: 4px 10px;
+  }
+  
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 15px;
+  }
+  
+  .author-info h4 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 520px;
   }
 }

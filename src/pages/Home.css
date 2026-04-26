@@ -128,13 +128,14 @@
 }
 
 .stat-block h3 {
-  font-size: 4.5rem;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
   color: var(--accent-gold);
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 .stat-block p {
-  font-size: 1.1rem;
+  font-size: clamp(0.85rem, 3vw, 1.1rem);
   line-height: 1.6;
   opacity: 0.9;
   max-width: 300px;
@@ -209,14 +210,51 @@
 @media (max-width: 1024px) {
   .property-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .stats-grid {
+    gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .section-header {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   
+  .home-intro-text::after {
+    font-size: 20vw;
+    letter-spacing: 1vw;
+  }
+
+  .intro-text {
+    font-size: 1.5rem;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .home-callouts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .callout-card {
+    padding: 40px 25px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stat-block h3 {
+    margin-bottom: 5px;
+  }
+
   .cta-card {
     padding: 60px 25px;
     border-radius: 24px;
@@ -229,9 +267,26 @@
   .cta-actions {
     flex-direction: column;
     width: 100%;
+    gap: 15px;
   }
   
-  .cta-actions button {
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 1.3rem;
+  }
+
+  .cta-card h2 {
+    font-size: 2rem;
+  }
+
+  .cta-card p {
+    font-size: 1rem;
+    margin-bottom: 30px;
   }
 }

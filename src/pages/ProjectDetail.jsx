@@ -153,11 +153,13 @@ const ProjectDetail = () => {
                     title="Official Price List 2026" 
                     description="Get the latest plot-wise pricing and current payment plans."
                     magnetType="Price Chart"
+                    fileUrl={project.priceListUrl}
                   />
                   <LeadMagnet 
                     title="Layout & Site Map" 
                     description="Detailed blueprint showing available plots and common amenities."
                     magnetType="Site Plan"
+                    fileUrl={project.sitemapUrl}
                   />
                 </div>
               </div>

@@ -59,7 +59,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
+h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 6vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
 
 a {
   text-decoration: none;
@@ -80,7 +86,8 @@ button {
 
 @media (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -230,18 +237,20 @@ section {
 }
 
 .section-title {
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 10vw, 3.5rem);
   text-align: center;
   margin-bottom: 24px;
   color: var(--text-primary);
+  padding: 0 10px;
 }
 
 .section-subtitle {
   text-align: center;
   color: var(--text-secondary);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   max-width: 600px;
   margin: 0 auto 50px auto;
+  padding: 0 15px;
 }
 
 .text-gold {
@@ -337,57 +346,9 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 120px 0 60px;
-    text-align: center;
-  }
-  
-  .hero-content {
-    margin: 0 auto 40px;
-    text-align: center;
-  }
-
-  .hero-badge {
-    justify-content: center;
-  }
-  
-  .hero-description {
-    margin: 0 auto 40px;
-  }
-  
-  .hero-actions {
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .hero-btn-primary, .hero-btn-outline {
-    width: 100%;
-  }
-  
-  .hero-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
-    gap: 10px;
-  }
-  
-  .stat-card {
-    padding: 15px 10px;
-    text-align: center;
-  }
-}
-
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  
-  .hero-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .stat-card h3 {
-    font-size: 1.4rem;
+  .btn-gold {
+    width: 100%;
+    padding: 16px 20px;
   }
 }

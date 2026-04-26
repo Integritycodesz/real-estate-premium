@@ -6,7 +6,7 @@ export const projects = [
     image: "/src/assets/rajgharana.png",
     type: "Residential Plot",
     price: "₹1,450 /sq.ft",
-    status: "Sold Out",
+    status: "100% SOLD OUT",
     description: "Rajgharana is PBD Group's flagship residential development. A fully delivered and thriving community, it offers premium plots with modern infrastructure, wide roads, and a secure environment. Just 2 mins from Raebareli Main Road, this project has seen 40% value appreciation in the last 24 months.",
     features: ["Fully Delivered & Living", "Grand Entrance Gate", "40% Value Growth"],
     amenities: [
@@ -28,7 +28,9 @@ export const projects = [
       "Possession": "Immediate",
       "Total Area": "15 Acres",
       "Plot Sizes": "1000 - 2500 Sq. Ft."
-    }
+    },
+    sitemapUrl: "/downloads/rajgharana/sitemap.pdf",
+    priceListUrl: "/downloads/rajgharana/pricelist.pdf"
   },
   {
     id: "hanumant-dham",
@@ -37,7 +39,7 @@ export const projects = [
     image: "/src/assets/hanumant_dham.png",
     type: "Residential Plot",
     price: "₹1,250 /sq.ft",
-    status: "SELLING FAST",
+    status: "60% SOLD OUT",
     description: "Hanumant Dham is a serene residential community designed for those seeking peace and spiritual connectivity. Strategically located near SGPGI and major spiritual landmarks, it offers high-potential plots in a fast-developing zone.",
     features: ["Walking Distance to Temples", "Near SGPGI Hospital", "100% Legally Verified"],
     amenities: [
@@ -59,7 +61,9 @@ export const projects = [
       "Possession": "Ready for Registry",
       "Total Area": "10 Acres",
       "Plot Sizes": "800 - 2000 Sq. Ft."
-    }
+    },
+    sitemapUrl: "/downloads/hanumant-dham/sitemap.pdf",
+    priceListUrl: "/downloads/hanumant-dham/pricelist.pdf"
   },
   {
     id: "barsana-estate",
@@ -90,7 +94,9 @@ export const projects = [
       "Possession": "Dec 2026",
       "Total Area": "12 Acres",
       "Infrastructure": "Underground Utilities"
-    }
+    },
+    sitemapUrl: "/downloads/barsana-estate/sitemap.pdf",
+    priceListUrl: "/downloads/barsana-estate/pricelist.pdf"
   },
   {
     id: "nature-green",
@@ -121,7 +127,9 @@ export const projects = [
       "Possession": "In Progress",
       "Total Area": "18 Acres",
       "Theme": "Sustainable Living"
-    }
+    },
+    sitemapUrl: "/downloads/nature-green/sitemap.pdf",
+    priceListUrl: "/downloads/nature-green/pricelist.pdf"
   },
   {
     id: "shivay-residency",
@@ -152,7 +160,9 @@ export const projects = [
       "Possession": "Immediate Registry",
       "Total Area": "20 Acres",
       "Units": "Available in Phases"
-    }
+    },
+    sitemapUrl: "/downloads/shivay-residency/sitemap.pdf",
+    priceListUrl: "/downloads/shivay-residency/pricelist.pdf"
   },
   {
     id: "shivdhara-residency",
@@ -181,7 +191,9 @@ export const projects = [
       "Location": "Raebareli Road",
       "Possession": "Immediate",
       "Total Area": "12 Acres"
-    }
+    },
+    sitemapUrl: "/downloads/shivdhara-residency/sitemap.pdf",
+    priceListUrl: "/downloads/shivdhara-residency/pricelist.pdf"
   },
   {
     id: "muraliya-garden",
@@ -212,7 +224,10 @@ export const projects = [
       "Possession": "Ready to Build",
       "Total Area": "8 Acres",
       "Plot Sizes": "800, 1000, 1200 Sq. Ft."
-    }
+    },
+    sitemapUrl: "/downloads/muraliya-garden/sitemap.pdf",
+    priceListUrl: "/downloads/muraliya-garden/pricelist.pdf"
+  }
   }
 ];
 

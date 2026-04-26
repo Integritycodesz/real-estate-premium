@@ -35,7 +35,7 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
 };
 
 const ProjectsSection = () => {
-  const featuredProjectIds = ['shivay-residency', 'hanumant-dham', 'shivdhara-residency'];
+  const featuredProjectIds = ['shivay-residency', 'hanumant-dham', 'rajgharana', 'shivdhara-residency'];
   const filteredProjects = projects.filter(p => featuredProjectIds.includes(p.id));
 
   return (
