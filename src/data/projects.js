@@ -3,7 +3,7 @@ export const projects = [
     id: "rajgharana",
     title: "Rajgharana",
     location: "Raebareli Road, Lucknow",
-    image: "/src/assets/rajgharana.png",
+    image: new URL('../assets/rajgharana.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,450 /sq.ft",
     status: "100% SOLD OUT",
@@ -18,9 +18,9 @@ export const projects = [
       "Drainage System"
     ],
     gallery: [
-      "/src/assets/rajgharana.png",
-      "/src/assets/living_room.png",
-      "/src/assets/hero_exterior_new_1776831190922.png"
+      new URL('../assets/rajgharana.png', import.meta.url).href,
+      new URL('../assets/living_room.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -36,7 +36,7 @@ export const projects = [
     id: "hanumant-dham",
     title: "Hanumant Dham",
     location: "Near Spiritual Landmarks, Lucknow",
-    image: "/src/assets/hanumant_dham.png",
+    image: new URL('../assets/hanumant_dham.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,250 /sq.ft",
     status: "60% SOLD OUT",
@@ -51,9 +51,9 @@ export const projects = [
       "Jogging Track"
     ],
     gallery: [
-      "/src/assets/hanumant_dham.png",
-      "/src/assets/kitchen.png",
-      "/src/assets/hero_exterior_new_1776831190922.png"
+      new URL('../assets/hanumant_dham.png', import.meta.url).href,
+      new URL('../assets/kitchen.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -69,7 +69,7 @@ export const projects = [
     id: "barsana-estate",
     title: "Barsana Estate",
     location: "Raebareli Road, Lucknow",
-    image: "/src/assets/barsana_estate.png",
+    image: new URL('../assets/barsana_estate.png', import.meta.url).href,
     type: "Luxury Plot",
     price: "INR 1,650 /sq.ft",
     status: "Sold Out",
@@ -84,9 +84,9 @@ export const projects = [
       "Wide Entrance"
     ],
     gallery: [
-      "/src/assets/barsana_estate.png",
-      "/src/assets/living_room.png",
-      "/src/assets/hero_exterior_new_1776831190922.png"
+      new URL('../assets/barsana_estate.png', import.meta.url).href,
+      new URL('../assets/living_room.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Luxury Residential Plots",
@@ -102,7 +102,7 @@ export const projects = [
     id: "nature-green",
     title: "Nature Green",
     location: "Kisan Path, Lucknow",
-    image: "/src/assets/nature_green.png",
+    image: new URL('../assets/nature_green.png', import.meta.url).href,
     type: "Eco Plot",
     price: "INR 1,150 /sq.ft",
     status: "60% OFF",
@@ -117,9 +117,9 @@ export const projects = [
       "Eco-Walkways"
     ],
     gallery: [
-      "/src/assets/nature_green.png",
-      "/src/assets/living_room.png",
-      "/src/assets/kitchen.png"
+      new URL('../assets/nature_green.png', import.meta.url).href,
+      new URL('../assets/living_room.png', import.meta.url).href,
+      new URL('../assets/kitchen.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Eco-Residential Plots",
@@ -135,7 +135,7 @@ export const projects = [
     id: "shivay-residency",
     title: "Shivay Residency (Jila Panchayat Approved)",
     location: "Raebareli Road, Lucknow",
-    image: "/src/assets/shivdhara.png",
+    image: new URL('../assets/shivdhara.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,550 /sq.ft",
     status: "SELLING FAST",
@@ -150,9 +150,9 @@ export const projects = [
       "Landscaped Parks"
     ],
     gallery: [
-      "/src/assets/shivdhara.png",
-      "/src/assets/hero_exterior_new_1776831190922.png",
-      "/src/assets/kitchen.png"
+      new URL('../assets/shivdhara.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href,
+      new URL('../assets/kitchen.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Modern Residential Plots",
@@ -168,7 +168,7 @@ export const projects = [
     id: "shivdhara-residency",
     title: "Shivdhara Residency",
     location: "Raebareli Road corridor, Lucknow",
-    image: "/src/assets/shivdhara.png",
+    image: new URL('../assets/shivdhara.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,350 /sq.ft",
     status: "NEW LAUNCH",
@@ -183,8 +183,8 @@ export const projects = [
       "Drainage"
     ],
     gallery: [
-      "/src/assets/shivdhara.png",
-      "/src/assets/hero_exterior_new_1776831190922.png"
+      new URL('../assets/shivdhara.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -199,7 +199,7 @@ export const projects = [
     id: "muraliya-garden",
     title: "Muraliya Garden",
     location: "Raebareli Road corridor, Lucknow",
-    image: "/src/assets/muraliya_garden.png",
+    image: new URL('../assets/muraliya_garden.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,200 /sq.ft",
     status: "READY TO BUILD",
@@ -214,9 +214,9 @@ export const projects = [
       "Daily Maintenance"
     ],
     gallery: [
-      "/src/assets/muraliya_garden.png",
-      "/src/assets/living_room.png",
-      "/src/assets/hero_exterior_new_1776831190922.png"
+      new URL('../assets/muraliya_garden.png', import.meta.url).href,
+      new URL('../assets/living_room.png', import.meta.url).href,
+      new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     specifications: {
       "Project Type": "Residential Plots",

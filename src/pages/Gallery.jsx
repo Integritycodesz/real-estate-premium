@@ -9,17 +9,17 @@ const Gallery = () => {
 
   // Custom gallery images provided by the user
   const siteImages = [
-    { url: "/src/assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg", title: "Site Progress View", category: "Site Development", project: "Ongoing Development" },
-    { url: "/src/assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg", title: "Customer Site Visit", category: "Site Development", project: "Live Site Visit" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg", title: "Project Overview", category: "Site Development", project: "Raebareli Road Site" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg", title: "Infrastructure Work", category: "Site Development", project: "Road Development" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg", title: "Boundary Wall Construction", category: "Site Development", project: "Secured Perimeter" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg", title: "Street Lighting Install", category: "Site Development", project: "Utilities Phase" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg", title: "Main Entrance Gate", category: "Site Development", project: "Grand Entrance" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg", title: "Plot Leveling", category: "Site Development", project: "Land Preparation" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg", title: "On-site Office", category: "Site Development", project: "Sales & Support" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg", title: "Greenery & Landscaping", category: "Site Development", project: "Park Development" },
-    { url: "/src/assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg", title: "Family Site Inspection", category: "Site Development", project: "Trust & Transparency" }
+    { url: new URL('../assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg', import.meta.url).href, title: "Site Progress View", category: "Site Development", project: "Ongoing Development" },
+    { url: new URL('../assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg', import.meta.url).href, title: "Customer Site Visit", category: "Site Development", project: "Live Site Visit" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg', import.meta.url).href, title: "Project Overview", category: "Site Development", project: "Raebareli Road Site" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg', import.meta.url).href, title: "Infrastructure Work", category: "Site Development", project: "Road Development" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg', import.meta.url).href, title: "Boundary Wall Construction", category: "Site Development", project: "Secured Perimeter" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg', import.meta.url).href, title: "Street Lighting Install", category: "Site Development", project: "Utilities Phase" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg', import.meta.url).href, title: "Main Entrance Gate", category: "Site Development", project: "Grand Entrance" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg', import.meta.url).href, title: "Plot Leveling", category: "Site Development", project: "Land Preparation" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg', import.meta.url).href, title: "On-site Office", category: "Site Development", project: "Sales & Support" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg', import.meta.url).href, title: "Greenery & Landscaping", category: "Site Development", project: "Park Development" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg', import.meta.url).href, title: "Family Site Inspection", category: "Site Development", project: "Trust & Transparency" }
   ];
 
   // Only show the custom images in the gallery
