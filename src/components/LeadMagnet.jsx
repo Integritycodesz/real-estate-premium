@@ -5,29 +5,29 @@ import './LeadMagnet.css';
 const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState('idle'); // idle, sending, success
+  const [formData, setFormData] = useState({ name: '', phone: '' });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
     
-    // Proper Logic: Trigger actual download after a short delay
+    // Construct WhatsApp Message
+    const message = `Hi, I am ${formData.name}. I am interested in the ${magnetType} for your project. Please share the details on my number: ${formData.phone}.`;
+    const whatsappUrl = `https://wa.me/917054550296?text=${encodeURIComponent(message)}`;
+
+    // Simulate preparation and redirect
     setTimeout(() => {
       setStatus('success');
       
-      if (fileUrl && fileUrl !== '#') {
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.download = `${title.replace(/\s+/g, '_')}_${magnetType.replace(/\s+/g, '_')}`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
       
       setTimeout(() => {
         setIsOpen(false);
         setStatus('idle');
+        setFormData({ name: '', phone: '' });
       }, 3000);
-    }, 1500);
+    }, 1200);
   };
 
   return (
@@ -55,18 +55,30 @@ const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl })
             
             <div className="modal-header">
               <ShieldCheck size={40} className="text-gold" />
-              <h3>Enter Details to Receive {magnetType}</h3>
-              <p>We'll send the latest {magnetType.toLowerCase()} and inventory details to your mobile.</p>
+              <h3>Receive {magnetType} on WhatsApp</h3>
+              <p>We'll send the latest {magnetType.toLowerCase()} and inventory details directly to your WhatsApp.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="magnet-form">
-              <input type="text" placeholder="Full Name" required />
-              <input type="tel" placeholder="WhatsApp Number" required />
+              <input 
+                type="text" 
+                placeholder="Full Name" 
+                required 
+                value={formData.name}
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+              />
+              <input 
+                type="tel" 
+                placeholder="WhatsApp Number" 
+                required 
+                value={formData.phone}
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+              />
               <button type="submit" className={status === 'success' ? 'success' : ''}>
-                {status === 'sending' ? 'Preparing File...' : 
-                 status === 'success' ? 'Sent to WhatsApp! 🎉' : 
-                 `Download ${magnetType}`}
-                {status === 'idle' && <Send size={18} />}
+                {status === 'sending' ? 'Connecting...' : 
+                 status === 'success' ? 'Redirecting to WhatsApp...' : 
+                 `Get ${magnetType} on WhatsApp`}
+                {status === 'idle' && <MessageCircle size={18} />}
               </button>
             </form>
             <p className="modal-footer-text">🔒 100% Privacy Guaranteed. No Spam.</p>
