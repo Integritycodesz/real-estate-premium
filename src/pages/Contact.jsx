@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, CheckCircle2 } from 'lucide-react';
+import { projects } from '../data/projects';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import './PageStyles.css';
 
@@ -115,8 +116,9 @@ const Contact = () => {
                 <div className="select-wrapper">
                   <select className="form-input">
                     <option value="">Select Project of Interest</option>
-                    <option value="shivay">Shivay Residency (Jila Panchayat Approved)</option>
-                    <option value="rajgharana">Rajgharana</option>
+                    {projects.map(project => (
+                      <option key={project.id} value={project.id}>{project.title}</option>
+                    ))}
                     <option value="general">General Inquiry</option>
                   </select>
                   <CheckCircle2 size={18} className="select-icon" />

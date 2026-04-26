@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, LayoutGrid, MessageSquare, Phone, Send } from 'lucide-react';
+import { Home, LayoutGrid, TrendingUp, Phone, Send } from 'lucide-react';
 import './MobileBottomNav.css';
 
 const MobileBottomNav = () => {
@@ -27,10 +27,10 @@ const MobileBottomNav = () => {
         <span>Enquire</span>
       </div>
       
-      <a href="https://wa.me/917054550296" target="_blank" rel="noopener noreferrer" className="nav-item">
-        <MessageSquare size={20} />
-        <span>WhatsApp</span>
-      </a>
+      <NavLink to="/why-invest" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        <TrendingUp size={20} />
+        <span>Why Invest</span>
+      </NavLink>
       
       <a href="tel:+917054550296" className="nav-item">
         <Phone size={20} />

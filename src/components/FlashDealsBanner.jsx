@@ -4,10 +4,10 @@ import './FlashDealsBanner.css';
 
 const FlashDealsBanner = () => {
   const deals = [
-    { text: "Akshaya Tritiya Special: Free Registry + ₹51k Gold Coin on Hanumant Dham!", highlight: "Free Registry" },
-    { text: "Limited Inventory: Corner Plots available at Shivay Residency!", highlight: "Corner Plots" },
-    { text: "New Launch: Shivdhara Residency - Exclusive Phase 1 Pricing!", highlight: "New Launch" },
-    { text: "Special Offer for SGPGI Employees: Extra ₹500/sqft Discount at Muraliya Garden!", highlight: "SGPGI Discount" }
+    { text: "🎁 Limited Time Benefits: Upgrade your lifestyle with exclusive launch offers", highlight: "Limited Time Benefits" },
+    { text: "📜 Free Registry: Zero registration cost — direct savings for you", highlight: "Free Registry" },
+    { text: "🏡 Free Boundary Wall: Secure your property at no extra cost", highlight: "Free Boundary Wall" },
+    { text: "💰 ₹50,000 Instant Discount: Book now and save instantly on your investment", highlight: "Instant Discount" }
   ];
 
   return (

@@ -7,8 +7,8 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
   return (
     <div className="project-card" data-type={type}>
       <div className="project-image-wrapper">
-        <div 
-          className="project-image" 
+        <div
+          className="project-image"
           style={{ backgroundImage: `url(${image})` }}
         ></div>
         <div className="project-status">{status || 'Available'}</div>

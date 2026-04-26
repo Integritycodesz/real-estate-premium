@@ -37,7 +37,7 @@ const HeroSection = () => {
 
           <div className="hero-actions reveal-delay-4">
             <Link
-              to="/projects"
+              to="/contact"
               className="hero-btn-primary"
             >
               Check Plot Availability
