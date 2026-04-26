@@ -105,7 +105,7 @@ export const projects = [
     image: new URL('../assets/nature_green.png', import.meta.url).href,
     type: "Eco Plot",
     price: "INR 1,150 /sq.ft",
-    status: "60% OFF",
+    status: "SELLING FAST",
     description: "Nature Green is an eco-conscious development that redefines sustainable living. With dedicated organic gardens and rainwater harvesting, it offers a refreshing lifestyle away from the urban chaos.",
     features: ["Eco-Friendly", "Lush Landscapes", "Organic Gardens"],
     amenities: [

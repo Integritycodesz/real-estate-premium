@@ -11,16 +11,19 @@ const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl })
     e.preventDefault();
     setStatus('sending');
     
-    // Construct WhatsApp Message
-    const message = `Hi, I am ${formData.name}. I am interested in the ${magnetType} for your project. Please share the details on my number: ${formData.phone}.`;
-    const whatsappUrl = `https://wa.me/917054550296?text=${encodeURIComponent(message)}`;
-
-    // Simulate preparation and redirect
+    // Simulate preparation and trigger download
     setTimeout(() => {
       setStatus('success');
       
-      // Open WhatsApp in new tab
-      window.open(whatsappUrl, '_blank');
+      if (fileUrl) {
+        // Trigger direct download
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.setAttribute('download', ''); // Trigger download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
       
       setTimeout(() => {
         setIsOpen(false);
@@ -55,8 +58,8 @@ const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl })
             
             <div className="modal-header">
               <ShieldCheck size={40} className="text-gold" />
-              <h3>Receive {magnetType} on WhatsApp</h3>
-              <p>We'll send the latest {magnetType.toLowerCase()} and inventory details directly to your WhatsApp.</p>
+              <h3>Download {magnetType}</h3>
+              <p>Please provide your details to instantly download the latest {magnetType.toLowerCase()} and inventory details.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="magnet-form">
@@ -69,16 +72,15 @@ const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl })
               />
               <input 
                 type="tel" 
-                placeholder="WhatsApp Number" 
+                placeholder="Mobile Number" 
                 required 
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
               />
-              <button type="submit" className={status === 'success' ? 'success' : ''}>
-                {status === 'sending' ? 'Connecting...' : 
-                 status === 'success' ? 'Redirecting to WhatsApp...' : 
-                 `Get ${magnetType} on WhatsApp`}
-                {status === 'idle' && <MessageCircle size={18} />}
+              <button type="submit" className={status === 'success' ? 'success' : ''} disabled={status !== 'idle'}>
+                {status === 'sending' ? 'Preparing Download...' : 
+                 status === 'success' ? 'Starting Download...' : 
+                 `Download ${magnetType}`}
               </button>
             </form>
             <p className="modal-footer-text">🔒 100% Privacy Guaranteed. No Spam.</p>

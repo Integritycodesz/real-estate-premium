@@ -7,7 +7,7 @@ const SmartLSection = () => {
     {
       icon: <Target className="text-gold" size={32} />,
       title: "Smart Location selection",
-      desc: "We don't buy everywhere. We only select land in the direct path of government development hubs like SGPGI and the New Outer Ring Road."
+      desc: "We don't buy everywhere. We only select land in the direct path of government development hubs like Awas Vikas, IT City, and premium developments like Kalpana Estates and Eldico Solano near Raebareli Road, Lucknow."
     },
     {
       icon: <ShieldCheck className="text-gold" size={32} />,
