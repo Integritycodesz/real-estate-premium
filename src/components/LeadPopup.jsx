@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send, Phone, User, Zap, Star, ShieldCheck, MapPin, Calendar } from 'lucide-react';
 import './LeadPopup.css';
+import MobileLeadPopup from './MobileLeadPopup';
 import PlotImg from '../assets/about/about_hero.png';
 
 const LeadPopup = () => {
@@ -8,6 +9,14 @@ const LeadPopup = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [status, setStatus] = useState('idle');
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Resize listener
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Manual trigger via event
   useEffect(() => {
@@ -61,6 +70,11 @@ const LeadPopup = () => {
   };
 
   if (!isVisible) return null;
+
+  // Render dedicated mobile popup
+  if (isMobile) {
+    return <MobileLeadPopup onClose={handleClose} />;
+  }
 
   return (
     <div className={`lead-popup-overlay ${isClosing ? 'fade-out' : ''}`}>
@@ -197,3 +211,4 @@ const LeadPopup = () => {
 };
 
 export default LeadPopup;
+

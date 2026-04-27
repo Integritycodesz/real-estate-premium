@@ -200,7 +200,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 100px; /* Extra bottom padding for MobileBottomNav */
+    padding: 40px 0 80px; /* Reduced from 60px/100px */
   }
 
   .footer-grid {

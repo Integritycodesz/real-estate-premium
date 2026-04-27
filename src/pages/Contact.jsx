@@ -113,15 +113,27 @@ const Contact = () => {
                 
                 <input type="tel" placeholder="Phone Number" className="form-input" />
                 
-                <div className="select-wrapper">
-                  <select className="form-input">
-                    <option value="">Select Project of Interest</option>
-                    {projects.map(project => (
-                      <option key={project.id} value={project.id}>{project.title}</option>
-                    ))}
-                    <option value="general">General Inquiry</option>
-                  </select>
-                  <CheckCircle2 size={18} className="select-icon" />
+                <div className="form-row">
+                  <div className="select-wrapper">
+                    <select className="form-input">
+                      <option value="">Select Project of Interest</option>
+                      {projects.map(project => (
+                        <option key={project.id} value={project.id}>{project.title}</option>
+                      ))}
+                      <option value="general">General Inquiry</option>
+                    </select>
+                    <CheckCircle2 size={18} className="select-icon" />
+                  </div>
+
+                  <div className="select-wrapper">
+                    <select className="form-input">
+                      <option value="">Select Budget</option>
+                      <option value="10-20">10-20 lakh</option>
+                      <option value="20-30">20-30 lakh</option>
+                      <option value="30+">30 lakh +</option>
+                    </select>
+                    <CheckCircle2 size={18} className="select-icon" />
+                  </div>
                 </div>
                 
                 <textarea placeholder="How can we help you?" rows="4" className="form-textarea"></textarea>

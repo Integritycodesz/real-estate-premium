@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, User, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Send, User, Mail, Phone, MessageSquare, Coins } from 'lucide-react';
 import './InquiryForm.css';
 
 const InquiryForm = ({ projectTitle }) => {
@@ -7,6 +7,7 @@ const InquiryForm = ({ projectTitle }) => {
     name: '',
     email: '',
     phone: '',
+    budget: '',
     message: `I'm interested in ${projectTitle}. Please share more details.`
   });
 
@@ -67,6 +68,23 @@ const InquiryForm = ({ projectTitle }) => {
                 onChange={e => setFormData({...formData, phone: e.target.value})}
               />
             </div>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <div className="input-with-icon">
+            <Coins size={18} className="form-icon" />
+            <select 
+              required
+              value={formData.budget}
+              onChange={e => setFormData({...formData, budget: e.target.value})}
+              style={{ width: '100%', background: 'transparent', border: 'none', padding: '12px 10px 12px 0', fontSize: '1rem', color: '#1a202c', outline: 'none' }}
+            >
+              <option value="">Select Budget</option>
+              <option value="10-20">10-20 lakh</option>
+              <option value="20-30">20-30 lakh</option>
+              <option value="30+">30 lakh +</option>
+            </select>
           </div>
         </div>
 

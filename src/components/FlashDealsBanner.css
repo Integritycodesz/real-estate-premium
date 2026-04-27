@@ -2,17 +2,21 @@
   background: linear-gradient(90deg, #1a1a1a, #C81414, #1a1a1a);
   background-size: 200% auto;
   color: white;
-  height: 52px;
+  height: 48px;
   position: sticky; 
-  top: 80px; 
+  top: 80px; /* Aligns below the active navbar */
   left: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 2000; 
+  z-index: 4999; 
   animation: gradientMove 6s ease infinite;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root.nav-hidden .flash-deals-banner {
+  top: 0; /* Moves to the very top when navbar hides */
 }
 
 .banner-marquee {
@@ -108,9 +112,13 @@
     margin: 10px auto;
     border-radius: 25px;
     height: 40px;
-    top: 75px;
+    top: 65px;
     background: linear-gradient(90deg, #1a1a1a, #C81414, #1a1a1a);
     background-size: 200% auto;
+  }
+
+  :root.nav-hidden .flash-deals-banner {
+    top: 10px; /* Stay slightly off the top for the rounded look */
   }
   
   .banner-marquee {

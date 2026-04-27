@@ -3,11 +3,7 @@ import { ShieldCheck, CircleDollarSign, MapPin, UserCheck, FileText } from 'luci
 import './TrustBar.css';
 
 const trustItems = [
-  {
-    icon: <ShieldCheck size={24} />,
-    title: "Jila Panchayat Approved",
-    subtitle: "Every plot verified"
-  },
+
   {
     icon: <CircleDollarSign size={24} />,
     title: "Zero Hidden Charges",

@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Home, LayoutGrid, TrendingUp, Phone, Send } from 'lucide-react';
 import './MobileBottomNav.css';
 
 const MobileBottomNav = () => {
+  const [visible, setVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 50;
+      
+      setVisible(isVisible);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   const openLeadPopup = () => {
     window.dispatchEvent(new Event('open-pbd-lead-popup'));
   };
 
   return (
-    <div className="mobile-bottom-nav">
+    <div className={`mobile-bottom-nav ${!visible ? 'hidden' : ''}`}>
       <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
         <Home size={20} />
         <span>Home</span>

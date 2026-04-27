@@ -23,7 +23,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="hero-description reveal-delay-3">
-            Invest in Jila Panchayat/Government verified plots across Lucknow’s primary growth corridors: Raebareli Road.
+            Invest in government-verified plots across Lucknow’s primary growth corridors: Raebareli Road.
             Join 500+ families already living in our fully delivered estates.
           </p>
 
@@ -65,10 +65,7 @@ const HeroSection = () => {
             <h3>500+</h3>
             <p>Families Already Living</p>
           </div>
-          <div className="stat-card dark">
-            <h3>100%</h3>
-            <p>Jila Panchayat Approved</p>
-          </div>
+
           <div className="stat-card dark">
             <h3>10+</h3>
             <p>Years of Legacy</p>

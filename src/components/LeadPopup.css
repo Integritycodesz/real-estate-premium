@@ -1,8 +1,8 @@
 .lead-popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(6, 17, 44, 0.9);
-  backdrop-filter: blur(12px);
+  background: rgba(6, 17, 44, 0.6); /* Reduced opacity */
+  backdrop-filter: blur(8px); /* Slightly reduced blur */
   z-index: 20000;
   display: flex;
   align-items: center;
@@ -15,10 +15,11 @@
   background: #ffffff;
   width: 100%;
   max-width: 850px;
+  max-height: 90vh; /* Ensure it doesn't exceed viewport */
   border-radius: 24px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
   display: flex;
   animation: slideUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
@@ -27,19 +28,18 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 36px;
-  height: 36px;
+  width: 40px; /* Larger hit area */
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f4f4f4;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.3s ease;
   color: #333;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .popup-close:hover {
@@ -149,36 +149,34 @@
   font-family: var(--font-heading);
   font-size: 1.8rem;
   color: var(--primary-blue);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 
 .popup-header p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .popup-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .popup-input-group {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .input-icon-wrapper {
   position: absolute;
   left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--primary-blue);
-  opacity: 0.6;
-  display: flex;
-  align-items: center;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -186,13 +184,11 @@
 .popup-input-group select {
   width: 100%;
   padding: 14px 15px 14px 45px;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  background: #fdfdfd;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  border-radius: 12px;
+  border: 1.5px solid #eee;
+  background: #fafafa;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
-  color: #333;
 }
 
 .popup-input-group input:focus,
@@ -200,7 +196,7 @@
   outline: none;
   border-color: var(--primary-blue);
   background: #fff;
-  box-shadow: 0 4px 12px rgba(10, 40, 110, 0.08);
+  box-shadow: 0 5px 15px rgba(10, 40, 110, 0.05);
 }
 
 .date-input-wrapper {
@@ -208,10 +204,9 @@
   display: flex;
   align-items: center;
   padding: 0 15px 0 45px;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  background: #fdfdfd;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  border: 1.5px solid #eee;
+  background: #fafafa;
 }
 
 .date-input-wrapper:focus-within {
@@ -240,16 +235,16 @@
   color: white;
   border: none;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   transition: all 0.3s ease;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .popup-submit-btn:hover:not(:disabled) {
@@ -271,12 +266,11 @@
 }
 
 .popup-trust-footer {
-  margin-top: 25px;
-  padding-top: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #f0f0f0;
-  gap: 10px;
 }
 
 .trust-item {
@@ -302,16 +296,19 @@
 
 @media (max-width: 768px) {
   .lead-popup-overlay {
-    padding: 10px;
-    align-items: flex-end; /* Push to bottom on mobile for better thumb reach */
+    padding: 0;
+    align-items: flex-end; /* Bottom sheet style */
   }
 
   .lead-popup-content {
-    max-width: 100%;
-    border-radius: 24px 24px 0 0; /* Rounded top only when at bottom */
-    margin-bottom: -10px; /* Offset parent padding */
-    max-height: 90vh;
-    overflow-y: auto;
+    border-radius: 30px 30px 0 0;
+    max-height: 85vh;
+    animation: slideUpMobile 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  @keyframes slideUpMobile {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
   }
 
   .popup-body {
@@ -319,69 +316,49 @@
   }
 
   .popup-image-side {
-    flex: none;
-    height: 140px;
-    min-height: 140px;
-    display: block; /* Show image even on small screens but compact */
+    height: 160px;
+    min-height: 160px;
   }
 
   .popup-image-overlay {
-    padding: 15px 20px;
-  }
-
-  .popup-badge-group {
-    flex-direction: row;
-    gap: 8px;
+    padding: 20px 25px;
   }
 
   .popup-image-text h3 {
-    font-size: 1.3rem;
-    margin-top: 5px;
-  }
-
-  .popup-form-side {
-    padding: 25px 20px 80px; /* Extra bottom padding for MobileBottomNav */
-  }
-
-  .popup-header h2 {
     font-size: 1.4rem;
   }
 
+  .popup-form-side {
+    padding: 30px 25px 40px;
+  }
+
+  .popup-header h2 {
+    font-size: 1.5rem;
+  }
+
   .popup-header p {
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-  }
-
-  .popup-input-group input, 
-  .popup-input-group select {
-    padding: 12px 15px 12px 40px;
-  }
-
-  .date-input-wrapper {
-    padding-left: 40px;
-  }
-
-  .popup-submit-btn {
-    padding: 14px;
-  }
-
-  .popup-trust-footer {
-    flex-wrap: wrap;
-    margin-top: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .popup-image-side {
-    height: 120px;
+    display: none; /* Remove image to save space on small phones */
   }
   
-  .popup-header h2 {
-    font-size: 1.25rem;
+  .lead-popup-content {
+    max-height: 80vh;
   }
 
-  .trust-indicator {
-    display: none; /* Hide minor details on very small screens */
+  .popup-form-side {
+    padding: 40px 20px 30px;
+  }
+  
+  .popup-close {
+    background: #f0f0f0;
+    top: 10px;
+    right: 10px;
   }
 }
 

@@ -20,7 +20,7 @@ const AboutSection = () => {
             </p>
             
             <p className="description-text">
-              With 10 years of expertise in this industry, our founder saw one pattern repeat itself: good families were making the most important financial decision of their lives without proper guidance. Every listing we offer is Jila Panchayat or Nagar Panchayat approved. Every conversation is honest.
+              With 10 years of expertise in this industry, our founder saw one pattern repeat itself: good families were making the most important financial decision of their lives without proper guidance. Every listing we offer is legally verified and approved. Every conversation is honest.
             </p>
             
             <div className="founder-quote-box">
@@ -37,7 +37,7 @@ const AboutSection = () => {
             <div className="feature-card">
               <span className="feature-number">01</span>
               <h3>Legal Trust</h3>
-              <p>Every property is Jila Panchayat or Nagar Panchayat approved. No grey areas. No verbal promises only.</p>
+              <p>Every property is government verified. No grey areas. No verbal promises only.</p>
             </div>
             
             <div className="feature-card">

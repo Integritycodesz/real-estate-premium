@@ -503,57 +503,72 @@
 @media (max-width: 1200px) {
   .corridor-main-row, .math-wrapper, .comparison-flex {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
   
   .math-visual { display: none; }
+  
+  .corridor-visual-side {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 992px) {
   .stats-grid-invest {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 20px;
+    gap: 30px;
+  }
+  
+  .invest-hero-glass-box {
+    max-width: 100%;
+    border-radius: 24px;
+    padding: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .invest-hero-with-bg {
     min-height: auto;
-    padding: 120px 0 60px;
+    padding: 140px 0 80px;
     text-align: center;
   }
 
   .hero-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(6, 17, 44, 0.95) 0%,
-      rgba(6, 17, 44, 0.8) 100%
+    background: radial-gradient(
+      circle at top,
+      rgba(6, 17, 44, 0.8) 0%,
+      rgba(6, 17, 44, 0.95) 100%
     );
   }
 
   .invest-hero-glass-box {
-    padding: 40px 25px;
-    border-radius: 24px;
+    padding: 35px 20px;
+    background: rgba(255, 255, 255, 0.08);
     border-left: none;
-    border-top: 5px solid var(--accent-gold);
-    margin: 0 auto;
-    max-width: 100%;
-    text-align: center;
+    border-top: 4px solid var(--accent-gold);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
   }
 
   .hero-title-main {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    margin-bottom: 20px;
+  }
+
+  .hero-desc-main {
+    margin: 0 auto 35px;
+    font-size: 1rem;
   }
   
   .invest-hero-actions {
     flex-direction: column;
-    align-items: center;
     gap: 15px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .invest-hero-actions .btn {
     width: 100%;
-    max-width: 320px;
   }
   
   .section {
@@ -564,9 +579,21 @@
     display: none;
   }
 
+  .invest-stats-bar {
+    padding: 50px 0;
+  }
+
   .stats-grid-invest {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 15px;
+  }
+  
+  .stat-item-invest .stat-value {
+    font-size: 2.5rem;
+  }
+
+  .stat-item-invest.highlighted .stat-value {
+    font-size: 3rem;
   }
   
   .data-points-grid, .math-cards {
@@ -575,41 +602,109 @@
   }
   
   .visual-badge {
-    position: static;
+    position: relative;
     display: inline-block;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    transform: none;
+    margin-top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 5;
   }
   
+  .neighbour-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .neighbour-card {
+    padding: 30px 20px;
+  }
+
   .comparison-table-wrapper {
+    margin-top: 30px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  /* Add a subtle indicator that the table is scrollable */
+  .comparison-table-wrapper::after {
+    content: 'Swipe to view more →';
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
   }
 
   .comparison-table {
-    min-width: 500px;
+    min-width: 600px;
+    margin-bottom: 10px;
   }
 
   .comparison-table th, .comparison-table td {
     padding: 15px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .roi-insight-box {
     padding: 35px 25px;
+    margin-top: 40px;
+  }
+
+  .roi-insight-box h4 {
+    font-size: 1.3rem;
+  }
+
+  .roi-insight-box p {
+    font-size: 1rem;
+  }
+
+  .invest-cta-box-fixed {
+    padding: 50px 25px;
+    border-radius: 24px;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .invest-hero-with-bg {
+    padding: 120px 0 60px;
+  }
+
   .stats-grid-invest {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
   
   .invest-cta-box-fixed {
-    padding: 60px 20px;
+    padding: 40px 20px;
+  }
+
+  .invest-cta-box-fixed h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header-centered h2 {
+    font-size: 2rem;
+  }
+
+  .neighbour-brand {
+    font-size: 1.3rem;
+  }
+  
+  .invest-stats-bar .container {
+    padding: 0 20px;
   }
 }
 

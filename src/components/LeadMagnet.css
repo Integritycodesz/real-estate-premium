@@ -148,8 +148,19 @@
   .lead-magnet-card {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+  .magnet-icon {
+    width: 48px;
+    height: 48px;
   }
   .magnet-btn {
     width: 100%;
+    padding: 10px 15px;
+  }
+  .magnet-modal-content {
+    padding: 30px 20px;
+    border-radius: 20px;
   }
 }

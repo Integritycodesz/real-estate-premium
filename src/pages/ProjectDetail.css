@@ -560,7 +560,7 @@
 
 @media (max-width: 768px) {
   .project-nav-bar {
-    top: 60px;
+    top: 44px;
   }
   
   .gallery-main-frame {
@@ -582,11 +582,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
-  padding: 12px 15px;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 8px 15px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
   z-index: 1000;
-  gap: 12px;
+  gap: 10px;
 }
 
 .mobile-action-btn {
@@ -595,10 +597,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border: none;
   text-decoration: none;
 }
@@ -616,7 +618,7 @@
 @media (max-width: 768px) {
   .sticky-mobile-actions {
     display: flex;
-    bottom: 80px; /* Stay above MobileBottomNav if present, or just use 0 */
+    bottom: 60px; /* Aligned with thinner MobileBottomNav */
   }
   
   /* If MobileBottomNav is used, we need to decide which one is more important.

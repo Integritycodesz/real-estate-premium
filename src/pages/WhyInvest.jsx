@@ -1,6 +1,6 @@
 import React from 'react';
 import { TrendingUp, Map, Clock, ArrowRight, ShieldCheck, Building2, Landmark, Globe, PieChart, Zap, GraduationCap, HeartPulse, Train, Briefcase } from 'lucide-react';
-import WhyInvestSection from '../components/WhyInvestSection';
+
 import Counter from '../components/Counter';
 import './WhyInvest.css';
 
@@ -18,11 +18,11 @@ const WhyInvest = () => {
         <div className="hero-overlay"></div>
         <div className="container hero-container-invest">
           <div className="invest-hero-glass-box">
-            <span className="badge">Expert Investment Guide</span>
+
             <h1 className="hero-title-main">Why Your Next Big Move Should Be <span className="text-gold">Raebareli Road</span></h1>
             <p className="hero-desc-main">Lucknow is growing faster than ever, and at the heart of this expansion is Raebareli Road. It's not just a stretch of asphalt; it's a corridor of opportunity where thousands are securing their future. If you've been waiting for the "right time," this is it.</p>
             <div className="invest-hero-actions">
-               <button className="btn-primary btn-large" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>Download Investment Guide</button>
+               <button className="btn-primary btn-large" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>Get Started Today</button>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ const WhyInvest = () => {
                     <tr>
                       <td>Legal Approval</td>
                       <td>RERA/LDA</td>
-                      <td className="highlight-col">Jila Panchayat / Verified</td>
+                      <td className="highlight-col">Govt. Verified</td>
                     </tr>
                     <tr>
                       <td>Immediate Possession</td>
@@ -213,8 +213,7 @@ const WhyInvest = () => {
         </div>
       </section>
 
-      {/* Reusing existing slider */}
-      <WhyInvestSection />
+
 
       {/* Contact CTA */}
       <section className="invest-cta section">

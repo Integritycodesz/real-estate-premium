@@ -1,0 +1,222 @@
+.mobile-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 17, 44, 0.4);
+  backdrop-filter: blur(10px);
+  z-index: 30000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.mobile-popup-content {
+  background: #ffffff;
+  width: 100%;
+  max-height: 85vh;
+  border-radius: 36px 36px 0 0;
+  position: relative;
+  padding: 30px 20px 25px;
+  box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: mobileSlideUp 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Add a subtle aesthetic background blob */
+.mobile-popup-content::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes mobileSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #06112c;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.mobile-popup-close:active {
+  transform: scale(0.9);
+  background: #e2e8f0;
+}
+
+.mobile-popup-handle {
+  width: 45px;
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-popup-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-popup-tag {
+  background: linear-gradient(135deg, #ff4d4d 0%, #c81414 100%);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(200, 20, 20, 0.2);
+}
+
+.mobile-popup-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: #06112c;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.mobile-popup-header p {
+  color: #55607a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.mobile-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-input-wrapper input {
+  width: 100%;
+  padding: 14px 18px 14px 48px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 1rem;
+  color: #1e293b;
+  font-family: var(--font-body);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-input-wrapper input:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: white;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.08);
+}
+
+.mobile-input-icon {
+  position: absolute;
+  left: 20px;
+  color: #06112c;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.mobile-input-wrapper input:focus + .mobile-input-icon {
+  opacity: 1;
+  color: #d4af37;
+}
+
+.mobile-popup-submit {
+  background: linear-gradient(135deg, #0a286e 0%, #06112c 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 5px;
+  box-shadow: 0 12px 24px rgba(6, 17, 44, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mobile-popup-submit:active {
+  transform: scale(0.97);
+}
+
+.mobile-popup-submit.success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.2);
+}
+
+.mobile-popup-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.mobile-footer-item svg {
+  color: #d4af37;
+  opacity: 0.8;
+}
+
+.mobile-footer-item span {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
