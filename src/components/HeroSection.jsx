@@ -62,6 +62,10 @@ const HeroSection = () => {
             <p>Ongoing Projects</p>
           </div>
           <div className="stat-card dark">
+            <h3>2+</h3>
+            <p>Delivered Projects</p>
+          </div>
+          <div className="stat-card dark">
             <h3>500+</h3>
             <p>Families Already Living</p>
           </div>

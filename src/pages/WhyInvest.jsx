@@ -115,12 +115,12 @@ const WhyInvest = () => {
                 <div className="math-card">
                   <div className="card-icon"><TrendingUp /></div>
                   <h4>Early Buyer Advantage</h4>
-                  <p>In 2021, buyers invested **₹11L** in Sunrise projects. Those same plots trade at **₹21L+** today. That is **91% ROI** in 3 years.</p>
+                  <p>In 2021, buyers invested <strong>₹11L</strong> in Sunrise projects. Those same plots trade at <strong>₹21L+</strong> today. That is <strong>91% ROI</strong> in 3 years.</p>
                 </div>
                 <div className="math-card">
                   <div className="card-icon"><PieChart /></div>
                   <h4>The ROI Math</h4>
-                  <p>A ₹12L loan at 8.5% = ~₹14,866/month EMI. Meanwhile, the plot is appreciating at **15%+ annually**. The math favors buying now over waiting.</p>
+                  <p>A ₹12L loan at 8.5% = ~₹14,866/month EMI. Meanwhile, the plot is appreciating at <strong>15%+ annually</strong>. The math favors buying now over waiting.</p>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ const WhyInvest = () => {
                <div className="roi-insight-box">
                   <TrendingUp size={40} className="text-gold" />
                   <h4>Insight for Smart Investors</h4>
-                  <p>In the last 24 months, land prices in unorganized sectors grew by 12%, while **legally cleared plots near Omaxe/DLF corridors grew by 28-35%**. We focus exclusively on the latter.</p>
+                  <p>In the last 24 months, land prices in unorganized sectors grew by 12%, while <strong>legally cleared plots near Omaxe/DLF corridors grew by 28-35%</strong>. We focus exclusively on the latter.</p>
                </div>
             </div>
           </div>

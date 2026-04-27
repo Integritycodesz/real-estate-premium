@@ -43,7 +43,7 @@ const About = () => {
   }, []);
 
   const timelineData = [
-    { year: "2014", title: "The Foundation", event: "PBD Group founded by Narendra Yadav with a focus on trust and transparent documentation." },
+    { year: "2019", title: "The Foundation", event: "PBD Group founded by Narendra Yadav with a focus on trust and transparent documentation." },
     { year: "2020", title: "First Milestone", event: "Launched Rajgharana on Raebareli Road. Fully sold and delivered to happy families." },
     { year: "2022", title: "Gokul Vihar Delivery", event: "Completed our second residential community, solidifying our reputation for delivery." },
     { year: "2023-24", title: "Expansion Era", event: "Launched Shivay Residency and 3 more projects along the high-growth corridor." },
@@ -53,10 +53,10 @@ const About = () => {
   return (
     <div className="about-page fade-in">
       {/* Dynamic Hero */}
-      <section 
-        className="about-hero" 
-        style={{ 
-          backgroundImage: `url(${AboutHeroImg})` 
+      <section
+        className="about-hero"
+        style={{
+          backgroundImage: `url(${AboutHeroImg})`
         }}
       >
         <div className="container">
@@ -66,7 +66,7 @@ const About = () => {
               Built on Promises.<br />
               <span className="text-gold">Lived by Families.</span>
             </h1>
-            
+
             <div className="hero-glass-box">
               <p className="glass-lead">
                 In Lucknow's crowded real estate market, promises are cheap. Documents, approvals, and honest handshakes — those are rare.
@@ -102,20 +102,20 @@ const About = () => {
               </div>
               <div className="frame-overlay-gold"></div>
             </div>
-            
+
             <div className="legacy-content reveal-on-scroll" ref={addToRefs}>
               <h2 className="section-title-medium">The Founder's Legacy</h2>
               <h3 className="section-subtitle-gold">A Simple Belief: The Narendra Yadav Story</h3>
-              
+
               <p>Narendra Yadav didn't set out to build a real estate company. He set out to fix something broken. Watching families pour their life savings into land that came with confusion rather than clarity, he knew there was a better way.</p>
               <p>With deep conviction, he founded PBD Group. Not to become the biggest name in real estate, but to become the most trusted one in Lucknow.</p>
-              
+
               <blockquote className="premium-quote">
                 "If a family trusts me with their life's investment, the least I can do is make sure every document is exactly as promised."
               </blockquote>
 
               <p>What keeps Narendra going today isn't business metrics. It's the families already living in Rajgharana and Gokul Vihar — real people building real lives on land we promised them.</p>
-              
+
               <div className="founder-signature">
                 <div className="signature-name">Narendra Yadav</div>
                 <div className="signature-title">Founder & CEO, PBD Group</div>
@@ -132,10 +132,10 @@ const About = () => {
             <div className="legacy-content reveal-on-scroll" ref={addToRefs}>
               <h2 className="section-title-medium" style={{ color: '#fff' }}>Strategic Leadership</h2>
               <h3 className="section-subtitle-gold">Driving Innovation: The Sonia Yadav Vision</h3>
-              
+
               <p style={{ color: 'rgba(255,255,255,0.8)' }}>As Managing Director, Sonia Yadav brings a modern, data-driven approach to Lucknow's traditional land market. Her focus is on integrating technology with transparency, ensuring that every project is not just a piece of land, but a well-planned community.</p>
               <p style={{ color: 'rgba(255,255,255,0.8)' }}>She leads our project planning and customer experience teams, dedicated to the belief that buying a home should be as joyful as living in one.</p>
-              
+
               <blockquote className="premium-quote dark">
                 "Our goal is to redefine luxury in plotted developments by bringing urban planning standards to every project we touch."
               </blockquote>
@@ -163,7 +163,7 @@ const About = () => {
           <p className="centered" style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '800px', margin: '0 auto 40px' }}>
             We don't just sell plots; we deliver peace of mind. Every project goes through a rigorous legal and structural verification process.
           </p>
-          
+
           <div className="seal-grid">
             <div className="seal-item">
               <span className="seal-icon">⚖️</span>
@@ -216,7 +216,7 @@ const About = () => {
               <h2 className="section-title-medium">Built on Core Values</h2>
               <p className="large-lead">Our philosophy is simple: Put people first, and the business will follow. This belief guides every decision we make at PBD Group.</p>
             </div>
-            
+
             <div className="values-display reveal-on-scroll" ref={addToRefs}>
               <div className="value-card-premium">
                 <div className="value-icon">🛡️</div>
@@ -241,10 +241,10 @@ const About = () => {
       {/* Final CTA Image Section */}
       <section className="section-padding">
         <div className="container">
-          <div className="final-legacy-box reveal-on-scroll" ref={addToRefs} 
-               style={{ 
-                 backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${TrustCtaImg})` 
-               }}>
+          <div className="final-legacy-box reveal-on-scroll" ref={addToRefs}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${TrustCtaImg})`
+            }}>
             <div className="final-legacy-content">
               <h2>Join the 500+ Families</h2>
               <p>Start your own legacy on land that is secure, verified, and promised.</p>
