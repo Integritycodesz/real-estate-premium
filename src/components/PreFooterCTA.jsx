@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, Phone, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './PreFooterCTA.css';
 
 const PreFooterCTA = () => {
@@ -16,10 +17,10 @@ const PreFooterCTA = () => {
         </div>
         
         <div className="cta-actions">
-          <button className="cta-btn gold-btn" onClick={handleSiteVisit}>
+          <Link to="/contact" className="cta-btn gold-btn">
             Schedule Site Visit
             <ArrowRight size={18} />
-          </button>
+          </Link>
           
           <a href="https://wa.me/917054550296" target="_blank" rel="noopener noreferrer" className="cta-btn whatsapp-btn">
             <MessageCircle size={18} />

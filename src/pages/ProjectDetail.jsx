@@ -230,10 +230,10 @@ const ProjectDetail = () => {
                 <p className="price-terms">*All-inclusive transparent pricing.</p>
                 
                 <div className="sidebar-action-group">
-                  <button className="btn-call-action" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>
+                  <Link to="/contact" className="btn-call-action">
                     <PhoneCall size={20} />
                     <span>Request Site Visit</span>
-                  </button>
+                  </Link>
                   <a 
                     href={`https://wa.me/917054550296?text=Interested in ${project.title}. Please share details.`}
                     target="_blank"

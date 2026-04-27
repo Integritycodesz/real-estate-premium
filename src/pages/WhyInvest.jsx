@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TrendingUp, Map, Clock, ArrowRight, ShieldCheck, Building2, Landmark, Globe, PieChart, Zap, GraduationCap, HeartPulse, Train, Briefcase } from 'lucide-react';
 
 import Counter from '../components/Counter';
@@ -22,7 +23,7 @@ const WhyInvest = () => {
             <h1 className="hero-title-main">Why Your Next Big Move Should Be <span className="text-gold">Raebareli Road</span></h1>
             <p className="hero-desc-main">Lucknow is growing faster than ever, and at the heart of this expansion is Raebareli Road. It's not just a stretch of asphalt; it's a corridor of opportunity where thousands are securing their future. If you've been waiting for the "right time," this is it.</p>
             <div className="invest-hero-actions">
-               <button className="btn-primary btn-large" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>Get Started Today</button>
+               <Link to="/contact" className="btn-primary btn-large">Get Started Today</Link>
             </div>
           </div>
         </div>
@@ -222,9 +223,9 @@ const WhyInvest = () => {
             <div className="cta-glow"></div>
             <h2>Ready to Secure Your Legacy?</h2>
             <p>Schedule a free site visit today. Our experts will show you exactly which plots offer the best combination of legal clarity and appreciation potential.</p>
-            <button className="btn btn-gold" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>
+            <Link to="/contact" className="btn btn-gold">
               Book a Free Site Visit <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
         </div>
       </section>

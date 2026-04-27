@@ -43,7 +43,7 @@ const Footer = () => {
             <li><Link to="/projects">Our Projects</Link></li>
             <li><Link to="/why-invest">Why Invest</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
-            <li><button className="link-btn" onClick={() => window.dispatchEvent(new Event('open-pbd-lead-popup'))}>Schedule Site Visit</button></li>
+            <li><Link to="/contact">Schedule Site Visit</Link></li>
           </ul>
         </div>
 

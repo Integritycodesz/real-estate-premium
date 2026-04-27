@@ -181,9 +181,7 @@
   }
 
   .navbar {
-    padding: 0;
-    height: auto;
-    background: transparent;
+    display: none;
   }
 
   .navbar.scrolled,

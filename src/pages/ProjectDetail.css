@@ -560,7 +560,7 @@
 
 @media (max-width: 768px) {
   .project-nav-bar {
-    top: 44px;
+    top: 0;
   }
   
   .gallery-main-frame {
