@@ -16,7 +16,6 @@
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
 }
 
-
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -89,13 +88,119 @@
   font-size: 0.6rem;
 }
 
+/* ── FAB Trigger (replaces Gallery in nav bar) ── */
+.fab-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fab-trigger.active svg {
+  color: #7e22ce;
+  transform: translateY(-2px);
+}
+
+.fab-trigger.active span {
+  color: #7e22ce;
+}
+
+/* ── Vertical Pill Menu ── */
+.fab-pill-menu {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 5001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.fab-pill-menu.open {
+  pointer-events: auto;
+}
+
+/* Pill items */
+.pill-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(20px) scale(0.9);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+}
+
+.fab-pill-menu.open .pill-nav-item {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.pill-nav-item span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill-nav-item:active {
+  transform: scale(0.95) !important;
+}
+
+/* Pastel color variants */
+.pill-nav-item.lavender {
+  background: rgba(224, 231, 255, 0.95);
+  color: #4338ca;
+}
+
+.pill-nav-item.purple {
+  background: rgba(243, 232, 255, 0.95);
+  color: #7e22ce;
+}
+
+.pill-nav-item.pink {
+  background: rgba(253, 230, 255, 0.95);
+  color: #be185d;
+}
+
+/* ── Overlay ── */
+.fab-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+  z-index: 4999;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
   }
 }
 
-/* Adjust for safe areas on mobile devices */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .mobile-bottom-nav {
     height: calc(60px + env(safe-area-inset-bottom));
