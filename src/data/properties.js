@@ -52,7 +52,7 @@ export const propertiesData = [
     priceValue: 2325000,
     size: "1,500 sq ft",
     propertyType: "Residential Plot",
-    development: "Govt. Approved",
+    development: "Zilla Panchayat Approved",
     location: "Raebareli Road",
     image: "/src/assets/shivdhara.png"
   },

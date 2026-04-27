@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
           <p className="footer-tagline">Where Trust Becomes Property.</p>
           <p className="footer-bio">
-            Lucknow's trust-first real estate partner. Helping families find legally approved, transparently priced properties on Raebareli Road since 2016.
+            Lucknow's trust-first real estate partner. Helping families find Zilla Panchayat Approved, transparently priced properties on Raebareli Road since 2016.
           </p>
           <div className="footer-socials">
             <a href="https://instagram.com/pbd_group" target="_blank" rel="noopener noreferrer" className="social-icon">

@@ -93,7 +93,7 @@ const LeadPopup = () => {
                 </div>
                 <div className="popup-badge red">
                   <ShieldCheck size={14} />
-                  <span>GOVT. APPROVED LAYOUT</span>
+                  <span>ZILLA PANCHAYAT APPROVED LAYOUT</span>
                 </div>
               </div>
               

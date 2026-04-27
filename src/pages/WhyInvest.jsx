@@ -192,7 +192,7 @@ const WhyInvest = () => {
                     <tr>
                       <td>Legal Approval</td>
                       <td>RERA/LDA</td>
-                      <td className="highlight-col">Govt. Verified</td>
+                      <td className="highlight-col">Zilla Panchayat Approved</td>
                     </tr>
                     <tr>
                       <td>Immediate Possession</td>

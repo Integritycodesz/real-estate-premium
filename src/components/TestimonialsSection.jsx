@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      text: "I was skeptical about buying a plot in Lucknow — too many agents had disappointed me before. PBD Group showed me the Jila Panchayat documents for Shivay Residency on the very first visit. That changed everything. No pressure, complete transparency.",
+      text: "I was skeptical about buying a plot in Lucknow — too many agents had disappointed me before. PBD Group showed me the Zilla Panchayat documents for Shivay Residency on the very first visit. That changed everything. No pressure, complete transparency.",
       name: "Rajesh Shrivastava",
       role: "Investor",
       project: "Shivay Residency",

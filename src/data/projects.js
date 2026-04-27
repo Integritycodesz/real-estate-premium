@@ -133,14 +133,14 @@ export const projects = [
   },
   {
     id: "shivay-residency",
-    title: "Shivay Residency (Govt. Approved)",
+    title: "Shivay Residency (Zilla Panchayat Approved)",
     location: "Raebareli Road, Lucknow",
     image: new URL('../assets/shivdhara.png', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 1,550 /sq.ft",
     status: "SELLING FAST",
-    description: "Shivay Residency is PBD Group's premium government approved project. It offers the highest level of regulatory clearance and is located in the most lucrative investment pocket of Raebareli Road. Perfect for those who prioritize safety and high resale value.",
-    features: ["Govt. Approved", "Immediate Registry", "Premium Corner Plots"],
+    description: "Shivay Residency is PBD Group's premium Zilla Panchayat Approved project. It offers the highest level of regulatory clearance and is located in the most lucrative investment pocket of Raebareli Road. Perfect for those who prioritize safety and high resale value.",
+    features: ["Zilla Panchayat Approved", "Immediate Registry", "Premium Corner Plots"],
     amenities: [
       "Community Center",
       "Modern Clubhouse",

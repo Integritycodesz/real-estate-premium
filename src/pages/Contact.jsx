@@ -178,7 +178,7 @@ const Contact = () => {
               },
               {
                 title: "2. Legal Documentation You Can Trust",
-                desc: "Every active PBD project comes with complete, verified legal documentation. Our flagship project, Shivay Residency, carries full Jila Panchayat approval."
+                desc: "Every active PBD project comes with complete, verified legal documentation. Our flagship project, Shivay Residency, carries full Zilla Panchayat Approved."
               },
               {
                 title: "3. Locations That Matter",
