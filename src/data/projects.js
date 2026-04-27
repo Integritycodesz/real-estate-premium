@@ -139,7 +139,7 @@ export const projects = [
     type: "Residential Plot",
     price: "INR 1,550 /sq.ft",
     status: "SELLING FAST",
-    description: "Shivay Residency is PBD Group's premium Zilla Panchayat Approved project. It offers the highest level of regulatory clearance and is located in the most lucrative investment pocket of Raebareli Road. Perfect for those who prioritize safety and high resale value.",
+    description: "Shivay Residency is PBD Group's premium Zilla Panchayat approved project. It offers the highest level of regulatory clearance and is located in the most lucrative investment pocket of Raebareli Road. Perfect for those who prioritize safety and high resale value.",
     features: ["Zilla Panchayat Approved", "Immediate Registry", "Premium Corner Plots"],
     amenities: [
       "Community Center",

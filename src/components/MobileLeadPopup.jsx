@@ -60,7 +60,7 @@ const MobileLeadPopup = ({ onClose }) => {
         <div className="mobile-popup-footer">
           <div className="mobile-footer-item">
             <ShieldCheck size={20} />
-            <span>Zilla Panchayat Approved</span>
+            <span>Govt. Approved</span>
           </div>
           <div className="mobile-footer-item">
             <Star size={20} />

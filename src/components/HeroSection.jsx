@@ -23,7 +23,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="hero-description reveal-delay-3">
-            Invest in Zilla Panchayat Approved plots across Lucknow’s primary growth corridors: Raebareli Road.
+            Invest in government-verified plots across Lucknow’s primary growth corridors: Raebareli Road.
             Join 500+ families already living in our fully delivered estates.
           </p>
 

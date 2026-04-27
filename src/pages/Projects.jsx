@@ -45,7 +45,7 @@ const Projects = () => {
               
               <div className="hero-glass-box">
                 <p className="glass-lead">
-                  Explore our curated catalog of premium, Zilla Panchayat Approved real estate along the Raebareli Road corridor, Lucknow.
+                  Explore our curated catalog of premium, legally approved real estate along the Raebareli Road corridor, Lucknow.
                 </p>
                 <p className="glass-body">
                   Every PBD project is selected for its strategic location, verified documentation, and long-term appreciation potential.

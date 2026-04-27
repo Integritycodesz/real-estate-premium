@@ -37,7 +37,7 @@ const AboutSection = () => {
             <div className="feature-card">
               <span className="feature-number">01</span>
               <h3>Legal Trust</h3>
-              <p>Every property is Zilla Panchayat Approved. No grey areas. No verbal promises only.</p>
+              <p>Every property is government verified. No grey areas. No verbal promises only.</p>
             </div>
             
             <div className="feature-card">

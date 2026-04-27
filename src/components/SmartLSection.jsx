@@ -12,7 +12,7 @@ const SmartLSection = () => {
     {
       icon: <ShieldCheck className="text-gold" size={32} />,
       title: "Legally Verified Layouts",
-      desc: "Skip the legal headache. Every plot is Zilla Panchayat Approved with a clear title, ready for immediate registry and possession."
+      desc: "Skip the legal headache. Every plot is Zilla Panchayat approved with a clear title, ready for immediate registry and possession."
     },
     {
       icon: <Clock className="text-gold" size={32} />,
