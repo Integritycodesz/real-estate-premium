@@ -1,0 +1,51 @@
+.scarcity-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.scarcity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.scarcity-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.scarcity-percentage {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary-red);
+}
+
+.progress-container {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-red) 0%, #ff5252 100%);
+  border-radius: 10px;
+  transition: width 1s ease-out;
+}
+
+.urgency-text {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.4;
+  font-style: italic;
+}

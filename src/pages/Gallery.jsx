@@ -1,33 +1,58 @@
 import React, { useState } from 'react';
-import { X, Maximize2 } from 'lucide-react';
+import { X, Maximize2, Play, Video } from 'lucide-react';
 import { projects } from '../data/projects';
 import './PageStyles.css';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
   const [filter, setFilter] = useState('All');
 
   // Custom gallery images provided by the user
   const siteImages = [
-    { url: new URL('../assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg', import.meta.url).href, title: "Site Progress View", category: "Site Development", project: "Ongoing Development" },
-    { url: new URL('../assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg', import.meta.url).href, title: "Customer Site Visit", category: "Site Development", project: "Live Site Visit" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg', import.meta.url).href, title: "Project Overview", category: "Site Development", project: "Raebareli Road Site" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg', import.meta.url).href, title: "Infrastructure Work", category: "Site Development", project: "Road Development" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg', import.meta.url).href, title: "Boundary Wall Construction", category: "Site Development", project: "Secured Perimeter" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg', import.meta.url).href, title: "Street Lighting Install", category: "Site Development", project: "Utilities Phase" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg', import.meta.url).href, title: "Main Entrance Gate", category: "Site Development", project: "Grand Entrance" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg', import.meta.url).href, title: "Plot Leveling", category: "Site Development", project: "Land Preparation" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg', import.meta.url).href, title: "On-site Office", category: "Site Development", project: "Sales & Support" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg', import.meta.url).href, title: "Greenery & Landscaping", category: "Site Development", project: "Park Development" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg', import.meta.url).href, title: "Family Site Inspection", category: "Site Development", project: "Trust & Transparency" }
+    { url: new URL('../assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg', import.meta.url).href, title: "Site Progress View", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg', import.meta.url).href, title: "Customer Site Visit", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg', import.meta.url).href, title: "Project Overview", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg', import.meta.url).href, title: "Infrastructure Work", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg', import.meta.url).href, title: "Boundary Wall Construction", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg', import.meta.url).href, title: "Street Lighting Install", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg', import.meta.url).href, title: "Main Entrance Gate", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg', import.meta.url).href, title: "Plot Leveling", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg', import.meta.url).href, title: "On-site Office", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg', import.meta.url).href, title: "Greenery & Landscaping", category: "Site Development", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg', import.meta.url).href, title: "Family Site Inspection", category: "Site Development", type: "image" }
   ];
 
-  // Only show the custom images in the gallery
-  const categories = ['All', 'Site Development'];
-  const galleryItems = siteImages.filter(item => filter === 'All' || item.category === filter);
+  // Aggregate images from all projects
+  const projectImages = projects.flatMap(p => 
+    (p.gallery || []).map(img => ({
+      url: img,
+      title: p.title,
+      category: p.title,
+      type: "image"
+    }))
+  );
 
-  const openLightbox = (image) => setSelectedImage(image);
-  const closeLightbox = () => setSelectedImage(null);
+  // Aggregate drone videos from all projects
+  const projectVideos = projects.flatMap(p =>
+    (p.droneVideos || []).map((vid, idx) => ({
+      url: vid,
+      thumbnail: p.image,
+      title: `${p.title} — Drone Clip ${idx + 1}`,
+      category: p.title,
+      type: "video"
+    }))
+  );
+
+  const allItems = [...siteImages, ...projectImages, ...projectVideos];
+
+  // Dynamically generate categories from projects + Site Development
+  const projectCategories = Array.from(new Set(projects.map(p => p.title)));
+  const categories = ['All', 'Site Development', ...projectCategories];
+  
+  const galleryItems = allItems.filter(item => filter === 'All' || item.category === filter);
+
+  const openLightbox = (item) => setSelectedItem(item);
+  const closeLightbox = () => setSelectedItem(null);
 
   return (
     <div className="page-wrapper fade-in">
@@ -74,16 +99,33 @@ const Gallery = () => {
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className="gallery-image-card"
+              className={`gallery-image-card ${item.type === 'video' ? 'video-card' : ''}`}
               onClick={() => openLightbox(item)}
             >
               <div className="image-zoom-wrapper">
-                <img src={item.url} alt={item.title} loading="lazy" />
+                {item.type === 'video' ? (
+                  <>
+                    <img src={item.thumbnail} alt={item.title} loading="lazy" />
+                    <div className="video-play-badge">
+                      <Play size={28} fill="#fff" />
+                    </div>
+                    <div className="video-type-badge">
+                      <Video size={12} />
+                      <span>Drone</span>
+                    </div>
+                  </>
+                ) : (
+                  <img src={item.url} alt={item.title} loading="lazy" />
+                )}
               </div>
 
               <div className="card-hover-overlay">
                 <div className="maximize-icon">
-                  <Maximize2 size={24} />
+                  {item.type === 'video' ? <Play size={24} /> : <Maximize2 size={24} />}
+                </div>
+                <div className="image-info-peek">
+                  <span className="peek-cat">{item.category}</span>
+                  <span className="peek-title">{item.title}</span>
                 </div>
               </div>
             </div>
@@ -92,14 +134,28 @@ const Gallery = () => {
       </div>
 
       {/* Lightbox Modal */}
-      {selectedImage && (
+      {selectedItem && (
         <div className="lightbox-modal" onClick={closeLightbox}>
           <button className="lightbox-close" onClick={closeLightbox}>
             <X size={32} />
           </button>
 
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <img src={selectedImage.url} alt={selectedImage.title} />
+            {selectedItem.type === 'video' ? (
+              <video
+                src={selectedItem.url}
+                controls
+                autoPlay
+                playsInline
+                className="lightbox-video"
+              />
+            ) : (
+              <img src={selectedItem.url} alt={selectedItem.title} />
+            )}
+            <div className="lightbox-caption">
+              <h3>{selectedItem.title}</h3>
+              <p>{selectedItem.category}{selectedItem.type === 'video' ? ' • Drone Video' : ''}</p>
+            </div>
           </div>
         </div>
       )}

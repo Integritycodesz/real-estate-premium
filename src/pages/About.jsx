@@ -5,8 +5,8 @@ import './PageStyles.css';
 
 // Import images
 import AboutHeroImg from '../assets/about/about_hero.png';
-import CeoImg from '../assets/about/ceo.png';
-import DirectorImg from '../assets/about/director.png';
+import CeoImg from '../assets/about/ceo.jpg';
+import DirectorImg from '../assets/about/director_dhiraj.jpeg';
 import TrustCtaImg from '../assets/about/trust_cta.png';
 
 const About = () => {
@@ -131,24 +131,24 @@ const About = () => {
           <div className="legacy-grid reversed">
             <div className="legacy-content reveal-on-scroll" ref={addToRefs}>
               <h2 className="section-title-medium" style={{ color: '#fff' }}>Strategic Leadership</h2>
-              <h3 className="section-subtitle-gold">Driving Innovation: The Sonia Yadav Vision</h3>
+              <h3 className="section-subtitle-gold">Driving Innovation: The Dhiraj Yadav Vision</h3>
 
-              <p style={{ color: 'rgba(255,255,255,0.8)' }}>As Managing Director, Sonia Yadav brings a modern, data-driven approach to Lucknow's traditional land market. Her focus is on integrating technology with transparency, ensuring that every project is not just a piece of land, but a well-planned community.</p>
-              <p style={{ color: 'rgba(255,255,255,0.8)' }}>She leads our project planning and customer experience teams, dedicated to the belief that buying a home should be as joyful as living in one.</p>
+              <p style={{ color: 'rgba(255,255,255,0.8)' }}>As Director, Dhiraj Yadav brings a modern, data-driven approach to Lucknow's traditional land market. His focus is on integrating technology with transparency, ensuring that every project is not just a piece of land, but a well-planned community.</p>
+              <p style={{ color: 'rgba(255,255,255,0.8)' }}>He leads our project planning and customer experience teams, dedicated to the belief that buying a home should be as joyful as living in one.</p>
 
               <blockquote className="premium-quote dark">
                 "Our goal is to redefine luxury in plotted developments by bringing urban planning standards to every project we touch."
               </blockquote>
 
               <div className="founder-signature">
-                <div className="signature-name">Sonia Yadav</div>
-                <div className="signature-title">Managing Director, PBD Group</div>
+                <div className="signature-name">Dhiraj Yadav</div>
+                <div className="signature-title">Director, PBD Group</div>
               </div>
             </div>
 
             <div className="legacy-image-container reveal-on-scroll" ref={addToRefs}>
               <div className="legacy-image-frame">
-                <img src={DirectorImg} alt="Sonia Yadav" />
+                <img src={DirectorImg} alt="Dhiraj Yadav" />
               </div>
               <div className="frame-overlay-gold"></div>
             </div>

@@ -27,7 +27,7 @@ const AboutSection = () => {
               <blockquote>
                 "You made the right decision trusting us. We make sure you never have reason to doubt it."
               </blockquote>
-              <cite>— Managing Director, PBD Group</cite>
+              <cite>— Director, PBD Group</cite>
             </div>
             
             <Link to="/about" className="btn-story">Our Full Story →</Link>

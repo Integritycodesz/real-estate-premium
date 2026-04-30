@@ -13,7 +13,6 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import WhyInvest from './pages/WhyInvest';
 import ProjectDetail from './pages/ProjectDetail';
-import CustomCursor from './components/CustomCursor';
 import ScrollReveal from './components/ScrollReveal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
@@ -29,7 +28,6 @@ const GlobalContent = () => {
     <>
       <LeadPopup />
       <SocialProofPopup />
-      <CustomCursor />
       <ScrollReveal />
       <FloatingWhatsApp />
       <Navbar />

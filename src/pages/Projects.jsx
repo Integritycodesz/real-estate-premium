@@ -4,6 +4,11 @@ import SearchBar from '../components/SearchBar';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import { ProjectCard } from '../components/ProjectsSection';
 import { projects } from '../data/projects';
+import DeveloperAbout from '../components/DeveloperAbout';
+import ChannelPartner from '../components/ChannelPartner';
+import FAQSection from '../components/FAQSection';
+import DistanceTable from '../components/DistanceTable';
+import { globalFaqs } from '../data/globalFaqs';
 import '../components/ProjectsSection.css';
 import './PageStyles.css';
 
@@ -39,16 +44,16 @@ const Projects = () => {
             <div className="hero-text-side">
               <span className="badge-gold">OUR PORTFOLIO</span>
               <h1 className="hero-title-large">
-                Our Projects.<br />
-                <span className="text-gold">Your Future Home.</span>
+                Verified Land.<br />
+                <span className="text-gold">Real Delivery.</span>
               </h1>
               
               <div className="hero-glass-box">
                 <p className="glass-lead">
-                  Explore our curated catalog of premium, legally approved real estate along the Raebareli Road corridor, Lucknow.
+                  Explore Lucknow’s primary growth corridors with 100% legally cleared residential plots.
                 </p>
                 <p className="glass-body">
-                  Every PBD project is selected for its strategic location, verified documentation, and long-term appreciation potential.
+                  Join 500+ families already living in our fully delivered estates along the Raebareli Road corridor.
                 </p>
                 <div className="glass-stats">
                   <div className="glass-stat">
@@ -99,6 +104,19 @@ const Projects = () => {
           </div>
         )}
       </div>
+
+      <div className="container">
+        <DistanceTable />
+      </div>
+
+      <section className="projects-faq-section section-padding">
+        <div className="container">
+          <FAQSection faqs={[]} /> {/* Empty array for faqs will fallback to globalFaqs */}
+        </div>
+      </section>
+
+      <DeveloperAbout />
+      <ChannelPartner />
     </div>
   );
 };

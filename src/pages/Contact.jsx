@@ -127,7 +127,7 @@ const Contact = () => {
 
                   <div className="select-wrapper">
                     <select className="form-input">
-                      <option value="">Select Budget</option>
+                      <option value="">Investment Amount</option>
                       <option value="10-20">10-20 lakh</option>
                       <option value="20-30">20-30 lakh</option>
                       <option value="30+">30 lakh +</option>

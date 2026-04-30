@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Send, User, Mail, Phone, MessageSquare, Coins } from 'lucide-react';
 import './InquiryForm.css';
 
-const InquiryForm = ({ projectTitle }) => {
+const InquiryForm = ({ projectTitle, hideTitle = false }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,8 +27,12 @@ const InquiryForm = ({ projectTitle }) => {
 
   return (
     <div className="inquiry-form-wrapper">
-      <h3>Quick Inquiry</h3>
-      <p>Send us your details and our property expert will get back to you within 24 hours.</p>
+      {!hideTitle && (
+        <>
+          <h3>Quick Inquiry</h3>
+          <p>Send us your details and our property expert will get back to you within 24 hours.</p>
+        </>
+      )}
 
       <form onSubmit={handleSubmit} className="inquiry-form">
         <div className="form-group">
@@ -80,7 +84,7 @@ const InquiryForm = ({ projectTitle }) => {
               onChange={e => setFormData({...formData, budget: e.target.value})}
               style={{ width: '100%', background: 'transparent', border: 'none', padding: '12px 10px 12px 0', fontSize: '1rem', color: '#1a202c', outline: 'none' }}
             >
-              <option value="">Select Budget</option>
+              <option value="">Investment Amount</option>
               <option value="10-20">10-20 lakh</option>
               <option value="20-30">20-30 lakh</option>
               <option value="30+">30 lakh +</option>
