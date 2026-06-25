@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import FlashDealsBanner from './FlashDealsBanner';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -41,8 +42,11 @@ const Navbar = () => {
   }, [prevScrollPos, menuOpen]);
 
   useEffect(() => {
-    setMenuOpen(false);
-  }, [location]);
+    if (menuOpen) {
+      const timer = setTimeout(() => setMenuOpen(false), 0);
+      return () => clearTimeout(timer);
+    }
+  }, [location, menuOpen]);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -58,7 +62,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <div className="logo-main">
-            <img src="/src/assets/logo.png" alt="PBD Group" className="site-logo" />
+            <img src={logo} alt="PBD Group" className="site-logo" />
             <div className="logo-sub">
               <span>PAWANTANAY BUILDERS</span>
               <span>& Developers Pvt. Ltd. Lucknow</span>

@@ -13,7 +13,8 @@ import {
   PhoneCall,
   MessageCircle,
   TrendingUp,
-  X
+  X,
+  Download
 } from 'lucide-react';
 import InquiryForm from '../components/InquiryForm';
 import FlashDealsBanner from '../components/FlashDealsBanner';
@@ -195,7 +196,7 @@ const ProjectDetail = () => {
         {/* PRICING & CALCULATOR */}
         <PlotInvestmentCalculator 
           initialRate={parseInt(project.price.replace(/[^\d]/g, '')) || 1900} 
-          commercialRate={project.commercialPrice ? parseInt(project.commercialPrice.replace(/[^\d]/g, '')) : null}
+          commercialRate={project.commercialPrice && /\d/.test(project.commercialPrice) ? parseInt(project.commercialPrice.replace(/[^\d]/g, '')) : null}
           projectTitle={project.title}
         />
 
@@ -242,6 +243,18 @@ const ProjectDetail = () => {
                 <p className="pricing-disclaimer-bottom">
                   *Prices mentioned are base rates. Registration, development charges, and corner premiums extra.
                 </p>
+                {project.id !== 'green-garden' && (
+                  <div className="project-downloads-wrapper" style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '30px', flexWrap: 'wrap' }}>
+                    <a href={`/downloads/${project.id === 'muralia-garden' ? 'muraliya-garden' : project.id}/sitemap.pdf`} download className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Download size={18} />
+                      Download Site Map
+                    </a>
+                    <a href={`/downloads/${project.id === 'muralia-garden' ? 'muraliya-garden' : project.id}/pricelist.pdf`} download className="btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Download size={18} />
+                      Download Price List
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </section>

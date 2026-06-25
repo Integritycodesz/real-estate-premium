@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import './About.css';
 import './PageStyles.css';
@@ -10,15 +10,6 @@ import DirectorImg from '../assets/about/director_dhiraj.jpeg';
 import TrustCtaImg from '../assets/about/trust_cta.png';
 
 const About = () => {
-  const revealRefs = useRef([]);
-  revealRefs.current = [];
-
-  const addToRefs = (el) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el);
-    }
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,13 +22,12 @@ const About = () => {
       { threshold: 0.1 }
     );
 
-    revealRefs.current.forEach((ref) => {
-      observer.observe(ref);
-    });
+    const elements = document.querySelectorAll('.reveal-on-scroll');
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      revealRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+      elements.forEach((el) => {
+        if (el) observer.unobserve(el);
       });
     };
   }, []);
@@ -96,14 +86,14 @@ const About = () => {
       <section className="legacy-section section-padding">
         <div className="container">
           <div className="legacy-grid">
-            <div className="legacy-image-container reveal-on-scroll" ref={addToRefs}>
+            <div className="legacy-image-container reveal-on-scroll">
               <div className="legacy-image-frame">
                 <img src={CeoImg} alt="Narendra Yadav" />
               </div>
               <div className="frame-overlay-gold"></div>
             </div>
 
-            <div className="legacy-content reveal-on-scroll" ref={addToRefs}>
+            <div className="legacy-content reveal-on-scroll">
               <h2 className="section-title-medium">The Founder's Legacy</h2>
               <h3 className="section-subtitle-gold">A Simple Belief: The Narendra Yadav Story</h3>
 
@@ -129,7 +119,7 @@ const About = () => {
       <section className="director-section section-padding bg-dark-blue">
         <div className="container">
           <div className="legacy-grid reversed">
-            <div className="legacy-content reveal-on-scroll" ref={addToRefs}>
+            <div className="legacy-content reveal-on-scroll">
               <h2 className="section-title-medium" style={{ color: '#fff' }}>Strategic Leadership</h2>
               <h3 className="section-subtitle-gold">Driving Innovation: The Dhiraj Yadav Vision</h3>
 
@@ -146,7 +136,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="legacy-image-container reveal-on-scroll" ref={addToRefs}>
+            <div className="legacy-image-container reveal-on-scroll">
               <div className="legacy-image-frame">
                 <img src={DirectorImg} alt="Dhiraj Yadav" />
               </div>
@@ -157,7 +147,7 @@ const About = () => {
       </section>
 
       {/* Trust Seal Section */}
-      <section className="trust-seal-section reveal-on-scroll" ref={addToRefs}>
+      <section className="trust-seal-section reveal-on-scroll">
         <div className="container">
           <h2 className="section-title-medium centered" style={{ color: '#fff' }}>The PBD Seal of Trust</h2>
           <p className="centered" style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '800px', margin: '0 auto 40px' }}>
@@ -195,7 +185,7 @@ const About = () => {
           <h2 className="section-title-medium centered">Our Journey</h2>
           <div className="journey-timeline">
             {timelineData.map((item, idx) => (
-              <div key={idx} className="journey-item reveal-on-scroll" ref={addToRefs}>
+              <div key={idx} className="journey-item reveal-on-scroll">
                 <div className="journey-marker"></div>
                 <div className="journey-card">
                   <span className="journey-year">{item.year}</span>
@@ -212,12 +202,12 @@ const About = () => {
       <section className="section-padding bg-light-gold">
         <div className="container">
           <div className="values-grid">
-            <div className="values-header reveal-on-scroll" ref={addToRefs}>
+            <div className="values-header reveal-on-scroll">
               <h2 className="section-title-medium">Built on Core Values</h2>
               <p className="large-lead">Our philosophy is simple: Put people first, and the business will follow. This belief guides every decision we make at PBD Group.</p>
             </div>
 
-            <div className="values-display reveal-on-scroll" ref={addToRefs}>
+            <div className="values-display reveal-on-scroll">
               <div className="value-card-premium">
                 <div className="value-icon">🛡️</div>
                 <h3>Protection</h3>
@@ -241,7 +231,7 @@ const About = () => {
       {/* Final CTA Image Section */}
       <section className="section-padding">
         <div className="container">
-          <div className="final-legacy-box reveal-on-scroll" ref={addToRefs}
+          <div className="final-legacy-box reveal-on-scroll"
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${TrustCtaImg})`
             }}>

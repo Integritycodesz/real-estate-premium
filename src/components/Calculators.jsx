@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TrendingUp, FileText, Calculator } from 'lucide-react';
 import './Calculators.css';
 
@@ -20,48 +20,36 @@ const Calculators = () => {
   const [initialInvestment, setInitialInvestment] = useState(1799000); 
   const [annualGrowth, setAnnualGrowth] = useState(15); 
   const [holdingPeriod, setHoldingPeriod] = useState(5); 
-  const [projectedValue, setProjectedValue] = useState(0);
 
-  useEffect(() => {
-    const p = initialInvestment;
-    const r = annualGrowth / 100;
-    const t = holdingPeriod;
-    const fv = p * Math.pow(1 + r, t);
-    setProjectedValue(fv);
-  }, [initialInvestment, annualGrowth, holdingPeriod]);
+  // Derived ROI calculations
+  const roiP = initialInvestment;
+  const roiR = annualGrowth / 100;
+  const roiT = holdingPeriod;
+  const projectedValue = roiP * Math.pow(1 + roiR, roiT);
 
   // --- Stamp Duty Calculator State ---
   const [propertyValue, setPropertyValue] = useState(1799000);
   const [buyerGender, setBuyerGender] = useState('Male (7% stamp duty)');
-  const [stampDutyCost, setStampDutyCost] = useState(0);
-  const [registrationFee, setRegistrationFee] = useState(0);
-  const [totalRegistrationCost, setTotalRegistrationCost] = useState(0);
 
-  useEffect(() => {
-    let dutyPercentage = 0.07;
-    if (buyerGender.includes('Female')) dutyPercentage = 0.06;
-    else if (buyerGender.includes('Joint')) dutyPercentage = 0.065;
+  // Derived Stamp Duty calculations
+  let dutyPercentage = 0.07;
+  if (buyerGender.includes('Female')) dutyPercentage = 0.06;
+  else if (buyerGender.includes('Joint')) dutyPercentage = 0.065;
 
-    const duty = propertyValue * dutyPercentage;
-    const regFee = propertyValue * 0.01;
-    setStampDutyCost(duty);
-    setRegistrationFee(regFee);
-    setTotalRegistrationCost(duty + regFee);
-  }, [propertyValue, buyerGender]);
+  const stampDutyCost = propertyValue * dutyPercentage;
+  const registrationFee = propertyValue * 0.01;
+  const totalRegistrationCost = stampDutyCost + registrationFee;
 
   // --- EMI Calculator State ---
   const [loanAmount, setLoanAmount] = useState(1500000);
   const [interestRate, setInterestRate] = useState(8.5);
   const [tenure, setTenure] = useState(15);
-  const [emi, setEmi] = useState(0);
 
-  useEffect(() => {
-    const p = loanAmount;
-    const r = interestRate / 12 / 100;
-    const n = tenure * 12;
-    const emiValue = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-    setEmi(emiValue);
-  }, [loanAmount, interestRate, tenure]);
+  // Derived EMI calculations
+  const emiP = loanAmount;
+  const emiR = interestRate / 12 / 100;
+  const emiN = tenure * 12;
+  const emi = (emiP * emiR * Math.pow(1 + emiR, emiN)) / (Math.pow(1 + emiR, emiN) - 1);
 
   const getSliderBackgroundSize = (value, min, max) => {
     return { backgroundSize: `${((value - min) * 100) / (max - min)}% 100%` };

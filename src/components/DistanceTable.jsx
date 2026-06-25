@@ -3,13 +3,13 @@ import './DistanceTable.css';
 
 const DistanceTable = () => {
   const data = [
-    { landmark: "SGPGI", shivay: "15 min", shivdhara: "8–10 min", hanumant: "10 min", muralia: "15 min" },
-    { landmark: "Mohanlalganj", shivay: "5–7 min", shivdhara: "8–10 min", hanumant: "5 min", muralia: "2 min (walk)" },
-    { landmark: "Kisan Path", shivay: "10–12 min", shivdhara: "10 min", hanumant: "10–12 min", muralia: "12–15 min" },
-    { landmark: "Lulu Mall", shivay: "15–18 min", shivdhara: "12 min", hanumant: "10 min", muralia: "10 min" },
-    { landmark: "Medanta", shivay: "15 min", shivdhara: "12 min", hanumant: "10 min", muralia: "10 min" },
-    { landmark: "Charbagh", shivay: "25 min", shivdhara: "20 min", hanumant: "20 min", muralia: "20–25 min" },
-    { landmark: "Expressway Link", shivay: "2–3 min", shivdhara: "20 min", hanumant: "20 min", muralia: "20 min" },
+    { landmark: "SGPGI", shivay: "5 min", shivdhara: "5 min", hanumant: "5 min", muralia: "5 min" },
+    { landmark: "Mohanlalganj", shivay: "5–7 min", shivdhara: "5–7 min", hanumant: "5–7 min", muralia: "5–7 min" },
+    { landmark: "Kisan Path", shivay: "3–4 min", shivdhara: "3–4 min", hanumant: "3–4 min", muralia: "3–4 min" },
+    { landmark: "Lulu Mall", shivay: "8–10 min", shivdhara: "8–10 min", hanumant: "8–10 min", muralia: "8–10 min" },
+    { landmark: "Medanta", shivay: "8–10 min", shivdhara: "8–10 min", hanumant: "8–10 min", muralia: "8–10 min" },
+    { landmark: "Charbagh", shivay: "15–20 min", shivdhara: "15–20 min", hanumant: "15–20 min", muralia: "15–20 min" },
+    { landmark: "Phoenix Palassio Mall", shivay: "8–10 min", shivdhara: "8–10 min", hanumant: "8–10 min", muralia: "8–10 min" },
   ];
 
   return (

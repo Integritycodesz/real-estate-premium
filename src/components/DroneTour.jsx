@@ -15,18 +15,6 @@ const DroneTour = ({ project }) => {
     // Video will autoplay via the autoPlay attribute when rendered
   };
 
-  const handleVideoToggle = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
-      } else {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      }
-    }
-  };
-
   const nextVideo = () => {
     if (hasDroneVideos) {
       setCurrentVideoIdx((prev) => (prev + 1) % project.droneVideos.length);

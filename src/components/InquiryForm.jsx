@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, User, Mail, Phone, MessageSquare, Coins } from 'lucide-react';
+import { sendInquiryEmail } from '../utils/emailService';
 import './InquiryForm.css';
 
 const InquiryForm = ({ projectTitle, hideTitle = false }) => {
@@ -11,18 +12,26 @@ const InquiryForm = ({ projectTitle, hideTitle = false }) => {
     message: `I'm interested in ${projectTitle}. Please share more details.`
   });
 
-  const [status, setStatus] = useState('idle'); // idle, sending, success
+  const [status, setStatus] = useState('idle'); // idle, sending, success, error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      await sendInquiryEmail({
+        ...formData,
+        projectTitle: projectTitle || 'General'
+      });
+      
       setStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', budget: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting inquiry form:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   return (
@@ -106,13 +115,15 @@ const InquiryForm = ({ projectTitle, hideTitle = false }) => {
 
         <button 
           type="submit" 
-          className={`btn-primary w-full ${status === 'sending' ? 'loading' : ''}`}
+          className={`btn-primary w-full ${status === 'sending' ? 'loading' : ''} ${status === 'error' ? 'btn-error' : ''}`}
           disabled={status !== 'idle'}
         >
           {status === 'sending' ? (
             'Sending...'
           ) : status === 'success' ? (
             'Sent Successfully!'
+          ) : status === 'error' ? (
+            'Failed to Send'
           ) : (
             <>
               <Send size={18} />
@@ -123,6 +134,9 @@ const InquiryForm = ({ projectTitle, hideTitle = false }) => {
 
         {status === 'success' && (
           <p className="success-msg">Thank you! Your inquiry has been received.</p>
+        )}
+        {status === 'error' && (
+          <p className="error-msg">Failed to send. Please contact us via WhatsApp.</p>
         )}
       </form>
     </div>

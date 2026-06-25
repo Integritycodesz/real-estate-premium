@@ -1,10 +1,10 @@
 .distance-table-container {
   margin: 60px 0;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-light);
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(10, 40, 110, 0.05);
 }
 
 .table-header-group {
@@ -12,32 +12,48 @@
   text-align: center;
 }
 
+.table-header-group .pre-title-gold {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 .table-wrapper {
   overflow-x: auto;
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+  background: #fff;
 }
 
 .distance-table {
   width: 100%;
   border-collapse: collapse;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
 .distance-table th {
-  background: rgba(212, 175, 55, 0.1);
-  color: #d4af37;
+  background: var(--primary-blue);
+  color: #fff;
   padding: 20px;
   text-align: left;
   font-weight: 600;
-  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   white-space: nowrap;
 }
 
 .distance-table td {
   padding: 18px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.distance-table tr:nth-child(even) td {
+  background: var(--bg-secondary);
 }
 
 .distance-table tr:last-child td {
@@ -45,21 +61,23 @@
 }
 
 .landmark-cell {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.02);
+  font-weight: 700;
+  color: var(--primary-blue);
+  background: rgba(10, 40, 110, 0.03) !important;
 }
 
 .distance-table tr:hover td {
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(197, 160, 40, 0.05) !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .distance-table-container {
     padding: 20px;
     margin: 40px 0;
   }
-  
+}
+
+@media (max-width: 768px) {
   .distance-table th, .distance-table td {
     padding: 12px 15px;
     font-size: 0.85rem;

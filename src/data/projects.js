@@ -29,13 +29,13 @@ export const projects = [
     },
     connectivity: [
       { landmark: "Raebareli Road", distance: "5 mins" },
-      { landmark: "SGPGI Hospital", distance: "15 mins" },
+      { landmark: "SGPGI Hospital", distance: "5 min" },
       { landmark: "Outer Ring Road", distance: "8 mins" }
     ]
   },
   {
-    id: "gokul-viha",
-    title: "Gokul Viha",
+    id: "gokul-vihar",
+    title: "Gokul Vihar",
     location: "Rsewain, Lucknow",
     image: new URL('../assets/gokul_viha.png', import.meta.url).href,
     type: "Residential Plot",
@@ -77,8 +77,10 @@ export const projects = [
     image: new URL('../assets/DJI_20260423074910_0020_D.JPG', import.meta.url).href,
     type: "Residential Plot",
     price: "INR 2,100 /sq.ft",
-    commercialPrice: "INR 2,700 /sq.ft",
+    commercialPrice: "Contact for Price",
     status: "~60% SOLD",
+    priceListUrl: "/downloads/shivay-residency/pricelist.pdf",
+    sitemapUrl: "/downloads/shivay-residency/sitemap.pdf",
     description: "Shivay Residency is PBD Group's premium Zilla Panchayat approved project. It offers the highest level of regulatory clearance and is located in the most lucrative investment pocket of Raebareli Road. Perfect for those who prioritize safety and high resale value.",
     features: ["Zilla Panchayat Approved", "Govt. Approved", "Immediate Registry", "Premium Corner Plots"],
     approvalBadge: "Zilla Panchayat Approved",
@@ -97,11 +99,10 @@ export const projects = [
       new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     droneVideos: [
-      "/videos/shivay-residency/DJI_20260423074335_0014_D.MP4",
-      "/videos/shivay-residency/DJI_20260423074413_0015_D.MP4",
-      "/videos/shivay-residency/DJI_20260423074547_0017_D.MP4",
-      "/videos/shivay-residency/DJI_20260423074948_0022_D.MP4",
-      "/videos/shivay-residency/DJI_20260423075211_0023_D.MP4"
+      "/videos/shivay-residency/DJI_20260423074335_0014_D.mp4",
+      "/videos/shivay-residency/DJI_20260423074413_0015_D.mp4",
+      "/videos/shivay-residency/DJI_20260423074547_0017_D.mp4",
+      "/videos/shivay-residency/DJI_20260423075211_0023_D.mp4"
     ],
     specifications: {
       "Project Type": "Modern Residential Plots",
@@ -111,16 +112,14 @@ export const projects = [
       "Units": "Available in Phases"
     },
     connectivity: [
-      { landmark: "Expressway Link", distance: "2–3 min" },
+      { landmark: "Phoenix Palassio Mall", distance: "8–10 min" },
       { landmark: "Mohanlalganj Market", distance: "5–7 min" },
-      { landmark: "SGPGI Hospital", distance: "15 min" },
-      { landmark: "Kisan Path Ring Road", distance: "10–12 min" },
-      { landmark: "Lulu Mall / Medanta", distance: "15–18 min" },
-      { landmark: "Charbagh Station", distance: "25 min" },
+      { landmark: "SGPGI Hospital", distance: "5 min" },
+      { landmark: "Kisan Path Ring Road", distance: "3–4 min" },
+      { landmark: "Lulu Mall / Medanta", distance: "8–10 min" },
+      { landmark: "Charbagh Station", distance: "15–20 min" },
       { landmark: "Madapur Mandir", distance: "Walking" }
     ],
-    sitemapUrl: "/downloads/shivay-residency/sitemap.pdf",
-    priceListUrl: "/downloads/shivay-residency/pricelist.pdf",
     h1Title: "Residential Plots in Hulaskheda Lucknow | Shivay Residency — Near Agra-Lucknow Expressway",
     subheading: "Lucknow's only expressway-adjacent plotted colony at this price. Jila Panchayat approved. 60% already sold.",
     scarcityPercentage: 60,
@@ -136,7 +135,7 @@ export const projects = [
       { config: "Small Plot (Resi)", size: "800 sqft", price: "₹16.8 lakh" },
       { config: "Standard Plot (Resi)", size: "1,000 sqft", price: "₹21.0 lakh" },
       { config: "Large Plot (Resi)", size: "1,500 sqft", price: "₹31.5 lakh" },
-      { config: "Commercial (Front)", size: "1,000 sqft", price: "₹27.0 lakh" }
+      { config: "Commercial (Front)", size: "Consult", price: "Contact for Price" }
     ],
     whatsappMessage: "I'm interested in Shivay Residency plots in Hulaskheda. Please share plot sizes and availability.",
     seo: {
@@ -159,7 +158,7 @@ export const projects = [
     coordinates: "26°43'31.5\"N 80°59'31.7\"E",
     image: new URL('../assets/shivdhara.png', import.meta.url).href,
     type: "Residential Plot",
-    price: "INR 1,900 /sq.ft",
+    price: "INR 1,899 /sq.ft",
     commercialPrice: "INR 2,500 /sq.ft",
     status: "~30-40% SOLD",
     description: "Shivdhara Residency is PBD's most forward-looking project — situated in northern Mohanlalganj, the zone immediately adjacent to Lucknow's upcoming Vigyan Path Outer Ring Road. Closest project to SGPGI in PBD's portfolio. Pre-Ring Road pricing — this window is 18–24 months.",
@@ -177,11 +176,11 @@ export const projects = [
       new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     droneVideos: [
-      "/videos/shivdhara-residency/DJI_20260423061427_0001_D.MP4",
-      "/videos/shivdhara-residency/DJI_20260423061716_0003_D.MP4",
-      "/videos/shivdhara-residency/DJI_20260423061811_0004_D.MP4",
-      "/videos/shivdhara-residency/DJI_20260423061850_0007_D.MP4",
-      "/videos/shivdhara-residency/DJI_20260423062049_0008_D.MP4"
+      "/videos/shivdhara-residency/DJI_20260423061427_0001_D_compressed.mp4",
+      "/videos/shivdhara-residency/DJI_20260423061716_0003_D_compressed.mp4",
+      "/videos/shivdhara-residency/DJI_20260423061811_0004_D_compressed.mp4",
+      "/videos/shivdhara-residency/DJI_20260423061850_0007_D_compressed.mp4",
+      "/videos/shivdhara-residency/DJI_20260423062049_0008_D_compressed.mp4"
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -190,13 +189,13 @@ export const projects = [
       "Total Area": "12 Acres"
     },
     connectivity: [
-      { landmark: "SGPGI Hospital", distance: "8–10 min" },
-      { landmark: "Mohanlalganj Market", distance: "8–10 min" },
+      { landmark: "SGPGI Hospital", distance: "5 min" },
+      { landmark: "Mohanlalganj Market", distance: "5–7 min" },
       { landmark: "Vigyan Path (Upcoming Ring Road)", distance: "Closest Project" },
       { landmark: "Gosainganj Market", distance: "5–8 min" },
-      { landmark: "Kisan Path", distance: "10 min" },
-      { landmark: "Lulu Mall / Medanta", distance: "12 min" },
-      { landmark: "Charbagh", distance: "20 min" }
+      { landmark: "Kisan Path", distance: "3–4 min" },
+      { landmark: "Lulu Mall / Medanta", distance: "8–10 min" },
+      { landmark: "Charbagh", distance: "15–20 min" }
     ],
     sitemapUrl: "/downloads/shivdhara-residency/sitemap.pdf",
     priceListUrl: "/downloads/shivdhara-residency/pricelist.pdf",
@@ -218,9 +217,9 @@ export const projects = [
       "Northern Mohanlalganj is the last under-explored direction in this belt"
     ],
     pricingTable: [
-      { config: "Entry plot (Resi)", size: "800 sqft", price: "₹15.2 lakh" },
-      { config: "Standard (Resi)", size: "1,200 sqft", price: "₹22.8 lakh" },
-      { config: "Large Plot (Resi)", size: "1,500 sqft", price: "₹28.5 lakh" },
+      { config: "Entry plot (Resi)", size: "800 sqft", price: "₹15.19 lakh" },
+      { config: "Standard (Resi)", size: "1,200 sqft", price: "₹22.79 lakh" },
+      { config: "Large Plot (Resi)", size: "1,500 sqft", price: "₹28.49 lakh" },
       { config: "Commercial Zone", size: "1,000 sqft", price: "₹25.0 lakh" }
     ],
     faqs: [
@@ -255,10 +254,10 @@ export const projects = [
       new URL('../assets/hero_exterior_new_1776831190922.png', import.meta.url).href
     ],
     droneVideos: [
-      "/videos/hanumant-dham/DJI_20260423071248_0009_D.MP4",
-      "/videos/hanumant-dham/DJI_20260423071405_0010_D.MP4",
-      "/videos/hanumant-dham/DJI_20260423071507_0011_D.MP4",
-      "/videos/hanumant-dham/DJI_20260423071552_0013_D.MP4"
+      "/videos/hanumant-dham/DJI_20260423071248_0009_D.mp4",
+      "/videos/hanumant-dham/DJI_20260423071405_0010_D.mp4",
+      "/videos/hanumant-dham/DJI_20260423071507_0011_D.mp4",
+      "/videos/hanumant-dham/DJI_20260423071552_0013_D.mp4"
     ],
     specifications: {
       "Project Type": "Residential Plots",
@@ -268,21 +267,21 @@ export const projects = [
       "Plot Sizes": "800 - 5000 Sq. Ft."
     },
     connectivity: [
-      { landmark: "SGPGI Hospital", distance: "10 min" },
-      { landmark: "Mohanlalganj Market", distance: "5 min" },
-      { landmark: "Kisan Path Ring Road", distance: "10–12 min" },
-      { landmark: "Lulu Mall / Medanta", distance: "10 min" },
-      { landmark: "Charbagh", distance: "20 min" },
-      { landmark: "Expressway Link", distance: "20 min" }
+      { landmark: "SGPGI Hospital", distance: "5 min" },
+      { landmark: "Mohanlalganj Market", distance: "5–7 min" },
+      { landmark: "Kisan Path Ring Road", distance: "3–4 min" },
+      { landmark: "Lulu Mall / Medanta", distance: "8–10 min" },
+      { landmark: "Charbagh", distance: "15–20 min" },
+      { landmark: "Phoenix Palassio Mall", distance: "8–10 min" }
     ],
     sitemapUrl: "/downloads/hanumant-dham/sitemap.pdf",
     priceListUrl: "/downloads/hanumant-dham/pricelist.pdf",
     h1Title: "Residential Plots in Mohanlalganj Lucknow | Hanumant Dham — Near IT City & SGPGI",
-    subheading: "10 minutes from SGPGI, near the IT City corridor. Plots from ₹12.8 lakh.",
+    subheading: "10 minutes from SGPGI, near the IT City corridor. Plots from ₹11.99 lakh.",
     scarcityPercentage: 35,
     urgencyLine: "IT City activation is the catalyst — land within 5 km of tech parks doubles in 5–7 years",
     whyInvestNow: [
-      "Entry at ₹12.8 lakh (800 sqft) — accessible for first-time and repeat investors",
+      "Entry at ₹11.99 lakh (800 sqft) — accessible for first-time and repeat investors",
       "IT City activation is the catalyst — land within 5 km of tech parks in UP doubles in 5–7 years historically",
       "30–40% sold — project is active and moving; not stale inventory",
       "SGPGI demand is permanent — healthcare worker housing demand doesn't cycle",
@@ -290,14 +289,14 @@ export const projects = [
     ],
     pricingTable: [
       { config: "Entry Plot (Resi)", size: "800 sqft", price: "₹11.99 lakh" },
-      { config: "Standard Plot (Resi)", size: "1,000 sqft", price: "₹14.99 lakh" },
-      { config: "Large Plot (Resi)", size: "1,500 sqft", price: "₹22.48 lakh" },
+      { config: "Standard Plot (Resi)", size: "1,200 sqft", price: "₹17.99 lakh" },
+      { config: "Large Plot (Resi)", size: "2,000 sqft", price: "₹29.98 lakh" },
       { config: "Commercial Plot", size: "Consult", price: null }
     ],
     whatsappMessage: "I'm interested in Hanumant Dham plots near SGPGI. Please share details.",
     seo: {
-      title: "Residential Plots Near SGPGI Lucknow | Hanumant Dham | Mohanlalganj | ₹1,600/sqft",
-      description: "Hanumant Dham offers residential plots near SGPGI and IT City, Mohanlalganj Lucknow. 800–5000 sqft plots from ₹12.8 lakh at ₹1,600/sqft. 30–40% sold.",
+      title: "Residential Plots Near SGPGI Lucknow | Hanumant Dham | Mohanlalganj | ₹1,499/sqft",
+      description: "Hanumant Dham offers residential plots near SGPGI and IT City, Mohanlalganj Lucknow. 800–5000 sqft plots from ₹11.99 lakh at ₹1,499/sqft. 30–40% sold.",
       keywords: "plots near SGPGI Lucknow, residential plots near IT City Lucknow, Hanumant Dham PBD, affordable plots Mohanlalganj, Khujoli Chauraha plots, Raebareli Road plots Lucknow"
     },
     faqs: [
@@ -319,7 +318,7 @@ export const projects = [
     price: "INR 1,799 /sq.ft",
     commercialPrice: null,
     status: "30-40% SOLD",
-    description: "Muralia Garden is PBD's most urban project — located adjacent to Mohanlalganj's main market and tehsil office. Daily needs are walkable. Government services are next door. Plots from 800 sqft at ₹1,799/sqft. Unlike peripheral projects betting on future development, Muralia Garden's value anchor already exists.",
+    description: "Muralia Garden is PBD's most urban project — located adjacent to Mohanlalganj's main market and tehsil office. Daily needs are walkable. Government services are next door. Plots from 800 sqft at ₹1,799/sqft (entry ₹14.39 lakh). Unlike peripheral projects betting on future development, Muralia Garden's value anchor already exists.",
     features: ["Govt. Approved", "Market 2 Min Walk", "Tehsil Adjacent", "Urban-Edge Location"],
     amenities: [
       "40-ft + 30-ft Internal Roads",
@@ -340,13 +339,13 @@ export const projects = [
       "Plot Sizes": "800 - 5000 Sq. Ft."
     },
     connectivity: [
-      { landmark: "Mohanlalganj Market", distance: "2 min (walk)" },
+      { landmark: "Mohanlalganj Market", distance: "5–7 min" },
       { landmark: "Tehsil Office", distance: "Adjacent" },
-      { landmark: "SGPGI Hospital", distance: "15 min" },
-      { landmark: "Kisan Path Ring Road", distance: "12–15 min" },
-      { landmark: "Lulu Mall / Medanta", distance: "10 min" },
-      { landmark: "Charbagh", distance: "20–25 min" },
-      { landmark: "Expressway Link", distance: "20 min" }
+      { landmark: "SGPGI Hospital", distance: "5 min" },
+      { landmark: "Kisan Path Ring Road", distance: "3–4 min" },
+      { landmark: "Lulu Mall / Medanta", distance: "8–10 min" },
+      { landmark: "Charbagh", distance: "15–20 min" },
+      { landmark: "Phoenix Palassio Mall", distance: "8–10 min" }
     ],
     sitemapUrl: "/downloads/muralia-garden/sitemap.pdf",
     priceListUrl: "/downloads/muralia-garden/pricelist.pdf",
@@ -355,22 +354,22 @@ export const projects = [
     scarcityPercentage: 35,
     urgencyLine: "The Market Is a 2-Minute Walk. The Price Has Not Caught Up to That Yet.",
     whyInvestNow: [
-      "Urban-edge plots at ₹1,600/sqft — as Mohanlalganj's urban classification upgrades, this price goes with it",
+      "Urban-edge plots at ₹1,799/sqft — as Mohanlalganj's urban classification upgrades, this price goes with it",
       "Tehsil-adjacent location has natural rental yield potential (professionals needing proximity to government offices)",
-      "Entry at ₹12.8 lakh — lowest-risk entry in PBD's portfolio, given existing civic infrastructure",
+      "Entry at ₹14.39 lakh — lowest-risk entry in PBD's portfolio, given existing civic infrastructure",
       "50% payment triggers registry — no long payment commitments"
     ],
     pricingTable: [
-      { config: "Residential Plot", size: "Starts from 800 sqft", price: "₹1,600 /sq.ft" },
+      { config: "Residential Plot", size: "Starts from 800 sqft", price: "₹1,799 /sq.ft" },
       { config: "Commercial Plot", size: "Starts from 1000 sqft", price: "₹2,200 /sq.ft" },
-      { config: "Entry plot (Resi)", size: "800 sqft", price: "₹12.8 lakh" },
-      { config: "Standard (Resi)", size: "1,200 sqft", price: "₹19.2 lakh" },
+      { config: "Entry plot (Resi)", size: "800 sqft", price: "₹14.39 lakh" },
+      { config: "Standard (Resi)", size: "1,200 sqft", price: "₹21.59 lakh" },
       { config: "Large / Custom (Resi)", size: "Up to 5,000 sqft", price: "On Request" }
     ],
     whatsappMessage: "I'm interested in Muralia Garden plots near Mohanlalganj market. Please share availability.",
     seo: {
-      title: "Plots Near Mohanlalganj Market Lucknow | Muralia Garden | Tehsil Road | ₹1,600/sqft",
-      description: "Muralia Garden — residential plots adjacent to Mohanlalganj Main Market and Tehsil, Lucknow. 800–5000 sqft from ₹12.8 lakh at ₹1,600/sqft. Urban-edge location.",
+      title: "Plots Near Mohanlalganj Market Lucknow | Muralia Garden | Tehsil Road | ₹1,799/sqft",
+      description: "Muralia Garden — residential plots adjacent to Mohanlalganj Main Market and Tehsil, Lucknow. 800–5000 sqft from ₹14.39 lakh at ₹1,799/sqft. Urban-edge location.",
       keywords: "plots near Mohanlalganj market Lucknow, residential plots tehsil road Mohanlalganj, Muralia Garden PBD, urban plots Mohanlalganj, affordable plots near market Lucknow"
     },
     faqs: [

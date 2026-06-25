@@ -25,13 +25,13 @@ const activities = [
   { name: "Tarun Gill", location: "Sushant Golf City", action: "booked a plot", project: "Shivay Residency", icon: <ShoppingBag size={18} /> }
 ];
 
+const filteredActivities = activities.filter(a => 
+  a.project !== "Rajgharana" && a.project !== "Barsana Estate"
+);
+
 const SocialProofPopup = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
-  const filteredActivities = activities.filter(a => 
-    a.project !== "Rajgharana" && a.project !== "Barsana Estate"
-  );
 
   useEffect(() => {
     const showNotification = () => {

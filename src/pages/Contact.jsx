@@ -1,13 +1,45 @@
-import React from 'react';
-import { Mail, Phone, MapPin, MessageCircle, Clock, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, MessageCircle, Clock, CheckCircle2, Send, Loader2 } from 'lucide-react';
 import { projects } from '../data/projects';
+import { sendInquiryEmail } from '../utils/emailService';
 import FlashDealsBanner from '../components/FlashDealsBanner';
 import './PageStyles.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    project: '',
+    budget: '',
+    message: ''
+  });
+
+  const [status, setStatus] = useState('idle'); // idle, sending, success, error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+    
+    try {
+      await sendInquiryEmail({
+        ...formData,
+        projectTitle: formData.project || 'General Inquiry'
+      });
+      
+      setStatus('success');
+      setFormData({ name: '', email: '', phone: '', project: '', budget: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
+  };
+
   return (
     <div className="page-wrapper fade-in">
-      {/* Hero Header */}
+      {/* ... previous hero code remains same ... */}
       <header className="page-hero-header" style={{ 
         backgroundImage: "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')",
       }}>
@@ -105,17 +137,42 @@ const Contact = () => {
                 <p>Quick response, real information, zero pressure.</p>
               </div>
               
-              <form onSubmit={(e) => e.preventDefault()} className="contact-form-layout">
+              <form onSubmit={handleSubmit} className="contact-form-layout">
                 <div className="form-row">
-                  <input type="text" placeholder="Your Name" className="form-input" />
-                  <input type="email" placeholder="Email Address" className="form-input" />
+                  <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    className="form-input" 
+                    required
+                    value={formData.name}
+                    onChange={e => setFormData({...formData, name: e.target.value})}
+                  />
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    className="form-input" 
+                    required
+                    value={formData.email}
+                    onChange={e => setFormData({...formData, email: e.target.value})}
+                  />
                 </div>
                 
-                <input type="tel" placeholder="Phone Number" className="form-input" />
+                <input 
+                  type="tel" 
+                  placeholder="Phone Number" 
+                  className="form-input" 
+                  required
+                  value={formData.phone}
+                  onChange={e => setFormData({...formData, phone: e.target.value})}
+                />
                 
                 <div className="form-row">
                   <div className="select-wrapper">
-                    <select className="form-input">
+                    <select 
+                      className="form-input"
+                      value={formData.project}
+                      onChange={e => setFormData({...formData, project: e.target.value})}
+                    >
                       <option value="">Select Project of Interest</option>
                       {projects.map(project => (
                         <option key={project.id} value={project.id}>{project.title}</option>
@@ -126,7 +183,11 @@ const Contact = () => {
                   </div>
 
                   <div className="select-wrapper">
-                    <select className="form-input">
+                    <select 
+                      className="form-input"
+                      value={formData.budget}
+                      onChange={e => setFormData({...formData, budget: e.target.value})}
+                    >
                       <option value="">Investment Amount</option>
                       <option value="10-20">10-20 lakh</option>
                       <option value="20-30">20-30 lakh</option>
@@ -136,11 +197,35 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <textarea placeholder="How can we help you?" rows="4" className="form-textarea"></textarea>
+                <textarea 
+                  placeholder="How can we help you?" 
+                  rows="4" 
+                  className="form-textarea"
+                  value={formData.message}
+                  onChange={e => setFormData({...formData, message: e.target.value})}
+                ></textarea>
                 
-                <button type="submit" className="btn btn-gold w-full btn-submit">
-                  Send Inquiry
+                <button 
+                  type="submit" 
+                  className={`btn btn-gold w-full btn-submit ${status === 'sending' ? 'loading' : ''}`}
+                  disabled={status !== 'idle'}
+                >
+                  {status === 'sending' ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" />
+                      Sending...
+                    </>
+                  ) : status === 'success' ? (
+                    'Sent Successfully! 🎉'
+                  ) : status === 'error' ? (
+                    'Failed to Send. Try Again.'
+                  ) : (
+                    'Send Inquiry'
+                  )}
                 </button>
+                
+                {status === 'success' && <p className="form-success-text">Thank you! Your message has been sent to our team.</p>}
+                {status === 'error' && <p className="form-error-text">Something went wrong. Please try WhatsApp for a faster response.</p>}
               </form>
             </div>
           </div>

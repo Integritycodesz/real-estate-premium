@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MessageCircle, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logo from '../assets/logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="footer-col brand-col">
           <Link to="/" className="footer-logo-link">
             <div className="logo-main footer-logo-container">
-              <img src="/src/assets/logo.png" alt="PBD Group" className="site-logo footer-logo" />
+              <img src={logo} alt="PBD Group" className="site-logo footer-logo" />
               <div className="logo-sub">
                 <span>PAWANTANAY BUILDERS</span>
                 <span>& Developers Pvt. Ltd. Lucknow</span>

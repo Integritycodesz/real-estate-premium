@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
 import { X, Send, User, Phone, Star, ShieldCheck, Zap } from 'lucide-react';
+import { sendInquiryEmail } from '../utils/emailService';
 import './MobileLeadPopup.css';
 
 const MobileLeadPopup = ({ onClose }) => {
   const [status, setStatus] = useState('idle');
+  const [formData, setFormData] = useState({ name: '', phone: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => {
+    
+    try {
+      await sendInquiryEmail({
+        ...formData,
+        projectTitle: 'Lead Popup (Mobile)',
+        message: 'Lead captured via mobile-specific popup.'
+      });
+      
       setStatus('success');
       setTimeout(() => onClose(), 2500);
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting mobile lead popup:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   return (
@@ -31,23 +44,37 @@ const MobileLeadPopup = ({ onClose }) => {
         <form onSubmit={handleSubmit} className="mobile-popup-form">
           <div className="mobile-input-wrapper">
             <User size={22} className="mobile-input-icon" />
-            <input type="text" placeholder="Your Full Name" required />
+            <input 
+              type="text" 
+              placeholder="Your Full Name" 
+              required 
+              value={formData.name}
+              onChange={e => setFormData({...formData, name: e.target.value})}
+            />
           </div>
           
           <div className="mobile-input-wrapper">
             <Phone size={22} className="mobile-input-icon" />
-            <input type="tel" placeholder="Mobile Number" required />
+            <input 
+              type="tel" 
+              placeholder="Mobile Number" 
+              required 
+              value={formData.phone}
+              onChange={e => setFormData({...formData, phone: e.target.value})}
+            />
           </div>
 
           <button 
             type="submit" 
-            className={`mobile-popup-submit ${status === 'success' ? 'success' : ''}`}
+            className={`mobile-popup-submit ${status === 'success' ? 'success' : ''} ${status === 'error' ? 'error' : ''}`}
             disabled={status !== 'idle'}
           >
             {status === 'sending' ? (
               'Authenticating...'
             ) : status === 'success' ? (
               'Priority Access Granted! 🎉'
+            ) : status === 'error' ? (
+              'Failed to Send'
             ) : (
               <>
                 <span>Claim Priority Access</span>

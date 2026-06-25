@@ -8,19 +8,19 @@ export const propertiesData = [
     propertyType: "Residential Plot",
     development: "Gated Colony",
     location: "Raebareli Road",
-    image: "/src/assets/rajgharana.png",
+    image: new URL('../assets/rajgharana.png', import.meta.url).href,
     status: "Sold Out"
   },
   {
     id: 2,
     name: "Hanumant Dham Plot",
-    price: "₹12,50,000",
-    priceValue: 1250000,
+    price: "₹14,99,000",
+    priceValue: 1499000,
     size: "1,000 sq ft",
     propertyType: "Residential Plot",
     development: "Serene Community",
     location: "Raebareli Road",
-    image: "/src/assets/hanumant_dham.png"
+    image: new URL('../assets/hanumant_dham.png', import.meta.url).href
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const propertiesData = [
     propertyType: "Luxury Plot",
     development: "Underground Utilities",
     location: "Raebareli Road",
-    image: "/src/assets/barsana_estate.png",
+    image: new URL('../assets/barsana_estate.png', import.meta.url).href,
     status: "Sold Out"
   },
   {
@@ -43,29 +43,29 @@ export const propertiesData = [
     propertyType: "Eco Plot",
     development: "Sustainable Project",
     location: "Kisan Path",
-    image: "/src/assets/nature_green.png"
+    image: new URL('../assets/nature_green.png', import.meta.url).href
   },
   {
     id: 5,
     name: "Shivay Residency Premium Plot",
-    price: "₹23,25,000",
-    priceValue: 2325000,
+    price: "₹31,50,000",
+    priceValue: 3150000,
     size: "1,500 sq ft",
     propertyType: "Residential Plot",
     development: "Zilla Panchayat Approved",
     location: "Raebareli Road",
-    image: "/src/assets/shivdhara.png"
+    image: new URL('../assets/shivdhara.png', import.meta.url).href
   },
   {
     id: 6,
     name: "Muraliya Garden Plot",
-    price: "₹9,60,000",
-    priceValue: 960000,
+    price: "₹14,39,200",
+    priceValue: 1439200,
     size: "800 sq ft",
     propertyType: "Residential Plot",
     development: "Ready to Build",
     location: "Raebareli Road",
-    image: "/src/assets/muraliya_garden.png"
+    image: new URL('../assets/muraliya_garden.png', import.meta.url).href
   }
 ];
 

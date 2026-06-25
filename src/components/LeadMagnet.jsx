@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2, X, Send, ShieldCheck } from 'lucide-react';
+import { sendInquiryEmail } from '../utils/emailService';
 import './LeadMagnet.css';
 
 const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [status, setStatus] = useState('idle'); // idle, sending, success
+  const [status, setStatus] = useState('idle'); // idle, sending, success, error
   const [formData, setFormData] = useState({ name: '', phone: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
     
-    // Simulate preparation and trigger download
-    setTimeout(() => {
+    try {
+      // Send lead to admin via Resend
+      await sendInquiryEmail({
+        ...formData,
+        projectTitle: `Download Request: ${magnetType}`,
+        message: `User requested download for: ${title} (${magnetType})`
+      });
+
       setStatus('success');
       
       if (fileUrl) {
@@ -30,7 +37,11 @@ const LeadMagnet = ({ title, description, magnetType = 'Price Chart', fileUrl })
         setStatus('idle');
         setFormData({ name: '', phone: '' });
       }, 3000);
-    }, 1200);
+    } catch (error) {
+      console.error("Error submitting lead magnet:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   return (

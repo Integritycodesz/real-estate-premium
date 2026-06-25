@@ -3,6 +3,7 @@ import { X, Send, Phone, User, Zap, Star, ShieldCheck, MapPin, Calendar } from '
 import './LeadPopup.css';
 import MobileLeadPopup from './MobileLeadPopup';
 import PlotImg from '../assets/about/about_hero.png';
+import { sendInquiryEmail } from '../utils/emailService';
 
 const LeadPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,6 +11,12 @@ const LeadPopup = () => {
   const [status, setStatus] = useState('idle');
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    purpose: '',
+    meetingDate: ''
+  });
 
   // Resize listener
   useEffect(() => {
@@ -59,14 +66,25 @@ const LeadPopup = () => {
     }, 500);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => {
+    
+    try {
+      await sendInquiryEmail({
+        ...formData,
+        projectTitle: 'Lead Popup (Site Wide)',
+        message: `Lead captured via main popup. Interested in: ${formData.purpose}. Meeting scheduled for: ${formData.meetingDate}`
+      });
+      
       setStatus('success');
       setHasSubmitted(true);
       setTimeout(() => handleClose(), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting lead popup:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
+    }
   };
 
   if (!isVisible) return null;
@@ -120,21 +138,37 @@ const LeadPopup = () => {
                 <div className="input-icon-wrapper">
                   <User size={18} />
                 </div>
-                <input type="text" placeholder="Your Full Name" required />
+                <input 
+                  type="text" 
+                  placeholder="Your Full Name" 
+                  required 
+                  value={formData.name}
+                  onChange={e => setFormData({...formData, name: e.target.value})}
+                />
               </div>
               
               <div className="popup-input-group">
                 <div className="input-icon-wrapper">
                   <Phone size={18} />
                 </div>
-                <input type="tel" placeholder="Mobile Number" required />
+                <input 
+                  type="tel" 
+                  placeholder="Mobile Number" 
+                  required 
+                  value={formData.phone}
+                  onChange={e => setFormData({...formData, phone: e.target.value})}
+                />
               </div>
 
               <div className="popup-input-group">
                 <div className="input-icon-wrapper">
                   <MapPin size={18} />
                 </div>
-                <select required defaultValue="">
+                <select 
+                  required 
+                  value={formData.purpose}
+                  onChange={e => setFormData({...formData, purpose: e.target.value})}
+                >
                   <option value="" disabled>Looking for?:</option>
                   <option value="investment">Investment</option>
                   <option value="personal">Personal Use</option>
@@ -156,6 +190,8 @@ const LeadPopup = () => {
                     }}
                     placeholder=""
                     required 
+                    value={formData.meetingDate}
+                    onChange={e => setFormData({...formData, meetingDate: e.target.value})}
                     onClick={(e) => e.target.showPicker?.()}
                   />
                 </div>
@@ -163,13 +199,15 @@ const LeadPopup = () => {
 
               <button 
                 type="submit" 
-                className={`popup-submit-btn ${status === 'success' ? 'success' : ''}`}
+                className={`popup-submit-btn ${status === 'success' ? 'success' : ''} ${status === 'error' ? 'error' : ''}`}
                 disabled={status !== 'idle'}
               >
                 {status === 'sending' ? (
                   'Checking Availability...'
                 ) : status === 'success' ? (
                   'Success! We will contact you. 🎉'
+                ) : status === 'error' ? (
+                  'Failed to Send'
                 ) : (
                   <>
                     <span>Check Availability & Get Details</span>

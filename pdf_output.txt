@@ -1,0 +1,559 @@
+﻿PAWANTANAY BUILDERS & DEVELOPERS — WEBSITE
+CONTENT SYSTEM v2
+Updated with: Plot sizing · Inventory status · Priority projects · WA/Call CTAs Tech Team
+Implementation Ready | April 2026
+CONTENT STRATEGY NOTES FOR TECH TEAM
+Priority for launch: Shivay Residency + Shivdhara Residency go live first. Primary CTA on all
+pages: WhatsApp button (sticky on mobile) + Call button. Inventory urgency: Use real sold-out
+% as a trust + scarcity signal. Plot sizing: Entry ticket = ₹X/sqft × 800 sqft minimum. Always
+show INR entry price. Approval status: Only Shivay Residency is Jila Panchayat approved. Do
+NOT claim approval for others unless confirmed. Use "Structured Layout Development" for
+others.
+★ PRIORITY PROJECT 1: SHIVAY RESIDENCY
+Push hardest. Highest rate. Jila Panchayat approved. ~60% sold — use scarcity.
+Location: Hulaskheda, Mohanlalganj, Lucknow — Near Agra-Lucknow Link Expressway Rate:
+₹2,100/sqft | Approved: Jila Panchayat | Status: ~60% SOLD
+SECTION 1 — HERO
+H1: Residential Plots in Hulaskheda Lucknow | Shivay Residency — Near Agra-Lucknow
+Expressway
+Subheading: Lucknow's only expressway-adjacent plotted colony at this price. Jila Panchayat
+approved. 60% already sold.
+Hero Description (3 lines max): Shivay Residency at Hulaskheda is the premium offering from
+Pawantanay Builders — the only Jila Panchayat approved plotted development with direct
+proximity to the Agra-Lucknow Link Expressway in this belt. Plots starting from 800 sqft (entry
+at ₹16.8 lakh) going up to 5,000 sqft with customization available. With 60% of inventory already
+sold, remaining plots are moving fast.
+Primary CTA (sticky mobile button): WhatsApp Now — Get Plot Details
+Call Now — Speak
+to Our Team
+
+Urgency Line (below hero): Only 40% plots remaining — last 3 months saw fastest
+bookings
+SECTION 2 — PROJECT OVERVIEW
+Shivay Residency is positioned at Hulaskheda, on the southwestern edge of Mohanlalganj — the
+location with the best inter-city road access in PBD's entire portfolio. The Agra-Lucknow
+Expressway link is minutes away, making this ideal for buyers who commute between Lucknow
+and Kanpur, Agra, or Delhi.
+This is a fully structured layout with 40-ft and 30-ft roads, pre-planned utilities, Jila Panchayat
+approval, and the Madapur Mandir temple cluster as a neighborhood anchor.
+Who this project is for:
+Investors seeking expressway-corridor appreciation at below-market entry
+Families wanting peaceful suburban living with fast city access
+Professionals who travel frequently on the Agra-Lucknow Expressway
+NRIs wanting a clean-title, approved plot in Lucknow
+SECTION 3 — PLOT SIZING & PRICING
+Configuration
+Size
+Starting Price
+Entry plot
+800 sqft
+₹16.8 lakh
+Mid-size
+1,200 sqft
+₹25.2 lakh
+Large plot
+2,000 sqft
+₹42 lakh
+Premium / Custom
+Up to 5,000 sqft
+On Request
+Rate
+₹2,100 / sqft
+Fixed
+Payment
+50% on registration
+Balance in schedule
+Custom plot configurations available on request.
+
+SECTION 4 — LOCATION ADVANTAGE
+Link Expressway: 2–3 min — direct Agra-Lucknow Expressway access
+Mohanlalganj Market & Tehsil: 5–7 min
+SGPGI Hospital: 15 min
+Kisan Path (Ring Road): 10–12 min
+Lulu Mall / Medanta: 15–18 min
+Charbagh Railway Station: 25 min
+Madapur Mandir: Walking distance
+Delhi via Expressway: ~4 hrs | Kanpur: ~90 min | Agra: ~3 hrs
+SECTION 5 — WHY THIS LOCATION?
+Hulaskheda sits at an inflection point: it carries Mohanlalganj's affordable emerging-area pricing
+while being physically adjacent to one of UP's highest-quality road corridors. Expressway-
+adjacent plots in comparable Lucknow zones (Gomti Nagar Extension) command ₹5,500–
+₹7,000/sqft. Shivay Residency is priced at ₹2,100 — the arbitrage is significant and narrowing.
+As the Lucknow–Raebareli Road undergoes its 6-lane upgrade and the State Capital Region
+(SCR) development plan executes, this belt reprices. The question is not whether — it's when.
+And 60% of buyers have already decided.
+SECTION 6 — WHY INVEST NOW?
+60% inventory already sold — remaining plots go to waitlist if not acted on
+Jila Panchayat approval is a legal moat — not available in most competing plots in this zone
+50% payment triggers registry — lowest capital deployment for a titled plot in Lucknow
+SCR investment of ₹5 lakh crore over 20 years systematically upgrades this entire corridor
+Entry at ₹16.8 lakh (800 sqft) — actionable for first-time buyers and investors alike
+SECTION 7 — PROJECT HIGHLIGHTS
+Jila Panchayat approved (only approved project in PBD portfolio)
+40-ft primary internal roads
+
+30-ft secondary road grid
+Sewer, drainage, electricity infrastructure
+Park and green zone in layout
+Madapur Mandir proximity — spiritual & community anchor
+Custom plot sizes up to 5,000 sqft
+Link Expressway access in 2–3 min
+SECTION 8 — INVENTORY STATUS
+60% of plots sold. Remaining inventory is limited by layout — not being created
+artificially.
+This is factual scarcity. When this project was launched, buyers who visited and decided quickly
+are now sitting on an asset that has seen natural appreciation as surrounding development has
+advanced. The buyers who wait are the ones who end up regretting.
+SECTION 9 — WHO SHOULD BUY?
+Investor: Expressway premium + Jila Panchayat approval + 60% sold track record = strongest
+appreciation narrative in PBD's portfolio. Entry at ₹16.8 lakh.
+End-user / family: Expressway in 2 min, market in 7 min, temple walkable, 40-ft roads inside.
+Build your home without worrying about road digging or utility delays — it's all pre-planned.
+Land banker / NRI: Clean title. Government approved layout. Flexible sizing. This is the easiest
+plot to resell or construct on in this belt.
+SECTION 10 — SITE MAP DESCRIPTION
+(For design/dev team)
+Entry gate from Hulaskheda main road — with "Shivay Residency" gate visual
+40-ft spine road labeled "Shivay Marg"
+30-ft secondary grid dividing blocks (A, B, C blocks recommended)
+Corner plots highlighted with "Premium" tag
+Sold plots shown in muted fill — empty plots in white (shows scarcity visually)
+
+Direction callouts: "Link Expressway → 2 min" | "Mohanlalganj Market → 7 min" | "Madapur
+Mandir → Walking"
+Park zone, electricity substation point, sewer line marked
+North arrow + scale bar
+"Jila Panchayat Approved" stamp watermark on layout
+SECTION 11 — TRUST SIGNALS
+Jila Panchayat approved — verifiable government sanction
+60% plots already sold — largest buyer confidence signal
+50% payment → immediate registry — no delay, no ambiguity
+Pawantanay Builders active across 4 projects in same corridor — not a single-project
+developer
+Physical site visit available — nothing hidden, no CGI renders
+SECTION 12 — CTA SECTION
+Headline: 40% Plots Remaining. Don't Plan Your Visit After They're Gone.
+Body: Shivay Residency is Lucknow's only Jila Panchayat approved plotted colony with Link
+Expressway access. Plots from ₹16.8 lakh. Registry at 50% payment.
+CTA 1 (Primary — Green WA Button): WhatsApp Now for Plot Availability Link:
+wa.me/[YOUR NUMBER] with pre-filled message: "I'm interested in Shivay Residency plots.
+Please share details."
+CTA 2 (Secondary — Call Button): Call Now: [YOUR NUMBER]
+CTA 3 (Tertiary): Book a Free Site Visit
+SECTION 13 — SEO METADATA
+Meta Title: Residential Plots in Hulaskheda Lucknow | Shivay Residency | Jila
+Panchayat Approved | Near Expressway
+Meta Description: Shivay Residency — Jila Panchayat approved residential plots in
+Hulaskheda, Mohanlalganj, Lucknow. Near Agra-Lucknow Expressway. Plots from 800–
+5000 sqft at ₹2,100/sqft. 60% sold. WhatsApp for availability.
+
+Slug: /projects/shivay-residency-hulaskheda-mohanlalganj-lucknow
+Keywords: Jila Panchayat approved plots Lucknow, residential plots Hulaskheda, plots near
+Agra Lucknow Expressway, Shivay Residency PBD, premium plots Mohanlalganj Lucknow, buy
+plot near expressway Lucknow, plotted colony Mohanlalganj approved
+★ PRIORITY PROJECT 2: SHIVDHARA RESIDENCY
+Push second hardest. Ring Road frontier. Closest to SGPGI. Pre-activation pricing.
+Location: North Mohanlalganj / Gosainganj Belt, Lucknow Rate: (Confirm with team —
+recommended: ₹1,500–1,600/sqft based on position) Status: ~30–40% sold | Confirm exact %
+with sales team
+SECTION 1 — HERO
+H1: Residential Plots Near Lucknow Ring Road | Shivdhara Residency — North
+Mohanlalganj
+Subheading: The Ring Road is coming. Plots this close to it won't stay at this price.
+Hero Description: Shivdhara Residency is PBD's most forward-looking project — situated in
+northern Mohanlalganj, the zone immediately adjacent to Lucknow's upcoming Vigyan Path
+Outer Ring Road (DPR completed 2025, construction beginning 2026). Closest project to SGPGI
+in PBD's portfolio. Plots from 800 sqft with customization available. Pre-Ring Road pricing — this
+window is 18–24 months.
+Primary CTA: WhatsApp for Early Mover Details
+Call Now — Enquire About Shivdhara
+Urgency Line: Ring Road construction begins 2026 — land within 3 km reprices during
+construction phase
+SECTION 2 — PROJECT OVERVIEW
+Shivdhara Residency occupies the northernmost position in PBD's portfolio — trending toward
+the Gosainganj corridor from Mohanlalganj's northern edge. This is the "timing play" project: it
+serves buyers who understand infrastructure cycles and want to position themselves before the
+Ring Road completion triggers a structural repricing of this zone.
+Who this project is for:
+
+Aggressive investors with a 3–5 year horizon
+First-time buyers who want the lowest entry ticket + maximum holding period
+SGPGI doctors, staff, and associated healthcare professionals (closest commute distance)
+Land banking buyers who want bulk / custom sizing
+SECTION 3 — PLOT SIZING & PRICING
+Configuration
+Size
+Approx. Price*
+Entry plot
+800 sqft
+Confirm with team
+Standard
+1,200 sqft
+Confirm with team
+Large / Custom
+Up to 5,000 sqft
+On Request
+Payment
+50% on registration
+Balance in schedule
+Rate to be confirmed and published by team. Recommend anchoring at a slight discount to
+Hanumant Dham/Muralia to reflect pre-infrastructure positioning.
+SECTION 4 — LOCATION ADVANTAGE
+Lucknow Outer Ring Road (Vigyan Path): Closest PBD project to Ring Road alignment
+SGPGI Hospital: 8–10 min (shortest in PBD portfolio)
+Gosainganj Town: 5–8 min — established market and social infrastructure
+Kisan Path (operational Ring Road segment): ~10 min
+Mohanlalganj Market: 8–10 min
+Shaheed Path: ~15 min
+Charbagh: ~20 min
+Dual corridor: Raebareli Road (south) + Gosainganj arterial (north) both accessible
+SECTION 5 — WHY THIS LOCATION? (ANALYST TONE)
+Three verifiable factors make northern Mohanlalganj the smartest bet in PBD's portfolio for a
+patient investor:
+
+1. Ring Road effect: Vigyan Path DPR was completed in July 2025. Construction starts 2026.
+Historically in Lucknow, land within 3 km of ring road corridors appreciates 30–50% during
+construction phase — before the road even opens. Shivdhara Residency is in that zone.
+2. SGPGI proximity: At 8–10 min, this is the closest plotted development to SGPGI in PBD's
+portfolio. The hospital employs thousands of medical professionals who need nearby
+housing. That demand is structural, not speculative.
+3. Gosainganj absorption: Gosainganj is being drawn into Lucknow's urban boundary
+expansion. As that process completes, northern Mohanlalganj — currently priced as
+emerging — gets reclassified into Lucknow's urban pricing matrix. That reclassification is
+worth 40–60% in price terms, historically.
+SECTION 6 — WHY INVEST NOW?
+Pre-Ring Road land pricing is a closing window — construction begins 2026
+SGPGI housing demand is permanent, not cyclical
+Entry plots from 800 sqft — lowest capital barrier for a structured plotted colony
+50% payment triggers registry — no long payment commitments
+Northern Mohanlalganj is the last under-explored direction in this belt
+SECTION 7 — PROJECT HIGHLIGHTS
+40-ft primary roads + 30-ft secondary road grid
+Sewer, drainage, electricity infrastructure
+Park and green zone in layout
+Closest PBD project to Ring Road alignment
+Closest PBD project to SGPGI
+Dual-corridor access (Raebareli Road + Gosainganj arterial)
+Custom plot sizes: 800 sqft to 5,000 sqft
+Structured layout — not random farmland conversion
+
+SECTION 8 — INVENTORY STATUS
+~30–40% of plots sold. Majority of inventory still available — early mover window
+open.
+(Team: update exact % before publishing. This project is in the active selling phase — use
+urgency around Ring Road timeline, not pure scarcity.)
+SECTION 9 — WHO SHOULD BUY?
+Aggressive investor: Pre-infrastructure pricing, Ring Road construction beginning 2026. This is
+the moment infrastructure investors wait for. 3–5 year horizon, strong appreciation expected.
+SGPGI professionals: 8–10 min commute. Build your own home near your workplace without
+paying city-center prices. Entry at the right time.
+First-time buyer with long horizon: Lowest likely price point in PBD's portfolio. Buy now, build
+when Ring Road matures, sell into a repriced market.
+SECTION 10 — SITE MAP DESCRIPTION
+(For design/dev team)
+Entry from main accessible road (confirm exact road with site team)
+"Ring Road Coming" callout bubble pointing north — this is a key visual hook
+SGPGI direction labeled ("SGPGI — 8 min")
+Gosainganj direction labeled
+40-ft primary spine road
+30-ft secondary grid
+Plot numbers, corner lots highlighted
+Park/green space
+"Ring Road alignment zone" indicated on map edge
+North arrow + scale
+Suggest: small inset map showing Vigyan Path Ring Road route relative to project
+
+SECTION 11 — TRUST SIGNALS
+Pawantanay Builders — active developer with 3 other projects in the same corridor
+50% payment → immediate registry
+Structured layout: not a raw land deal, roads and utilities are planned
+Verifiable Ring Road DPR completion — government source available
+Physical site visit available at all times
+SECTION 12 — CTA SECTION
+Headline: The Ring Road Starts Construction in 2026. Land Near It Will Not Be at
+This Price Then.
+Body: Shivdhara Residency is PBD's pre-infrastructure timing opportunity. Plots from 800 sqft.
+50% payment triggers registry. Early movers get the best plot selection.
+CTA 1 (Primary — WA Button): WhatsApp for Early Mover Pricing Pre-fill: "I'm interested in
+Shivdhara Residency near the Ring Road. Please share details."
+CTA 2: Call Now: [YOUR NUMBER]
+CTA 3: Book Site Visit — See the Location
+SECTION 13 — SEO METADATA
+Meta Title: Residential Plots Near Ring Road Lucknow | Shivdhara Residency | North
+Mohanlalganj | PBD
+Meta Description: Shivdhara Residency — residential plots in north Mohanlalganj,
+Lucknow, closest to the upcoming Vigyan Path Ring Road and SGPGI. Plots from 800–
+5000 sqft. Pre-Ring Road pricing. WhatsApp for early mover details.
+Slug: /projects/shivdhara-residency-north-mohanlalganj-lucknow
+Keywords: plots near Ring Road Lucknow, residential plots north Mohanlalganj, Shivdhara
+Residency PBD, plots near SGPGI Lucknow, Vigyan Path Ring Road plots, Gosainganj area plots,
+pre-construction land Lucknow, early mover plots Lucknow south
+
+PROJECT 3: HANUMANT DHAM
+Active project. ~30–40% sold. Standard push.
+Location: Udavat Kheda, Khujoli Chauraha, Mohanlalganj | Rate: ₹1,600/sqft | Near IT City
+SECTION 1 — HERO
+H1: Residential Plots in Mohanlalganj Lucknow | Hanumant Dham — Near IT City &
+SGPGI
+Subheading: 10 minutes from SGPGI, near the IT City corridor. Plots from ₹12.8 lakh.
+Hero Description: Hanumant Dham sits at Khujoli Chauraha on the Raebareli Road — 10 min
+from SGPGI and within proximity of Lucknow's planned IT City development zone. Structured
+plotted colony. Plots from 800 sqft (entry at ₹12.8 lakh) to 5,000 sqft with custom sizing. 30–40%
+already sold — active project with inventory available.
+CTA 1: WhatsApp for Plot Availability CTA 2: Call Now to Speak to Our Team
+SECTION 3 — PLOT SIZING & PRICING
+Configuration
+Size
+Starting Price
+Entry plot
+800 sqft
+₹12.8 lakh
+Standard
+1,200 sqft
+₹19.2 lakh
+Large
+2,000 sqft
+₹32 lakh
+Custom
+Up to 5,000 sqft
+On Request
+Rate
+₹1,600 / sqft
+Payment
+50% on registration
+SECTION 4 — LOCATION ADVANTAGE
+SGPGI: 10 min | Lucknow's largest healthcare employer
+Mohanlalganj Market: 5 min
+
+IT City Project: Nearby — tech corridor in development
+Kisan Path Ring Road: 10–12 min
+Lulu Mall / Medanta: 10–12 min
+Charbagh: 20 min
+Shaheed Path: 12–15 min
+SECTION 5 — WHY THIS LOCATION?
+Khujoli Chauraha is the geographic sweet spot of northern Mohanlalganj — accessible from
+Raebareli Road while being proximate to SGPGI's employment cluster. The IT City development
+nearby adds a second demand driver: white-collar tech employment within a 5-km radius. Plots
+here at ₹1,600/sqft are priced pre-IT City activation. Once Phase 1 launches, land within this
+radius historically reprices by 40–60%.
+SECTION 6 — WHY INVEST NOW?
+Entry at ₹12.8 lakh (800 sqft) — accessible for first-time and repeat investors
+IT City activation is the catalyst — land within 5 km of tech parks in UP doubles in 5–7 years
+historically
+30–40% sold — project is active and moving; not stale inventory
+SGPGI demand is permanent — healthcare worker housing demand doesn't cycle
+SECTION 7 — PROJECT HIGHLIGHTS
+40-ft + 30-ft internal roads
+Sewer, drainage, electricity
+Park and temple provision
+Near IT City (upcoming)
+SGPGI 10 min
+Custom plots 800–5,000 sqft
+50% payment → registry
+
+SECTION 12 — CTA
+Headline: Plots Near SGPGI and IT City — Entry From ₹12.8 Lakh
+CTA 1: WhatsApp for Hanumant Dham Details CTA 2: Call Now: [YOUR NUMBER]
+SECTION 13 — SEO METADATA
+Meta Title: Residential Plots Near SGPGI Lucknow | Hanumant Dham | Mohanlalganj |
+₹1,600/sqft Meta Description: Hanumant Dham offers residential plots near SGPGI and
+IT City, Mohanlalganj Lucknow. 800–5000 sqft plots from ₹12.8 lakh at ₹1,600/sqft.
+30–40% sold. WhatsApp now. Slug: /projects/hanumant-dham-mohanlalganj-lucknow
+Keywords: plots near SGPGI Lucknow, residential plots near IT City Lucknow, Hanumant Dham
+PBD, affordable plots Mohanlalganj, Khujoli Chauraha plots, Raebareli Road plots Lucknow
+PROJECT 4: MURALIA GARDEN
+Active project. ~30–40% sold. Urban-edge angle.
+Location: Near Mohanlalganj Main Market & Tehsil | Rate: ₹1,600/sqft
+SECTION 1 — HERO
+H1: Residential Plots Near Mohanlalganj Market Lucknow | Muralia Garden — Tehsil
+Road
+Subheading: Walk to the market, tehsil, and transport. Own a plot where urban life is already
+here.
+Hero Description: Muralia Garden is PBD's most urban project — located adjacent to
+Mohanlalganj's main market and tehsil office. Daily needs are walkable. Government services
+are next door. Plots from 800 sqft at ₹1,600/sqft (entry ₹12.8 lakh). Unlike peripheral projects
+betting on future development, Muralia Garden's value anchor already exists.
+CTA 1: WhatsApp for Muralia Garden Plots CTA 2: Call Now: [YOUR NUMBER]
+
+SECTION 3 — PLOT SIZING & PRICING
+Configuration
+Size
+Starting Price
+Entry plot
+800 sqft
+₹12.8 lakh
+Standard
+1,200 sqft
+₹19.2 lakh
+Large / Custom
+Up to 5,000 sqft
+On Request
+Rate
+₹1,600 / sqft
+Payment
+50% on registration
+SECTION 4 — LOCATION ADVANTAGE
+Mohanlalganj Main Market: 2 min / walkable
+Tehsil Office: Adjacent
+Lulu Mall / Medanta: 10 min
+SGPGI: 15 min
+Kisan Path: 12–15 min
+Charbagh: 20–25 min
+Shaheed Path: 15 min
+SECTION 5 — WHY THIS LOCATION?
+Muralia Garden's anchor is not a future expressway or upcoming IT park — it's the Mohanlalganj
+market and tehsil that have served this area for decades. This is the most defensible value story
+in PBD's portfolio: civic infrastructure that will not move, not disappear, and will only grow as
+Mohanlalganj is absorbed into Lucknow's urban boundary. Plot buyers here don't need to wait
+for development to arrive — they move in, and it's already there.
+SECTION 6 — WHY INVEST NOW?
+Urban-edge plots at ₹1,600/sqft — as Mohanlalganj's urban classification upgrades, this
+price goes with it
+
+Tehsil-adjacent location has natural rental yield potential (professionals needing proximity
+to government offices)
+Entry at ₹12.8 lakh — lowest-risk entry in PBD's portfolio, given existing civic infrastructure
+SECTION 12 — CTA
+Headline: The Market Is a 2-Minute Walk. The Price Has Not Caught Up to That Yet.
+CTA 1: WhatsApp for Muralia Garden Availability CTA 2: Call Now: [YOUR NUMBER]
+SECTION 13 — SEO METADATA
+Meta Title: Plots Near Mohanlalganj Market Lucknow | Muralia Garden | Tehsil Road |
+₹1,600/sqft Meta Description: Muralia Garden — residential plots adjacent to
+Mohanlalganj Main Market and Tehsil, Lucknow. 800–5000 sqft from ₹12.8 lakh at
+₹1,600/sqft. Urban-edge location. WhatsApp now. Slug: /projects/muralia-garden-
+mohanlalganj-market-lucknow Keywords: plots near Mohanlalganj market Lucknow,
+residential plots tehsil road Mohanlalganj, Muralia Garden PBD, urban plots Mohanlalganj,
+affordable plots near market Lucknow
+GLOBAL COMPONENTS — ALL PAGES
+Implement once, reuse across all 4 project pages
+WHATSAPP CTA SYSTEM (Tech Implementation)
+Sticky mobile footer (all pages):
+Pre-filled WA messages by project:
+Shivay Residency: "I'm interested in Shivay Residency plots in Hulaskheda.
+Please share plot sizes and availability."
+[WhatsApp Icon] WhatsApp Now    [Phone Icon] Call Now
+
+Shivdhara Residency: "I'm interested in Shivdhara Residency near the Ring Road.
+Please share early mover details."
+Hanumant Dham: "I'm interested in Hanumant Dham plots near SGPGI. Please
+share details."
+Muralia Garden: "I'm interested in Muralia Garden plots near Mohanlalganj
+market. Please share availability."
+PLOT INVESTMENT CALCULATOR COMPONENT
+(Recommended for tech team to build — high conversion impact)
+Inputs: Plot size (sqft slider: 800–5,000) + Project selector Outputs: Total price | 50% registration
+amount | Estimated balance
+Example display:
+Plot Size: 1,200 sqft
+Project: Shivay Residency
+Total: ₹25,20,000
+Pay on Registry: ₹12,60,000
+Balance: ₹12,60,000 (flexible schedule)
+SCARCITY INDICATOR COMPONENT
+(Recommend implementing on all project pages)
+Visual sold-out bar showing percentage filled:
+Project
+Sold
+Available
+Shivay Residency
+~60%
+~40% remaining
+Shivdhara Residency
+~30–40%
+Majority available
+Hanumant Dham
+~30–40%
+Majority available
+Muralia Garden
+~30–40%
+Majority available
+
+COMMON AMENITIES BLOCK (All Projects)
+Roads: 40-ft primary + 30-ft secondary grid
+Sewer and drainage system
+Electricity connection
+Park / green zone in layout
+Temple / community space provision
+50% payment triggers registration
+Custom plot sizing: 800 sqft to 5,000 sqft
+DISTANCE TABLE (Shared Component)
+Landmark
+Shivay Residency
+Shivdhara Residency
+Hanumant Dham
+Muralia Garden
+SGPGI
+15 min
+8–10 min
+10 min
+15 min
+Mohanlalganj
+5–7 min
+8–10 min
+5 min
+2 min (walk)
+Kisan Path
+10–12 min
+10 min
+10–12 min
+12–15 min
+Lulu Mall
+15–18 min
+12 min
+10 min
+10 min
+Medanta
+15 min
+12 min
+10 min
+10 min
+Charbagh
+25 min
+20 min
+20 min
+20–25 min
+Expressway Link
+2–3 min
+20 min
+20 min
+20 min
+FAQ BLOCK (SEO + Conversion — All Pages)
+Q: What is the minimum plot size available? A: All PBD projects offer plots starting from 800
+sqft. Custom sizes up to 5,000 sqft available on request.
+Q: What is the minimum investment to get a plot? A: Entry starts at ₹12.8 lakh (800 sqft at
+₹1,600/sqft) for Hanumant Dham and Muralia Garden. For Shivay Residency, entry is ₹16.8 lakh
+
+(800 sqft at ₹2,100/sqft).
+Q: How much do I need to pay at the time of registration? A: 50% of total plot value on
+registration. Balance payable in a mutually agreed schedule.
+Q: Is Shivay Residency government approved? A: Yes, Shivay Residency is Jila Panchayat
+approved — the only project in PBD's portfolio with this approval.
+Q: How many plots are still available? A: Shivay Residency has approximately 40% plots
+remaining. Other projects have majority inventory available. Contact us for current availability —
+inventory updates in real time.
+Q: Can I get a home loan / plot loan? A: Plot loans are offered by most nationalized banks for
+structured plotted colonies. Our team can guide you on documentation.
+Q: Can I customize my plot size? A: Yes — all projects offer custom configurations between 800
+sqft and 5,000 sqft. Speak to our team for availability of specific sizes.
+Q: Is there a site visit available? A: Yes, site visits are available 7 days a week. WhatsApp or call to
+schedule your visit.
+ASSOCIATE / CHANNEL PARTNER BLOCK
+"एसोसिएट बनने के लिए भी सम्पर्क करें"
+Pawantanay Builders & Developers welcomes real estate channel partners across Lucknow and
+surrounding districts. Competitive referral structure. Active inventory across 4 projects.
+WhatsApp us to register as an associate.
+CTA: WhatsApp to Become an Associate Partner
+ABOUT DEVELOPER BLOCK
+Pawantanay Builders & Developers Pvt. Ltd., Lucknow
+An active real estate developer with a portfolio of 4 structured plotted developments across the
+Mohanlalganj–Raebareli Road corridor in Lucknow. Projects range from ₹1,600 to ₹2,100/sqft
+across multiple micro-locations — from expressway-adjacent premium plots to urban-edge civic-
+proximity developments. All projects offer custom plot sizes (800–5,000 sqft), 50% payment on
+registration, and planned infrastructure with roads, sewer, electricity, and parks.
+Over 30–60% of plots across our active projects have already been sold — reflecting consistent
+buyer trust and demand in the Mohanlalganj belt.
+
+End of Document — Version 2.0 Shivay Residency + Shivdhara Residency: PRIORITY LAUNCH
+All pricing, distances, and inventory % to be verified with sales team before going live Shivdhara
+rate to be confirmed and inserted before publishing
+

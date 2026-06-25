@@ -8,7 +8,6 @@ import DeveloperAbout from '../components/DeveloperAbout';
 import ChannelPartner from '../components/ChannelPartner';
 import FAQSection from '../components/FAQSection';
 import DistanceTable from '../components/DistanceTable';
-import { globalFaqs } from '../data/globalFaqs';
 import '../components/ProjectsSection.css';
 import './PageStyles.css';
 
@@ -16,13 +15,6 @@ const Projects = () => {
   const location = useLocation();
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [activeFilters, setActiveFilters] = useState(null);
-
-  useEffect(() => {
-    if (location.state && location.state.filters) {
-      handleSearch(location.state.filters);
-      setActiveFilters(location.state.filters);
-    }
-  }, [location.state]);
 
   const handleSearch = (filters) => {
     setActiveFilters(filters);
@@ -35,6 +27,15 @@ const Projects = () => {
     
     setFilteredProjects(results);
   };
+
+  useEffect(() => {
+    if (location.state && location.state.filters) {
+      const timer = setTimeout(() => {
+        handleSearch(location.state.filters);
+      }, 0);
+      return () => clearTimeout(timer);
+    }
+  }, [location.state]);
 
   return (
     <div className="page-wrapper fade-in">

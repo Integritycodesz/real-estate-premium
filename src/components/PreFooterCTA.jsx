@@ -17,10 +17,10 @@ const PreFooterCTA = () => {
         </div>
         
         <div className="cta-actions">
-          <Link to="/contact" className="cta-btn gold-btn">
+          <button onClick={handleSiteVisit} className="cta-btn gold-btn">
             Schedule Site Visit
             <ArrowRight size={18} />
-          </Link>
+          </button>
           
           <a href="https://wa.me/917054550296" target="_blank" rel="noopener noreferrer" className="cta-btn whatsapp-btn">
             <MessageCircle size={18} />

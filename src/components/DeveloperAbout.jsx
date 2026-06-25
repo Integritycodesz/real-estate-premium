@@ -13,7 +13,7 @@ const DeveloperAbout = () => {
             <p className="dev-description">
               An active real estate developer with a portfolio of 4 structured plotted developments 
               across the Mohanlalganj–Raebareli Road corridor in Lucknow. Projects range from 
-              ₹1,600 to ₹2,100/sqft across multiple micro-locations — from expressway-adjacent 
+              ₹1,499 to ₹2,100/sqft across multiple micro-locations — from expressway-adjacent 
               premium plots to urban-edge civic proximity developments.
             </p>
             <p className="dev-description">
