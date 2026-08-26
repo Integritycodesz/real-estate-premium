@@ -1,18 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
-import { locations, propertyTypes } from '../data/properties';
+import { locations, propertyTypes, priceRanges } from '../data/properties';
 import './SearchBar.css';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, initialFilters }) => {
   const [filters, setFilters] = useState({
-    location: 'All Locations',
-    type: 'All Types',
-    minPrice: '',
-    maxPrice: ''
+    location: initialFilters?.location || 'All Locations',
+    type: initialFilters?.type || 'All Types',
+    priceRange: initialFilters?.priceRange || 'All Prices'
   });
 
+  useEffect(() => {
+    if (initialFilters) {
+      setFilters({
+        location: initialFilters.location || 'All Locations',
+        type: initialFilters.type || 'All Types',
+        priceRange: initialFilters.priceRange || 'All Prices'
+      });
+    } else {
+      setFilters({
+        location: 'All Locations',
+        type: 'All Types',
+        priceRange: 'All Prices'
+      });
+    }
+  }, [initialFilters]);
+
   const handleChange = (e) => {
-    setFilters({ ...filters, [e.target.name]: e.target.value });
+    const updated = { ...filters, [e.target.name]: e.target.value };
+    setFilters(updated);
+    if (onSearch) onSearch(updated);
   };
 
   const handleSearch = () => {
@@ -37,17 +54,17 @@ const SearchBar = ({ onSearch }) => {
             </select>
           </div>
 
-          <div className="search-field price-field">
+          <div className="search-field">
             <label>Price Range (₹)</label>
-            <div className="price-inputs">
-              <input type="number" name="minPrice" placeholder="Min" value={filters.minPrice} onChange={handleChange} />
-              <span>-</span>
-              <input type="number" name="maxPrice" placeholder="Max" value={filters.maxPrice} onChange={handleChange} />
-            </div>
+            <select name="priceRange" value={filters.priceRange} onChange={handleChange}>
+              {priceRanges.map(range => (
+                <option key={range.value} value={range.value}>{range.label}</option>
+              ))}
+            </select>
           </div>
         </div>
         
-        <button className="search-button" onClick={handleSearch}>
+        <button className="search-button" onClick={handleSearch} type="button">
           <Search size={20} />
           <span>Search</span>
         </button>
@@ -56,5 +73,5 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-
 export default SearchBar;
+

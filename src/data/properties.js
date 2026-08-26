@@ -69,6 +69,25 @@ export const propertiesData = [
   }
 ];
 
-export const locations = ["All Locations", "Raebareli Road", "Kisan Path"];
-export const propertyTypes = ["All Types", "Residential Plot", "Luxury Plot", "Eco Plot"];
+export const locations = [
+  "All Locations",
+  "Near IT City",
+  "Mohanlal Tehsil",
+  "Near Outer Ring Road"
+];
+
+export const propertyTypes = [
+  "All Types",
+  "Residential",
+  "Investment",
+  "Commercial"
+];
+
+export const priceRanges = [
+  { label: "Price Range", value: "All Prices" },
+  { label: "₹ 15,00,000 - ₹ 20,00,000", value: "1500000-2000000" },
+  { label: "₹ 20,00,000 - ₹ 30,00,000", value: "2000000-3000000" },
+  { label: "₹ 30,00,000 - ₹ 40,00,000", value: "3000000-4000000" },
+  { label: "₹ 50,00,000+", value: "5000000+" }
+];
 

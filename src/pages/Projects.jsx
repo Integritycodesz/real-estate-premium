@@ -17,15 +17,58 @@ const Projects = () => {
   const [activeFilters, setActiveFilters] = useState(null);
 
   const handleSearch = (filters) => {
-    setActiveFilters(filters);
+    const isDefault = 
+      (!filters.location || filters.location === 'All Locations') &&
+      (!filters.type || filters.type === 'All Types') &&
+      (!filters.priceRange || filters.priceRange === 'All Prices');
+
+    setActiveFilters(isDefault ? null : filters);
     
     const results = projects.filter(project => {
-      if (filters.location !== 'All Locations' && !project.location.includes(filters.location)) return false;
-      if (filters.type !== 'All Types' && project.type !== filters.type) return false;
+      // 1. Location filter
+      if (filters.location && filters.location !== 'All Locations') {
+        const hasLocationMatch = 
+          project.locationFilter?.includes(filters.location) ||
+          project.location?.toLowerCase().includes(filters.location.toLowerCase());
+        if (!hasLocationMatch) return false;
+      }
+      
+      // 2. Plot Type filter
+      if (filters.type && filters.type !== 'All Types') {
+        const typeNorm = filters.type.toLowerCase();
+        const hasTypeMatch = 
+          project.typeFilter?.some(t => t.toLowerCase() === typeNorm || t.toLowerCase().includes(typeNorm)) ||
+          project.type?.toLowerCase().includes(typeNorm) ||
+          (typeNorm.startsWith('residen') && project.type?.toLowerCase().includes('residential')) ||
+          (typeNorm.startsWith('residen') && project.typeFilter?.includes('Residential'));
+        if (!hasTypeMatch) return false;
+      }
+
+      // 3. Price Range filter
+      if (filters.priceRange && filters.priceRange !== 'All Prices') {
+        const minP = project.minPrice || 1000000;
+        const maxP = project.maxPrice || 10000000;
+
+        if (filters.priceRange === '1500000-2000000') {
+          if (minP > 2000000 || maxP < 1500000) return false;
+        } else if (filters.priceRange === '2000000-3000000') {
+          if (minP > 3000000 || maxP < 2000000) return false;
+        } else if (filters.priceRange === '3000000-4000000') {
+          if (minP > 4000000 || maxP < 3000000) return false;
+        } else if (filters.priceRange === '5000000+') {
+          if (maxP < 5000000) return false;
+        }
+      }
+      
       return true;
     });
     
     setFilteredProjects(results);
+  };
+
+  const handleClearFilters = () => {
+    setActiveFilters(null);
+    setFilteredProjects(projects);
   };
 
   useEffect(() => {
@@ -77,11 +120,27 @@ const Projects = () => {
       
       <div className="container section-padding">
         <div className="projects-filter-wrapper">
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} initialFilters={activeFilters} />
           {activeFilters && (
-            <p className="filter-results-info">
-              Showing {filteredProjects.length} projects matching your criteria.
-            </p>
+            <div className="filter-results-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '15px 0' }}>
+              <p className="filter-results-info" style={{ margin: 0 }}>
+                Showing <strong>{filteredProjects.length}</strong> {filteredProjects.length === 1 ? 'project' : 'projects'} matching your criteria.
+              </p>
+              <button 
+                onClick={handleClearFilters}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: 'var(--accent-gold, #c5a869)', 
+                  cursor: 'pointer', 
+                  fontSize: '0.85rem', 
+                  textDecoration: 'underline',
+                  fontWeight: 600
+                }}
+              >
+                Reset Filters
+              </button>
+            </div>
           )}
         </div>
 
@@ -98,10 +157,7 @@ const Projects = () => {
           <div className="no-results-box">
             <h3>No projects found matching your criteria.</h3>
             <p>Try adjusting your filters or clearing them to see all properties.</p>
-            <button className="btn-primary" onClick={() => {
-              setActiveFilters(null);
-              setFilteredProjects(projects);
-            }}>Clear All Filters</button>
+            <button className="btn-primary" onClick={handleClearFilters}>Clear All Filters</button>
           </div>
         )}
       </div>

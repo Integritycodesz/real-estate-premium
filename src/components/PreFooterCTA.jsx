@@ -22,7 +22,12 @@ const PreFooterCTA = () => {
             <ArrowRight size={18} />
           </button>
           
-          <a href="https://wa.me/917054550296" target="_blank" rel="noopener noreferrer" className="cta-btn whatsapp-btn">
+          <a 
+            href={`https://wa.me/917054550296?text=${encodeURIComponent("Hi PBD Group, I’m interested in your property projects. I’d like to know more about the available projects, pricing and site visit options. Please assist me.")}`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cta-btn whatsapp-btn"
+          >
             <MessageCircle size={18} />
             WhatsApp Us
           </a>

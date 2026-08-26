@@ -115,7 +115,7 @@ const WhyInvest = () => {
                 <div className="math-card">
                   <div className="card-icon"><TrendingUp /></div>
                   <h4>Early Buyer Advantage</h4>
-                  <p>In 2021, buyers invested <strong>₹11L</strong> in Sunrise projects. Those same plots trade at <strong>₹21L+</strong> today. That is <strong>91% ROI</strong> in 3 years.</p>
+                  <p>As Raebareli Road continues to develop, early buyers can enter at today’s prices before rising infrastructure, connectivity and demand push values higher.</p>
                 </div>
                 <div className="math-card">
                   <div className="card-icon"><PieChart /></div>

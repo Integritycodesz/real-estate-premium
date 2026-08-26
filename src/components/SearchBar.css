@@ -44,8 +44,7 @@
   font-weight: 500;
 }
 
-.search-field select,
-.search-field input {
+.search-field select {
   border: none;
   background: transparent;
   font-family: var(--font-body);
@@ -54,23 +53,13 @@
   outline: none;
   cursor: pointer;
   padding: 4px 0;
+  width: 100%;
 }
 
-.price-inputs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.price-inputs input {
-  width: 60px;
-  -moz-appearance: textfield;
-}
-
-.price-inputs input::-webkit-outer-spin-button,
-.price-inputs input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.search-field select option {
+  background: var(--surface-light, #ffffff);
+  color: var(--text-primary, #111111);
+  padding: 8px 12px;
 }
 
 .search-button {

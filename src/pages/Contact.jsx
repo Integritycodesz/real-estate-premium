@@ -123,7 +123,7 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <span className="info-label">Office Address:</span>
-                  <p className="info-value-text">Sai Tower, Second Floor, Near Dental Hospital,<br />Raebarelli Road— Lucknow, UP</p>
+                  <p className="info-value-text">2nd Floor, Sai Tower, Near Dental Hospital,<br />Raebareli Road, Lucknow, Uttar Pradesh</p>
                 </div>
               </div>
             </div>
@@ -240,7 +240,12 @@ const Contact = () => {
             <div className="whatsapp-content">
               <h2>Quick Questions? We're on WhatsApp.</h2>
               <p>Getting answers shouldn't require you to fill a form and wait three days. Drop us a WhatsApp message and we'll respond personally — with real information, not automated replies.</p>
-              <a href="https://wa.me/917054550296" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+              <a 
+                href={`https://wa.me/917054550296?text=${encodeURIComponent("Hi PBD Group, I’m interested in your property projects. I’d like to know more about the available projects, pricing and site visit options. Please assist me.")}`} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="whatsapp-btn"
+              >
                 <MessageCircle size={20} /> Click to Chat: +91 70545 50296
               </a>
             </div>

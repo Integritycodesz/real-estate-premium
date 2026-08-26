@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import FlashDealsBanner from './components/FlashDealsBanner';
 import LeadPopup from './components/LeadPopup';
-import SocialProofPopup from './components/SocialProofPopup';
 import Footer from './components/Footer';
 import PreFooterCTA from './components/PreFooterCTA';
 import Home from './pages/Home';
@@ -27,7 +26,6 @@ const GlobalContent = () => {
   return (
     <>
       <LeadPopup />
-      <SocialProofPopup />
       <ScrollReveal />
       <FloatingWhatsApp />
       <Navbar />

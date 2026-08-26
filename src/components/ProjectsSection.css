@@ -83,8 +83,9 @@
   background: #ff8c00; /* DarkOrange */
 }
 
-.project-status.status-new-launch {
-  background: #28a745; /* Green */
+.project-status.status-new-launch,
+.project-status.status-just-launched {
+  background: #16a34a; /* Green */
 }
 
 .project-status.status-60-sold, .project-status.status-30-40-sold {
@@ -92,7 +93,7 @@
 }
 
 .project-status.status-sold-out {
-  background: #6c757d; /* Grey */
+  background: #dc2626; /* Crimson Red */
 }
 
 .approval-badge {

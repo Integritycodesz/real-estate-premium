@@ -3,7 +3,7 @@ import { MessageCircle, Phone } from 'lucide-react';
 import './ProjectStickyCTA.css';
 
 const ProjectStickyCTA = ({ project }) => {
-  const whatsappUrl = `https://wa.me/917054550296?text=${encodeURIComponent(project.whatsappMessage || "Hello, I'm interested in your project " + project.title)}`;
+  const whatsappUrl = `https://wa.me/917054550296?text=${encodeURIComponent(project.whatsappMessage || "Hi PBD Group, I’m interested in your property projects. I’d like to know more about the available projects, pricing and site visit options. Please assist me.")}`;
   const callUrl = "tel:+917054550296";
 
   return (

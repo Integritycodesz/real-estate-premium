@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div className="offer-item">
               <span className="offer-icon">🎁</span>
               <span className="offer-label">Limited Time Benefits:</span>
-              <span className="offer-value">Free Registry | Free Boundary Wall | ₹50,000 Instant Discount</span>
+              <span className="offer-value">Free Registry | Free Boundary Wall | Terms & Conditions Apply</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const HeroSection = () => {
               <ArrowRight size={18} />
             </Link>
             <a
-              href="https://wa.me/917054550296?text=Hi, I am interested in your plots on Raebareli Road. Please share details."
+              href={`https://wa.me/917054550296?text=${encodeURIComponent("Hi PBD Group, I’m interested in your property projects. I’d like to know more about the available projects, pricing and site visit options. Please assist me.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hero-btn-outline"

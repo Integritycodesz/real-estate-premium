@@ -6,7 +6,7 @@ import './ProjectsSection.css';
 import { MapPin, ShieldCheck, Zap, ArrowRight } from 'lucide-react';
 
 export const ProjectCard = ({ id, title, location, image, features, type, price, commercialPrice, status, approvalBadge }) => {
-  const isSoldOut = status.toLowerCase().includes('sold out');
+  const isSoldOut = status ? status.toLowerCase().includes('sold out') : false;
   const isApproved = features.some(f => f.toLowerCase().includes('approved'));
 
   return (
@@ -16,9 +16,11 @@ export const ProjectCard = ({ id, title, location, image, features, type, price,
           className="project-image"
           style={{ backgroundImage: `url(${image})` }}
         ></div>
-        <div className={`project-status status-${(status || 'Available').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-          {status || 'Available'}
-        </div>
+        {status && (
+          <div className={`project-status status-${status.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+            {status}
+          </div>
+        )}
         {isApproved && (
           <div className="approval-badge">
             <ShieldCheck size={14} /> 

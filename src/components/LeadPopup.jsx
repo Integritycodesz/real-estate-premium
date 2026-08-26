@@ -36,30 +36,22 @@ const LeadPopup = () => {
     return () => window.removeEventListener('open-pbd-lead-popup', handleOpenPopup);
   }, []);
 
-  // Initial show after 5 seconds of refresh
+  // Initial show after 5 seconds - only once per session
   useEffect(() => {
-    const initialTimer = setTimeout(() => {
-      if (!hasSubmitted) {
+    const hasShown = sessionStorage.getItem('pbd_lead_popup_shown');
+    if (!hasShown && !hasSubmitted) {
+      const initialTimer = setTimeout(() => {
         setIsVisible(true);
-      }
-    }, 5000);
+        sessionStorage.setItem('pbd_lead_popup_shown', 'true');
+      }, 5000);
 
-    return () => clearTimeout(initialTimer);
+      return () => clearTimeout(initialTimer);
+    }
   }, [hasSubmitted]);
-
-  // Reappearance logic: every 1.5 minutes (90 seconds) if not visible
-  useEffect(() => {
-    const reappearanceTimer = setInterval(() => {
-      if (!isVisible && !hasSubmitted) {
-        setIsVisible(true);
-      }
-    }, 90000); // 1.5 minutes
-
-    return () => clearInterval(reappearanceTimer);
-  }, [isVisible, hasSubmitted]);
 
   const handleClose = () => {
     setIsClosing(true);
+    sessionStorage.setItem('pbd_lead_popup_shown', 'true');
     setTimeout(() => {
       setIsVisible(false);
       setIsClosing(false);
@@ -79,6 +71,7 @@ const LeadPopup = () => {
       
       setStatus('success');
       setHasSubmitted(true);
+      sessionStorage.setItem('pbd_lead_popup_shown', 'true');
       setTimeout(() => handleClose(), 3000);
     } catch (error) {
       console.error("Error submitting lead popup:", error);

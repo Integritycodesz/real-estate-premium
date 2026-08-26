@@ -9,17 +9,17 @@ const Gallery = () => {
 
   // Custom gallery images provided by the user
   const siteImages = [
-    { url: new URL('../assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg', import.meta.url).href, title: "Site Progress View", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg', import.meta.url).href, title: "Customer Site Visit", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg', import.meta.url).href, title: "Project Overview", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg', import.meta.url).href, title: "Infrastructure Work", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg', import.meta.url).href, title: "Boundary Wall Construction", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg', import.meta.url).href, title: "Street Lighting Install", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg', import.meta.url).href, title: "Main Entrance Gate", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg', import.meta.url).href, title: "Plot Leveling", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg', import.meta.url).href, title: "On-site Office", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg', import.meta.url).href, title: "Greenery & Landscaping", category: "Site Development", type: "image" },
-    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg', import.meta.url).href, title: "Family Site Inspection", category: "Site Development", type: "image" }
+    { url: new URL('../assets/WhatsApp_Image_2026-01-21_at_1.25.48_PM_1769362975229.jpeg', import.meta.url).href, title: "Site Progress View", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp_Image_2026-01-29_at_10.59.55_PM_1769755149841-1.jpeg', import.meta.url).href, title: "Customer Site Visit", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.35-AM-1-scaled.jpeg', import.meta.url).href, title: "Project Overview", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.36-AM-1-scaled.jpeg', import.meta.url).href, title: "Infrastructure Work", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.37-AM-scaled.jpeg', import.meta.url).href, title: "Boundary Wall Construction", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.39-AM-1-scaled.jpeg', import.meta.url).href, title: "Street Lighting Install", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.40-AM-1-scaled.jpeg', import.meta.url).href, title: "Main Entrance Gate", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM-1-scaled.jpeg', import.meta.url).href, title: "Plot Leveling", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.42-AM.jpeg', import.meta.url).href, title: "On-site Office", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.41-AM.jpeg', import.meta.url).href, title: "Greenery & Landscaping", category: "PBD GRP", type: "image" },
+    { url: new URL('../assets/WhatsApp-Image-2026-01-18-at-11.48.43-AM-1-scaled.jpeg', import.meta.url).href, title: "Family Site Inspection", category: "PBD GRP", type: "image" }
   ];
 
   // Aggregate images from all projects
@@ -45,9 +45,9 @@ const Gallery = () => {
 
   const allItems = [...siteImages, ...projectImages, ...projectVideos];
 
-  // Dynamically generate categories from projects + Site Development
+  // Dynamically generate categories from projects + PBD GRP
   const projectCategories = Array.from(new Set(projects.map(p => p.title)));
-  const categories = ['All', 'Site Development', ...projectCategories];
+  const categories = ['All', 'PBD GRP', ...projectCategories];
   
   const galleryItems = allItems.filter(item => filter === 'All' || item.category === filter);
 

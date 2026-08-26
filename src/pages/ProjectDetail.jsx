@@ -147,7 +147,7 @@ const ProjectDetail = () => {
             <div className="hero-top-info">
               <div className="header-meta">
                 <span className="badge-type">{project.type}</span>
-                <span className={`badge-status ${project.status.toLowerCase().replace(' ', '-')}`}>{project.status}</span>
+                {project.status && <span className={`badge-status ${project.status.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{project.status}</span>}
                 {project.approvalBadge && <span className="badge-status approval">{project.approvalBadge}</span>}
               </div>
               <h1 className="project-title-xl">{project.h1Title || project.title}</h1>
